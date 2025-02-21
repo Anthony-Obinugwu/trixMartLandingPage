@@ -31,8 +31,11 @@ export default function Hero() {
             </p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
-              <Button className="bg-[#006ED3] hover:bg-[#005bb0] text-white px-10 py-6 text-lg min-w-[200px]">
-                Join the Community
+            <Button
+                variant="outline"
+                className="bg-[#006ED3] border-[#006ED3] text-white hover:bg-white hover:text-[#006ED3] px-10 py-6 text-lg min-w-[200px]"
+              >
+                Join Our Community
               </Button>
               <Button
                 variant="outline"
