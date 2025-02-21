@@ -95,6 +95,10 @@ body {
   }
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .marck-script-regular {
   font-family: 'Marck Script', cursive;
 }

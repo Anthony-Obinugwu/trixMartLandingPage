@@ -7,7 +7,7 @@ import { cn } from "@/lib/utils"
 
 export default function Categories() {
   return (
-    <section className="py-24 bg-[#0A1128]">
+    <section className="py-24 bg-[#0A1128]" id="categories">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-white mb-4 relative inline-flex items-center">
@@ -91,7 +91,7 @@ function CategoryCard({ title, image, items = [], defaultExpanded = false }: Cat
     <div className="relative rounded-2xl overflow-hidden">
       <div className="relative h-[300px]">
         <Image
-          src={image}
+          src={image || "/food.png"}
           alt={title}
           width={600}
           height={300}
