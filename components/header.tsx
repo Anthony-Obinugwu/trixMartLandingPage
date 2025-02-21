@@ -1,36 +1,49 @@
+"use client"
 import { Button } from "@/components/ui/button"
 import Image from "next/image"
 import Link from "next/link"
 import MobileNav from "./mobile-nav"
 
 export default function Header() {
+  const handleScroll = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>, targetId: string) => {
+    e.preventDefault();
+    const targetElement = document.getElementById(targetId);
+    if (targetElement) {
+      targetElement.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
-    <header className="container mx-auto flex items-center justify-between p-4">
-      <Link href="/" className="flex items-center space-x-2">
-        <Image
-          src="Trix-Mart-Logo-Blue.png"
-          alt="Trix Mart Logo"
-          width={140}
-          height={70}
-          priority
-        />
-      </Link>
-      <nav className="hidden md:flex items-center gap-6">
-        <Link href="/about" className="text-sm text-gray-700 hover:text-gray-900">
-          About Us
+    <header className="px-4 py-4 max-w-[1440px] mx-auto">
+      <div className="flex items-center justify-between">
+        <Link href="/" className="flex items-center space-x-2">
+          <Image
+            src="/Trix-Mart-Logo-Blue.png"
+            alt="Trix Mart Logo"
+            width={140}
+            height={70}
+            priority
+          />
         </Link>
-        <Link href="/how-it-works" className="text-sm text-gray-700 hover:text-gray-900">
-          How it Works
-        </Link>
-        <Link href="/categories" className="text-sm text-gray-700 hover:text-gray-900">
-          Categories
-        </Link>
-        <Link href="/why-join" className="text-sm text-gray-700 hover:text-gray-900">
-          Why Join Us
-        </Link>
-        <Button className="bg-[#0D6EFD] hover:bg-[#0b5ed7] text-white text-sm px-4 py-2">Join the Community</Button>
-      </nav>
-      <MobileNav />
+        <nav className="hidden md:flex items-center gap-8">
+          <a href="#about" className="text-sm text-gray-700 hover:text-gray-900" onClick={(e) => handleScroll(e, "about")}>
+            About Us
+          </a>
+          <a href="#how-it-works" className="text-sm text-gray-700 hover:text-gray-900" onClick={(e) => handleScroll(e, "how-it-works")}>
+            How it Works
+          </a>
+          <a href="#categories" className="text-sm text-gray-700 hover:text-gray-900" onClick={(e) => handleScroll(e, "categories")}>
+            Categories
+          </a>
+          <a href="#why-join-us" className="text-sm text-gray-700 hover:text-gray-900" onClick={(e) => handleScroll(e, "why-join")}>
+            Why Join Us
+          </a>
+          <Button className="bg-[#006ED3] hover:bg-[#005bb0] text-white text-sm px-6 py-2">
+            Join the Community
+          </Button>
+        </nav>
+        <MobileNav />
+      </div>
     </header>
   )
 }

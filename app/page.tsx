@@ -1,3 +1,4 @@
+"use client"
 import About from "@/components/about"
 import Categories from "@/components/categories"
 import Footer from "@/components/footer"
@@ -8,18 +9,28 @@ import Layout from "@/components/layout"
 import Reviews from "@/components/reviews"
 import WhyJoin from "@/components/why-join"
 
+
 export default function Home() {
-  // This is where we will place the background image
-  const backgroundImage = ""
+
+
+  const backgroundImage = "/LandingPageBackground.png"
 
   return (
     <Layout backgroundImage={backgroundImage}>
       <Header />
       <Hero />
-      <About />
-      <HowItWorks />
-      <Categories />
-      <WhyJoin />
+      <section id="about">
+        <About />
+      </section>
+      <section id="how-it-works">
+        <HowItWorks />
+      </section>
+      <section id="categories">
+        <Categories />
+      </section>
+      <section id="why-join">
+        <WhyJoin />
+      </section>
       <Reviews />
       <Footer />
     </Layout>
