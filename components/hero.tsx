@@ -10,22 +10,23 @@ export default function Hero() {
 
         <div className="relative z-10">
           <div className="text-center mb-8">
-            <h1 className="text-4xl md:text-6xl font-medium tracking-tight text-gray-900 mb-6">
+            <h1 className="text-4xl md:text-6xl font-regular tracking-tight text-gray-600 mb-6">
               The
               <span className="relative inline-block mx-2">
-                <span className="relative z-10">student</span>
-                <div className="absolute inset-0 w-full h-full border-2 border-[#0D6EFD] rounded-full transform rotate-3" />
-                <div className="absolute inset-0 w-full h-full border-2 border-[#0D6EFD] rounded-full transform rotate-[10deg]" />
+                <span className="relative z-10 marck-script-regular text-[#006ED3]">student</span>
+      
               </span>
               marketplace where
               <br />
-              buyers shop, and sellers grow their
+              <span className="relative inline-block mx-2">
+                <span className="relative z-10">buyers</span>
+              </span>
+              shop, and sellers grow their
               <br />
               businesses
               <span className="relative inline-block mx-2">
-                <span className="relative z-10">within</span>
-                <div className="absolute inset-0 w-full h-full border-2 border-[#FF7A00] rounded-full transform -rotate-3" />
-                <div className="absolute inset-0 w-full h-full border-2 border-[#FF7A00] rounded-full transform rotate-[4deg]" />
+                <span className="relative z-10 marck-script-regular text-[#FB923C]">within</span>
+                
               </span>
               the university
             </h1>
@@ -38,7 +39,7 @@ export default function Hero() {
               </Button>
               <Button
                 variant="outline"
-                className="border-[#FF7A00] text-[#FF7A00] hover:bg-[#FF7A00] hover:text-white px-8 py-6 text-lg"
+                className="border-[#FB923C] text-[#FB923C] hover:bg-[#FB923C] hover:text-white px-8 py-6 text-lg"
               >
                 Become a Seller
               </Button>
