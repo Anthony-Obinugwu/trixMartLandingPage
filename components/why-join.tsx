@@ -15,14 +15,14 @@ export default function WhyJoin() {
         {/* Benefits to Buyers */}
 
         <div className="relative px-10 mb-10 sm:static sm:px-0 sm:mb-32">
-          <div className="bg-[#FF8B2A1F] h-[480px] mx-auto px-2 rounded-xl sm:relative sm:flex sm:items-center sm:justify-start sm:px-6 sm:h-44 md:px-10">
+          <div className="bg-[#FF8B2A1F] h-[400px] mx-auto px-6 rounded-xl sm:relative sm:flex sm:items-center sm:justify-start sm:px-6 sm:h-44 md:px-10">
             <h3 className="text-center font-bold text-xl py-6 sm:text-left lg:text-2xl">
-                <span className="sm:font-normal sm:text-sm lg:text-base">Benefits </span>
-                <br className="hidden sm:block"/>
+                <span className="font-normal text-sm lg:text-base">Benefits </span>
+                <br className=""/>
                 To Buyers
             </h3>
 
-            <div className="absolute left-0 right-0 top-36 flex flex-col gap-y-6 sm:max-w-96 sm:top-auto sm:left-auto sm:right-10 md:max-w-none lg:min-w-[550px]">
+            <div className="absolute left-0 right-0 top-28 flex flex-col gap-y-6 sm:max-w-96 sm:top-auto sm:left-auto sm:right-10 md:max-w-none lg:min-w-[550px]">
               <div className="bg-[#FFAD68] flex items-center py-4 px-4 rounded-xl">
                 <Image src="icons/dark-check-mark.svg" className="mr-4" width={25} height={25} alt="checkmark" />
                 <p className="text-sm text-[#051650]">Find affordable products from trusted students</p>
@@ -41,14 +41,14 @@ export default function WhyJoin() {
 
         {/* Benefits to Sellers */}
         <div className="relative px-10 sm:px-0 sm:static">
-          <div className="bg-[#006ED30D] h-[480px] mx-auto px-2 rounded-xl sm:relative sm:flex sm:items-center sm:justify-end sm:px-6 sm:h-44 md:px-10">
+          <div className="bg-[#006ED30D] h-[400px] mx-auto px-6 rounded-xl sm:relative sm:flex sm:items-center sm:justify-end sm:px-6 sm:h-44 md:px-10">
             <h3 className="text-center font-bold text-xl py-6 sm:text-right lg:text-2xl">
-                <span className="sm:font-normal sm:text-sm lg:text-base">Benefits </span>
-                <br className="hidden sm:block"/>
+                <span className="font-normal text-sm lg:text-base">Benefits </span>
+                <br className=""/>
                 To Sellers
             </h3>
 
-            <div className="absolute left-0 right-0 top-36 flex flex-col gap-y-6 sm:max-w-96 sm:top-auto sm:left-10 sm:right-auto md:max-w-none lg:min-w-[550px]">
+            <div className="absolute left-0 right-0 top-28 flex flex-col gap-y-6 sm:max-w-96 sm:top-auto sm:left-10 sm:right-auto md:max-w-none lg:min-w-[550px]">
               <div className="bg-[#0A42B6] flex items-center py-4 px-4 rounded-xl">
                 <Image src="icons/light-check-mark.svg" className="mr-4" width={25} height={25} alt="checkmark" />
                 <p className="text-sm text-[#F1F1F1]">Reach and Sell to active student buyers</p>
