@@ -89,12 +89,12 @@ function CategoryCard({ title, image, items = [], defaultExpanded = false }: Cat
 
   return (
     <div className="relative rounded-2xl overflow-hidden">
-      <div className="relative h-[300px]">
+      <div className="relative h-[200px]"> {/* Adjusted height */}
         <Image
           src={image || "/food.png"}
           alt={title}
           width={600}
-          height={300}
+          height={200} 
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent">
@@ -114,7 +114,7 @@ function CategoryCard({ title, image, items = [], defaultExpanded = false }: Cat
       <div
         className={cn(
           "overflow-hidden transition-all duration-300 ease-in-out",
-          isExpanded ? "max-h-[200px] mt-6 opacity-100" : "max-h-0 opacity-0",
+          isExpanded ? "max-h-[150px] mt-6 opacity-100 overflow-y-auto" : "max-h-0 opacity-0", // Adjusted max height and added overflow-y-auto
         )}
       >
         <ul className="space-y-3 text-white/90 text-lg p-8 bg-[#0A1128] rounded-b-2xl">
