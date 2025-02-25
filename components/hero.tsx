@@ -9,7 +9,7 @@ export default function Hero() {
       <div className="max-w-[1280px] mx-auto mb-8">
         <h1 className="relative w-fit first-line:font-thin text-[28px] text-center text-gray-900 mb-10 leading-[60px] mx-auto sm:text-3xl sm:leading-[80px] md:text-4xl md:leading-[80px]">
           <Image src="/page-vectors/trixmart-banner.svg" className="absolute -top-10 -z-10 sm:-top-6 sm:left-8 md:-top-8 md:w-36" width={120} height={200} alt="" />
-          <Image src="/page-vectors/shopping-bags.svg" className="absolute -top-10 right-40 -z-10 sm:-top-6" width={40} height={40} alt="" />
+          <Image src="/page-vectors/shopping-bags.svg" className="absolute -top-10 right-20 -z-10 sm:-top-6 sm:right-40" width={40} height={40} alt="" />
           The
           <span className="relative font-marckscript text-4xl inline-block leading-none mx-2 text-[#006ED3]">
             <Image src="/page-vectors/vector-1.svg" className="absolute scale-110" width={150} height={50} alt="student-emphasis" />
