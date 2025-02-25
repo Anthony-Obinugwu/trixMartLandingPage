@@ -51,10 +51,10 @@ function BenefitsCard({isDirectionLeft=false, benefactor, benefitsList}: Benefit
             </h3>
 
             <div className={`absolute left-0 right-0 top-28 flex flex-col gap-y-6 sm:max-w-96 sm:top-auto  ${ isDirectionLeft ? "sm:left-auto sm:right-10" : "sm:right-auto sm:left-10" } md:max-w-none lg:min-w-[550px]`}>
-              {benefitsList.map((benefit)=>(
-                <div className={` ${isDirectionLeft ? "bg-[#FFAD68]" : "bg-[#0A42B6]"} flex items-center py-4 px-4 rounded-xl`}>
-                <Image src={`${isDirectionLeft ? "icons/dark-check-mark.svg" : "icons/light-check-mark.svg"}`} className="mr-4" width={25} height={25} alt="checkmark" />
-                <p className={`text-sm ${isDirectionLeft ? "text-[#051650]" : "text-[#F1F1F1]"}`}>{benefit}</p>
+              {benefitsList.map((benefit, index)=>(
+                <div key={index} className={` ${isDirectionLeft ? "bg-[#FFAD68]" : "bg-[#0A42B6]"} flex items-center py-4 px-4 rounded-xl`}>
+                  <Image src={`${isDirectionLeft ? "icons/dark-check-mark.svg" : "icons/light-check-mark.svg"}`} className="mr-4" width={25} height={25} alt="checkmark" />
+                  <p className={`text-sm ${isDirectionLeft ? "text-[#051650]" : "text-[#F1F1F1]"}`}>{benefit}</p>
               </div>
               ))}
             </div>
