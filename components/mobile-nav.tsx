@@ -17,19 +17,23 @@ export default function MobileNav() {
       </SheetTrigger>
       <SheetContent side="right">
         <nav className="flex flex-col gap-4">
-          <Link href="/about" className="text-lg">
+          <Link href="#about" className="text-lg">
             About Us
           </Link>
-          <Link href="/how-it-works" className="text-lg">
+          <Link href="#how-it-works" className="text-lg">
             How it Works
           </Link>
-          <Link href="/categories" className="text-lg">
+          <Link href="#categories" className="text-lg">
             Categories
           </Link>
-          <Link href="/why-join" className="text-lg">
+          <Link href="#why-join" className="text-lg">
             Why Join Us
           </Link>
-          <Button className="bg-[#0D6EFD] hover:bg-[#0b5ed7] text-white w-full">Join the Community</Button>
+          <Link href="https://chat.whatsapp.com/E9fDd3thS80Ko35yKtZljW" target="_blank">
+            <Button className="bg-[#0D6EFD] hover:bg-[#0b5ed7] text-white w-full">
+              Join the Community
+            </Button>
+          </Link>
         </nav>
       </SheetContent>
     </Sheet>
