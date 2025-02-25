@@ -23,7 +23,7 @@ export default function Home() {
         <Header />
       </section>
       <section className="relative">
-        <Image src="/ellipse2.svg" className="absolute -bottom-4 right-0 -z-10" width={200} height={200} alt="" />
+        <Image src="/ellipse2.svg" className="absolute -bottom-4 right-0 -z-10 md:w-80 md:h-auto" width={200} height={200} alt="" />
         <Image src="/shopping-cart.svg" className="absolute top-2 right-2 -z-10 sm:top-10 sm:right-4 md:right-16" width={40} height={40} alt="" />
         <Image src="/color-shop.svg" className="absolute bottom-16 left-10 -z-10 sm:left-30 md:left-56" width={40} height={40} alt="" />
         <Image src="/credit-card.svg" className="absolute bottom-16 right-10 -z-10 sm:right-56 md:right-72" width={40} height={40} alt="" />
