@@ -21,7 +21,7 @@ export default function HowItWorks() {
           <div className="bg-white rounded-3xl p-12 border-2 border-[#0A42B6]">
             <div className="flex justify-start mb-8">
               <div className="w-24 h-24 rounded-full border-2 border-[#0A42B6] flex items-center justify-center">
-                <Image src="/blue-bag.svg" width={50} height={50} alt="" />
+                <Image src="/page-vectors/blue-bag.svg" width={50} height={50} alt="" />
               </div>
             </div>
             <div className="text-left mb-6">
@@ -36,7 +36,7 @@ export default function HowItWorks() {
                 "Receive your item",
               ].map((step, index) => (
                 <li key={index} className="flex items-start gap-4">
-                  <Image src="/blue-radio-elem.svg" className="" width={18} height={18} alt="" />
+                  <Image src="/page-vectors/blue-radio-elem.svg" className="" width={18} height={18} alt="" />
                   <span className="text-gray-700">{step}</span>
                 </li>
               ))}
@@ -47,7 +47,7 @@ export default function HowItWorks() {
           <div className="bg-white rounded-3xl p-12 border-2 border-[#CBCBCB]">
             <div className="flex justify-left mb-6">
               <div className="w-24 h-24 rounded-full border-2 border-[#CBCBCB] flex items-center justify-center">
-              <Image src="/black-bag.svg" width={50} height={50} alt="" />
+              <Image src="/page-vectors/black-bag.svg" width={50} height={50} alt="" />
               </div>
             </div>
             <div className="text-left mb-8">
@@ -62,7 +62,7 @@ export default function HowItWorks() {
                 "Sell and grow your business",
               ].map((step, index) => (
                 <li key={index} className="flex items-start gap-4">
-                  <Image src="/black-radio-elem.svg" className="" width={18} height={18} alt="" />
+                  <Image src="/page-vectors/black-radio-elem.svg" className="" width={18} height={18} alt="" />
                   <span className="text-gray-700">{step}</span>
                 </li>
               ))}
