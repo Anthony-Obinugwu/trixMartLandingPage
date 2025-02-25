@@ -51,16 +51,16 @@ function AboutCardRow ({title, subHeader, cardText, isDirectionLeft}: AboutCardR
   return (
     <div className={`mb-20 sm:flex ${!isDirectionLeft && "flex-row-reverse"} sm:justify-between sm:items-center sm:gap-10 md:gap-28 md:px-8`}>
       <div className="mb-10">
-        <h3 className="font-bold text-2xl text-center mb-2 text-nowrap">{title}</h3>
-        <p className="text-center text-nowrap">{subHeader}</p>
+        <h3 className="font-bold text-2xl text-center mb-2 text-nowrap sm:text-3xl lg:text-4xl">{title}</h3>
+        <p className="text-center text-lg text-nowrap sm:text-xl">{subHeader}</p>
       </div>
-      <div className={`relative ${isDirectionLeft ? "bg-[#FFAD68]" : "bg-[#0A42B6]"} w-full rounded-2xl py-6 px-8 sm:max-w-[450px]`}>
-        <Image src={isDirectionLeft ? "/page-vectors/circles.svg" : "/page-vectors/grid-dots.svg"} className="absolute top-0 right-0" width={100} height={100} alt=""/>
+      <div className={`relative ${isDirectionLeft ? "bg-[#FFAD68]" : "bg-[#0A42B6]"} w-full rounded-3xl py-6 px-8 sm:max-w-[450px] lg:py-12 lg:max-w-[550px]`}>
+        <Image src={isDirectionLeft ? "/circles.svg" : "/grid-dots.svg"} className="absolute top-0 right-0" width={100} height={100} alt=""/>
         <div className="relative inline-block">
-          <Image src="/page-vectors/ellipse9.svg" width={60} height={60} alt=""/>
-          <Image src="/page-vectors/blue-meteocons-star.svg" className="absolute top-2 left-2" width={16} height={16} alt=""/>
-          <Image src="/page-vectors/blue-meteocons-star.svg" className="absolute bottom-2 right-2" width={16} height={16} alt=""/>
-          <Image src={ isDirectionLeft ? '/page-vectors/space-ship.svg':'/page-vectors/bixby-vision.svg'} className="absolute top-5 left-5" width={20} height={20} alt=""/>
+          <Image src="/ellipse9.svg" width={60} height={60} alt=""/>
+          <Image src="/blue-meteocons-star.svg" className="absolute top-2 left-2" width={16} height={16} alt=""/>
+          <Image src="/blue-meteocons-star.svg" className="absolute bottom-2 right-2" width={16} height={16} alt=""/>
+          <Image src={ isDirectionLeft ? '/space-ship.svg':'/bixby-vision.svg'} className="absolute top-5 left-5" width={20} height={20} alt=""/>
           
         </div>
         <p className={` ${isDirectionLeft ? "text-[#051650]" : "text-[#F1F1F1]" } mt-6`}>
