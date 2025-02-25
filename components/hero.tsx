@@ -20,7 +20,7 @@ export default function Hero() {
             <Image src="/page-vectors/vector-2.svg" className="absolute scale-110" width={110} height={50} alt="student-emphasis" />
             within
           </span>
-          the university
+          the university.
         </h1>
 
         <p className="text-base text-center text-[#1E1E1E] mb-10 max-w-[640px] mx-auto md:text-xl">
