@@ -5,12 +5,11 @@ export default function HowItWorks() {
     <section className="py-24">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold mb-4 relative inline-flex items-center">
-            <span className="absolute -left-8 text-3xl text-primary/40">[</span>
-            How the Community Works
-            <span className="absolute -right-8 text-3xl text-primary/40">]</span>
+          <h2 className="text-2xl md:text-4xl font-bold flex justify-center mb-4 sm:text-3xl">
+            <div className="relative bg-white px-9 py-1 before:content-[''] before:absolute before:-top-1 before:-left-1 before:w-9 before:h-6 before:bg-[#006ED3] before:-z-10 after:content-[''] after:absolute after:-bottom-1 after:-right-1 after:w-9 after:h-6 after:bg-[#006ED3] after:-z-10">How the Community Works</div>
           </h2>
-          <p className="text-xl mb-4">Step-by-Step Guide to be a part of our community</p>
+          <p className="font-light text-base text-center leading-8 mb-12 sm:text-lg sm:mb-20">Step-by-Step Guide to be a part of our community</p>
+
           <p className="text-gray-600 max-w-3xl mx-auto">
             On the Trix Mart Community there are buyers and sellers. You can choose to be either one or both
           </p>
