@@ -35,7 +35,7 @@ export default function Home() {
       </header>
 
       {/* Hero Section */}
-      <main className="container mx-auto px-4 py-12 md:py-24">
+      <main className="container mx-auto px-4 py-12 md:pt-8 pb-24">
         <div className="max-w-6xl mx-auto relative">
           {/* Decorative Elements */}
           <div className="absolute -left-20 top-0">

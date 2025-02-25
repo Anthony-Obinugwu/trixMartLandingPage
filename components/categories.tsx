@@ -7,7 +7,7 @@ import { cn } from "@/lib/utils"
 
 export default function Categories() {
   return (
-    <section className="py-24 bg-[#0A1128]" id="categories">
+    <section className="pt-8 pb-24 bg-[#0A1128]" id="categories">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-white mb-4 relative inline-flex items-center">

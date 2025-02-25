@@ -5,8 +5,8 @@ const montserrat = Montserrat({ subsets: ['latin'], weight: ['400', '700']})
 
 export default function Reviews() {
   return (
-    <section className={`py-24 ${montserrat.className}`}>
-      <section className="py-24 bg-gray-50">
+    <section className={`pt-8 pb-24 ${montserrat.className}`}>
+      {/* <section className="pt-8 pb-24 bg-gray-50"> */}
         <div className="container mx-auto px-4">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">Our Reviews</h2>
           {/* You can start editing from here */ /*=> bless*/}
@@ -32,7 +32,7 @@ export default function Reviews() {
           </div>
 
         </div>
-      </section>
+      {/* </section> */}
     </section>
   )
 }

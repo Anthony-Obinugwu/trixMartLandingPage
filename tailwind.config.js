@@ -47,8 +47,11 @@ module.exports = {
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
       },
+      fontFamily: {
+        montserrat: ["montserrat"],
+        marckscript: ["marck-script"],
+      },
     },
   },
   plugins: [require("tailwindcss-animate")],
-}
-
+};

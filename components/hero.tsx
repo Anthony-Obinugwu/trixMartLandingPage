@@ -1,8 +1,12 @@
 import { Button } from "@/components/ui/button"
+import Image from "next/image"
 
 export default function Hero() {
   return (
-    <main className="px-4 py-12 md:py-24 max-w-[1440px] mx-auto">
+    <main className="relative px-4 py-12 md:pt-8 pb-24 max-w-[1440px] mx-auto">
+      <Image src="/page-vectors/hero-image.png"
+                  className="hidden sm:inline-block sm:absolute sm:bottom-0 sm:right-0"
+                   width={210} height={50} alt="student-emphasis" />
       <div className="max-w-[1280px] mx-auto relative">
         <div className="relative z-10">
           <div className="text-center mb-8">
@@ -10,6 +14,9 @@ export default function Hero() {
               The
               <span className="relative inline-block mx-2">
                 <span className="relative z-10 text-[28px] marck-script-regular text-[#006ED3] leading-[120%]">
+                  <Image src="/page-vectors/vector-1.svg"
+                  className="absolute"
+                   width={110} height={50} alt="student-emphasis" />
                   student
                 </span>
               </span>
@@ -20,6 +27,9 @@ export default function Hero() {
               businesses
               <span className="relative inline-block mx-2">
                 <span className="relative z-10 text-[28px] marck-script-regular text-[#FF8B2A] leading-[120%]">
+                <Image src="/page-vectors/vector-2.svg"
+                  className="absolute"
+                   width={110} height={50} alt="student-emphasis" />
                   within
                 </span>
               </span>
