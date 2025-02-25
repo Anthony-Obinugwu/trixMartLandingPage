@@ -5,7 +5,7 @@ import Image from "next/image"
 export default function Hero() {
   return (
     <main className="font-montserrat relative px-4 py-12 md:pt-8 pb-24 max-w-[1440px] mx-auto">
-      <Image src="/hero-image.png" className="hidden sm:inline-block sm:absolute sm:bottom-0 sm:right-0 sm:-z-10" width={210} height={50} alt="student-emphasis" />
+      <Image src="/hero-image.png" className="hidden sm:inline-block sm:absolute sm:bottom-0 sm:right-0 sm:-z-10 lg:w-72 lg:h-auto" width={210} height={50} alt="student-emphasis" />
       <div className="max-w-[1280px] mx-auto mb-8">
         <h1 className="relative w-fit font-extralight text-[28px] text-center text-gray-900 mb-10 leading-[60px] mx-auto sm:text-3xl sm:leading-[80px] md:text-4xl md:leading-[80px]">
           <Image src="/trixmart-banner.svg" className="absolute -top-10 -z-10 sm:-top-6 sm:left-8 md:-top-8 md:w-36" width={120} height={200} alt="" />
@@ -15,7 +15,7 @@ export default function Hero() {
             <Image src="/vector-1.svg" className="absolute scale-110" width={150} height={50} alt="" />
             student
           </span>
-          marketplace where <br className="hidden sm:block lg:hidden" /> buyers shop,<br className="hidden lg:block" /> and sellers grow their <br className="hidden sm:block lg:hidden " /> businesses
+          marketplace where <br className="hidden sm:block lg:hidden" /> buyers shop,<br className="hidden lg:block" /> and sellers grow their <br className="hidden sm:block " /> businesses
           <span className="relative font-marckscript text-4xl inline-block leading-none mx-2 text-[#FF8B2A]">
             <Image src="/vector-2.svg" className="absolute scale-110" width={110} height={50} alt="" />
             within
