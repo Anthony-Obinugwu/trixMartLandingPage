@@ -38,9 +38,11 @@ export default function Header() {
           <a href="#why-join-us" className="text-sm text-gray-700 hover:text-gray-900" onClick={(e) => handleScroll(e, "why-join")}>
             Why Join Us
           </a>
-          <Button className="bg-[#006ED3] hover:bg-[#005bb0] text-white text-sm px-6 py-2">
-            Join the Community
-          </Button>
+          <Link href="https://chat.whatsapp.com/E9fDd3thS80Ko35yKtZljW">
+            <Button className="bg-[#006ED3] hover:bg-[#005bb0] text-white text-sm px-6 py-2">
+              Join the Community
+            </Button>
+          </Link>
         </nav>
         <MobileNav />
       </div>

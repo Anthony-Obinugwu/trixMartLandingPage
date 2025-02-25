@@ -24,7 +24,7 @@ export default function Home() {
       </section>
       <section className="relative">
         <Image src="/page-vectors/ellipse2.svg" className="absolute -bottom-4 right-0 -z-10" width={200} height={200} alt="" />
-        <Image src="/page-vectors/shopping-cart.svg" className="absolute top-2 right-2 -z-10 sm:top-10 sm:right-4 md:right-52" width={40} height={40} alt="" />
+        <Image src="/page-vectors/shopping-cart.svg" className="absolute top-2 right-2 -z-10 sm:top-10 sm:right-4 md:right-16" width={40} height={40} alt="" />
         <Image src="/page-vectors/color-shop.svg" className="absolute bottom-16 left-10 -z-10 sm:left-30 md:left-56" width={40} height={40} alt="" />
         <Image src="/page-vectors/credit-card.svg" className="absolute bottom-16 right-10 -z-10 sm:right-56 md:right-72" width={40} height={40} alt="" />
         <Image src="/page-vectors/vector-3.svg" className="absolute top-52 left-3 -z-10 sm:top-64 md:top-80 lg:left-40" width={100} height={100} alt="" />
