@@ -8,10 +8,10 @@ export default function WhyJoin() {
     <section className={`pt-8 pb-24 ${montserrat.className}`} id="why-join-us">
       <div className="container mx-auto px-4">
         
-        <h2 className="text-3xl md:text-4xl font-bold flex justify-center mb-4">
+        <h2 className="text-2xl md:text-4xl font-bold flex justify-center mb-4 sm:text-3xl">
           <div className="relative bg-white px-9 py-1 before:content-[''] before:absolute before:-top-1 before:-left-1 before:w-9 before:h-6 before:bg-[#006ED3] before:-z-10 after:content-[''] after:absolute after:-bottom-1 after:-right-1 after:w-9 after:h-6 after:bg-[#006ED3] after:-z-10">Why Join Us</div>
           </h2>
-          <p className="font-light text-base text-center leading-8 mb-12 sm:mb-20">What are the benefits of joining Trix Mart?</p>
+          <p className="font-light text-base text-center leading-8 mb-12 sm:text-lg sm:mb-20">What are the benefits of joining Trix Mart?</p>
         {/* You can start editing from here */}
         <div className="space-y-10 sm:space-y-32">
           {/* Benefits to Buyers */}
