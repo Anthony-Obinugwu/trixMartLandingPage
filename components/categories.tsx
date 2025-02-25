@@ -7,15 +7,15 @@ import { cn } from "@/lib/utils"
 
 export default function Categories() {
   return (
-    <section className="py-24 bg-[#0A1128]" id="categories">
+    <section className="pt-8 pb-24 bg-[#0A1128]" id="categories">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-white mb-4 relative inline-flex items-center">
+          <h2 className="text-2xl font-bold text-white mb-4 relative inline-flex items-center sm:text-3xl">
             <span className="absolute -left-8 text-3xl text-white/40">[</span>
             Product Categories
             <span className="absolute -right-8 text-3xl text-white/40">]</span>
           </h2>
-          <p className="text-lg text-white/90">
+          <p className="text-base text-white/90 sm:text-lg">
             Products & Services sold by <span className="font-medium">student sellers</span>
           </p>
         </div>
