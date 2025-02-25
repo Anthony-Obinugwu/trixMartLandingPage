@@ -14,7 +14,7 @@ export default function Footer() {
               height={60}
             />
             <p className="mt-4 text-sm text-gray-600">
-              The student marketplace where buyers shop, and sellers grow their businesses within the university
+              The student marketplace where buyers shop, and sellers grow their businesses within the university.
             </p>
           </div>
           <div>
