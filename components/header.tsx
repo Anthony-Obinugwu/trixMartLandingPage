@@ -14,7 +14,7 @@ export default function Header() {
   };
 
   return (
-    <header className="px-4 py-4 max-w-[1440px] mx-auto">
+    <header className="font-montserrat px-4 py-4 max-w-[1440px] mx-auto">
       <div className="flex items-center justify-between">
         <Link href="/" className="flex items-center space-x-2">
           <Image
@@ -25,7 +25,7 @@ export default function Header() {
             priority
           />
         </Link>
-        <nav className="hidden md:flex items-center gap-8">
+        <nav className="hidden md:flex items-center gap-4 lg:gap-8">
           <a href="#about" className="text-sm text-gray-700 hover:text-gray-900" onClick={(e) => handleScroll(e, "about")}>
             About Us
           </a>
