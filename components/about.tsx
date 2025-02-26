@@ -25,7 +25,7 @@ export default function About() {
                 for everyone.
               </p>
               <Link href="https://chat.whatsapp.com/E9fDd3thS80Ko35yKtZljW" target="_blank">
-                <Button variant="outline" className="px-8 py-5 mt-4 text-lg bg-[#006ED3] border-[#006ED3] text-white hover:bg-white hover:text-[#006ED3]">
+                <Button variant="outline" className="bg-[#006ED3] text-base text-white border-[#006ED3] px-8 py-6 mt-4 rounded-2xl hover:bg-white hover:text-[#006ED3]">
                   Join the Community
                 </Button>
               </Link>
