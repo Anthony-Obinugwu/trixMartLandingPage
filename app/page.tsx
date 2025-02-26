@@ -24,7 +24,7 @@ export default function Home() {
       </section>
       <section className="relative">
         <Image src="/page-vectors/hero-image.png" className="hidden sm:inline-block sm:absolute sm:bottom-0 sm:right-0 sm:-z-10" width={210} height={50} alt="student-emphasis" />
-        <Image src="/page-vectors/ellipse2.svg" className="absolute -bottom-4 right-0 -z-10" width={200} height={200} alt="" />
+        <Image src="/page-vectors/ellipse2.svg" className="absolute -bottom-4 right-0 -z-10 md:w-80 md:h-auto" width={200} height={200} alt="" />
         <Image src="/page-vectors/shopping-cart.svg" className="absolute top-2 right-2 -z-10 sm:top-10 sm:right-4 md:right-16" width={40} height={40} alt="" />
         <Image src="/page-vectors/color-shop.svg" className="absolute bottom-16 left-10 -z-10 sm:left-30 md:left-56" width={40} height={40} alt="" />
         <Image src="/page-vectors/credit-card.svg" className="absolute bottom-16 right-10 -z-10 sm:right-56 md:right-72" width={40} height={40} alt="" />
@@ -48,15 +48,15 @@ export default function Home() {
         <Categories />
       </section>
       <section id="why-join" className="relative">
-        <Image src="\page-vectors\shopping-cart.svg" className="absolute top-24 right-3 sm:right-10 -z-10" width={50} height={50} alt="" />
-        <Image src="\page-vectors\blue-meteocons-star.svg" className="absolute top-32 left-8 sm:top-40 md:left-20 -z-10" width={40} height={40} alt="" />
-        <Image src="\page-vectors\orange-meteocons-star.svg" className="absolute bottom-10 right-16 sm:bottom-10 -z-10" width={40} height={40} alt="" />
-        <Image src="\page-vectors\color-shop.svg" className="absolute bottom-10 left-1 sm:bottom-4 -z-10" width={60} height={60} alt="" />
+        <Image src="/page-vectors/shopping-cart.svg" className="absolute top-24 right-3 sm:right-10 -z-10" width={50} height={50} alt="" />
+        <Image src="/page-vectors/blue-meteocons-star.svg" className="absolute top-32 left-8 sm:top-40 md:left-20 -z-10" width={40} height={40} alt="" />
+        <Image src="/page-vectors/orange-meteocons-star.svg" className="absolute bottom-10 right-16 sm:bottom-10 -z-10" width={40} height={40} alt="" />
+        <Image src="/page-vectors/color-shop.svg" className="absolute bottom-10 left-1 sm:bottom-4 -z-10" width={60} height={60} alt="" />
         <WhyJoin />
       </section>
       <section id="reviews" className="relative">
-        <Image src="\page-vectors\ellipse7.svg" className="absolute top-0 left-0 -z-10" width={120} height={60} alt="" />
-        <Image src="\page-vectors\ellipse8.svg" className="absolute -bottom-10 right-0 -z-10" width={120} height={60} alt="" />
+        <Image src="/page-vectors/ellipse7.svg" className="absolute top-0 left-0 -z-10" width={120} height={60} alt="" />
+        <Image src="/page-vectors/ellipse8.svg" className="absolute -bottom-10 right-0 -z-10" width={120} height={60} alt="" />
         <Reviews />
       </section>
       <Footer />

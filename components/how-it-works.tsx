@@ -1,8 +1,9 @@
+import Image from "next/image"
 import { ShoppingBag } from "lucide-react"
 
 export default function HowItWorks() {
   return (
-    <section className="py-24">
+    <section className="font-montserrat py-24">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-2xl md:text-4xl font-bold flex justify-center mb-4 sm:text-3xl">
@@ -17,14 +18,14 @@ export default function HowItWorks() {
 
         <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
           {/* Student Buyer Card */}
-          <div className="bg-white rounded-3xl p-8 shadow-lg">
-            <div className="flex justify-center mb-8">
-              <div className="w-24 h-24 rounded-full bg-primary/10 flex items-center justify-center">
-                <ShoppingBag className="w-12 h-12 text-primary" />
+          <div className="bg-white rounded-3xl p-12 border-2 border-[#0A42B6]">
+            <div className="flex justify-start mb-8">
+              <div className="w-24 h-24 rounded-full border-2 border-[#0A42B6] flex items-center justify-center">
+                <Image src="/page-vectors/blue-bag.svg" width={50} height={50} alt="" />
               </div>
             </div>
-            <div className="text-center mb-8">
-              <p className="text-gray-600 mb-2">How to join as a</p>
+            <div className="text-left mb-6">
+              <p className="text-xl text-[#1E1E1E] mb-2">How to join as a</p>
               <h3 className="text-3xl font-bold text-primary">Student Buyer</h3>
             </div>
             <ul className="space-y-6">
@@ -35,7 +36,7 @@ export default function HowItWorks() {
                 "Receive your item",
               ].map((step, index) => (
                 <li key={index} className="flex items-start gap-4">
-                  <div className="w-3 h-3 rounded-full bg-primary mt-1.5 flex-shrink-0" />
+                  <Image src="/page-vectors/blue-radio-elem.svg" className="" width={18} height={18} alt="" />
                   <span className="text-gray-700">{step}</span>
                 </li>
               ))}
@@ -43,13 +44,13 @@ export default function HowItWorks() {
           </div>
 
           {/* Student Seller Card */}
-          <div className="bg-white rounded-3xl p-8 shadow-lg">
-            <div className="flex justify-center mb-8">
-              <div className="w-24 h-24 rounded-full bg-gray-100 flex items-center justify-center">
-                <ShoppingBag className="w-12 h-12 text-gray-900" />
+          <div className="bg-white rounded-3xl p-12 border-2 border-[#CBCBCB]">
+            <div className="flex justify-left mb-6">
+              <div className="w-24 h-24 rounded-full border-2 border-[#CBCBCB] flex items-center justify-center">
+              <Image src="/page-vectors/black-bag.svg" width={50} height={50} alt="" />
               </div>
             </div>
-            <div className="text-center mb-8">
+            <div className="text-left mb-8">
               <p className="text-gray-600 mb-2">How to join as a</p>
               <h3 className="text-3xl font-bold">Student Seller</h3>
             </div>
@@ -61,7 +62,7 @@ export default function HowItWorks() {
                 "Sell and grow your business",
               ].map((step, index) => (
                 <li key={index} className="flex items-start gap-4">
-                  <div className="w-3 h-3 rounded-full bg-gray-900 mt-1.5 flex-shrink-0" />
+                  <Image src="/page-vectors/black-radio-elem.svg" className="" width={18} height={18} alt="" />
                   <span className="text-gray-700">{step}</span>
                 </li>
               ))}
