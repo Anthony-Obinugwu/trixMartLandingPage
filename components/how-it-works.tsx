@@ -18,9 +18,9 @@ export default function HowItWorks() {
 
         <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
           {/* Student Buyer Card */}
-          <div className="bg-white rounded-3xl p-12 border-2 border-[#0A42B6]">
+          <div className="group bg-white rounded-3xl p-12 border-2 border-[#CBCBCB] hover:border-[#0A42B6]">
             <div className="flex justify-start mb-8">
-              <div className="w-24 h-24 rounded-full border-2 border-[#0A42B6] flex items-center justify-center">
+              <div className="w-24 h-24 rounded-full border-2 border-[#CBCBCB] flex items-center justify-center group-hover:border-[#0A42B6]">
                 <Image src="/page-vectors/blue-bag.svg" width={50} height={50} alt="" />
               </div>
             </div>
@@ -44,9 +44,9 @@ export default function HowItWorks() {
           </div>
 
           {/* Student Seller Card */}
-          <div className="bg-white rounded-3xl p-12 border-2 border-[#CBCBCB]">
+          <div className="group bg-white rounded-3xl p-12 border-2 border-[#CBCBCB] hover:border-black">
             <div className="flex justify-left mb-6">
-              <div className="w-24 h-24 rounded-full border-2 border-[#CBCBCB] flex items-center justify-center">
+              <div className="w-24 h-24 rounded-full border-2 border-[#CBCBCB] flex items-center justify-center group-hover:border-black">
               <Image src="/page-vectors/black-bag.svg" width={50} height={50} alt="" />
               </div>
             </div>

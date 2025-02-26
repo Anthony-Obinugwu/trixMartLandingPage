@@ -10,13 +10,13 @@ export default function Hero() {
           <Image src="/page-vectors/trixmart-banner.svg" className="absolute -top-10 -z-10 sm:-top-6 sm:left-8 md:-top-8 md:w-36" width={120} height={200} alt="" />
           <Image src="/page-vectors/shopping-bags.svg" className="absolute -top-10 right-20 -z-10 sm:-top-6 sm:right-40" width={40} height={40} alt="" />
           The
-          <span className="relative font-marckscript text-4xl inline-block leading-none mx-2 text-[#006ED3]">
-            <Image src="/page-vectors/vector-1.svg" className="absolute scale-110" width={150} height={50} alt="" />
+          <span className="relative font-marckscript text-4xl inline-block leading-none mx-2 text-[#006ED3] md:text-5xl md:mx-3">
+            <Image src="/page-vectors/vector-1.svg" className="absolute scale-110" width={150} height={100} alt="" />
             student
           </span>
           marketplace where <br className="hidden sm:block" /> buyers shop,<br className="hidden" /> and sellers grow their <br className="hidden sm:block " /> businesses
-          <span className="relative font-marckscript text-4xl inline-block leading-none mx-2 text-[#FF8B2A]">
-            <Image src="/page-vectors/vector-2.svg" className="absolute scale-110" width={110} height={50} alt="" />
+          <span className="relative font-marckscript text-4xl inline-block leading-none mx-2 text-[#FF8B2A] md:text-5xl md:mx-3">
+            <Image src="/page-vectors/vector-2.svg" className="absolute scale-110" width={150} height={100} alt="" />
             within
           </span>
           the university.
