@@ -86,16 +86,16 @@ function CategoryCard({ title, image, items = [], defaultExpanded = false }: Cat
   const [isExpanded, setIsExpanded] = useState(defaultExpanded)
 
   return (
-    <div className="relative rounded-2xl overflow-hidden">
-      <div className="relative h-[200px]"> {/* Adjusted height */}
+    <div className="relative rounded-[25px] overflow-hidden" style={{ width: '724px', height: '273px' }}>
+      <div className="relative h-full"> {/* Adjusted height */}
         <Image
           src={image || "/food.png"}
           alt={title}
-          width={600}
-          height={200} 
+          width={724}
+          height={273} 
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent">
+        <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent flex items-center justify-center">
           <div className="absolute bottom-0 left-0 right-0 p-8">
             <div className="flex justify-between items-center">
               <h3 className="text-2xl font-medium text-white">{title}</h3>
@@ -115,7 +115,7 @@ function CategoryCard({ title, image, items = [], defaultExpanded = false }: Cat
           isExpanded ? "max-h-[150px] mt-6 opacity-100 overflow-y-auto" : "max-h-0 opacity-0", // Adjusted max height and added overflow-y-auto
         )}
       >
-        <ul className="space-y-3 text-white/90 text-lg p-8 bg-[#0A1128] rounded-b-2xl">
+        <ul className="space-y-3 text-white/90 text-lg p-8 bg-[#0A1128] rounded-b-[25px]">
           {items.map((item, index) => (
             <li key={index} className="flex items-center gap-3">
               <div className="w-2 h-2 bg-white rounded-full flex-shrink-0" />
