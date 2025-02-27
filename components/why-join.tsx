@@ -40,7 +40,7 @@ interface BenefitsProps{
 function BenefitsCard({isDirectionLeft=false, benefactor, benefitsList}: BenefitsProps){
   return (
     <div className="relative px-10 sm:static sm:px-0">
-          <div className={`${isDirectionLeft ? "bg-[#FF8B2A1F]" : "bg-[#006ED30D]"} h-[400px] mx-auto px-6 rounded-xl sm:relative sm:flex sm:items-center  ${isDirectionLeft ? "sm:justify-start" : "sm:justify-end"} sm:px-6 sm:h-44 md:px-10 lg:h-52`}>
+          <div className={`${isDirectionLeft ? "bg-[#FF8B2A1F]" : "bg-[#006ED30D]"} h-[450px] mx-auto px-6 rounded-xl sm:relative sm:flex sm:items-center  ${isDirectionLeft ? "sm:justify-start" : "sm:justify-end"} sm:px-6 sm:h-44 md:px-10 lg:h-52`}>
             <h3 className="text-center font-bold text-xl py-6 sm:text-left lg:text-2xl">
                 <span className="font-normal text-sm lg:text-base">Benefits </span>
                 <br className=""/>

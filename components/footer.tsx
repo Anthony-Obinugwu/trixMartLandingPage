@@ -32,19 +32,19 @@ export default function Footer() {
           <div className="lg:col-span-1">
             <h3 className="text-base font-semibold text-[#F1F1F1CF] mb-4">Quick Links</h3>
             <nav className="flex flex-col gap-3">
-              <Link href="/about" className="text-[#CFD3D7] text-xs text-nowrap hover:text-white transition-colors">
+              <Link href="#about" className="text-[#CFD3D7] text-xs text-nowrap hover:text-white transition-colors">
                 About Us
               </Link>
-              <Link href="/how-it-works" className="text-[#CFD3D7] text-xs text-nowrap hover:text-white transition-colors">
+              <Link href="#how-it-works" className="text-[#CFD3D7] text-xs text-nowrap hover:text-white transition-colors">
                 How Trix Mart works
               </Link>
-              <Link href="/categories" className="text-[#CFD3D7] text-xs text-nowrap hover:text-white transition-colors">
+              <Link href="#categories" className="text-[#CFD3D7] text-xs text-nowrap hover:text-white transition-colors">
                 Product Categories
               </Link>
-              <Link href="/why-join" className="text-[#CFD3D7] text-xs text-nowrap hover:text-white transition-colors">
+              <Link href="#why-join" className="text-[#CFD3D7] text-xs text-nowrap hover:text-white transition-colors">
                 Why Join Us
               </Link>
-              <Link href="/community" className="text-[#CFD3D7] text-xs text-nowrap hover:text-white transition-colors">
+              <Link href="https://chat.whatsapp.com/E9fDd3thS80Ko35yKtZljW" target="_blank" className="text-[#CFD3D7] text-xs text-nowrap hover:text-white transition-colors">
                 Join the Community
               </Link>
             </nav>
@@ -57,7 +57,9 @@ export default function Footer() {
               <a href="mailto:trixmartng@gmail.com" className="text-[#CFD3D7] text-xs text-nowrap hover:text-white transition-colors">
                 trixmartng@gmail.com
               </a>
-              <p className="text-[#CFD3D7] text-xs text-nowrap">+234 - 0903 - 096 - 5445</p>
+              <a href="tel:+23409030965445" className="text-[#CFD3D7] text-xs text-nowrap hover:text-white transition-colors">
+                +234 - 0903 - 096 - 5445
+              </a>
             </div>
           </div>
 
@@ -87,7 +89,7 @@ export default function Footer() {
                     type="email"
                     id="email"
                     placeholder="Enter Your Email"
-                    className="bg-[#F1F1F14A] text-xs text-nowrap text-[#77808B] border-none placeholder:text-[#CFD3D7]"
+                    className="bg-[#F1F1F14A] text-xs text-nowrap text-white border-none placeholder:text-[#CFD3D7]"
                   /><Button type="submit" className="bg-[#FF8B2A] flex-1 hover:bg-[#e67a1f] text-white">Subscribe</Button>
                 </div>
    

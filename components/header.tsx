@@ -26,17 +26,21 @@ export default function Header() {
           />
         </Link>
         <nav className="hidden md:flex items-center gap-4 lg:gap-8">
-          <a href="#about" className="text-sm text-gray-700 hover:text-gray-900" onClick={(e) => handleScroll(e, "about")}>
+          <a href="#about" className="relative group text-sm text-gray-700 hover:text-gray-900" onClick={(e) => handleScroll(e, "about")}>
             About Us
+            <div className="opacity-0 absolute w-full h-1 bg-[#FF8B2A] rounded-full -bottom-2 transition-opacity duration-100 sm:group-hover:opacity-100"></div>
           </a>
-          <a href="#how-it-works" className="text-sm text-gray-700 hover:text-gray-900" onClick={(e) => handleScroll(e, "how-it-works")}>
+          <a href="#how-it-works" className="relative group text-sm text-gray-700 hover:text-gray-900" onClick={(e) => handleScroll(e, "how-it-works")}>
             How it Works
+            <div className="opacity-0 absolute w-full h-1 bg-[#FF8B2A] rounded-full -bottom-2 transition-opacity duration-100 sm:group-hover:opacity-100"></div>
           </a>
-          <a href="#categories" className="text-sm text-gray-700 hover:text-gray-900" onClick={(e) => handleScroll(e, "categories")}>
+          <a href="#categories" className="relative group text-sm text-gray-700 hover:text-gray-900" onClick={(e) => handleScroll(e, "categories")}>
             Categories
+            <div className="opacity-0 absolute w-full h-1 bg-[#FF8B2A] rounded-full -bottom-2 transition-opacity duration-100 sm:group-hover:opacity-100"></div>
           </a>
-          <a href="#why-join-us" className="text-sm text-gray-700 hover:text-gray-900" onClick={(e) => handleScroll(e, "why-join")}>
+          <a href="#why-join-us" className="relative group text-sm text-gray-700 hover:text-gray-900" onClick={(e) => handleScroll(e, "why-join")}>
             Why Join Us
+            <div className="opacity-0 absolute w-full h-1 bg-[#FF8B2A] rounded-full -bottom-2 transition-opacity duration-100 sm:group-hover:opacity-100"></div>
           </a>
           <Link href="https://chat.whatsapp.com/E9fDd3thS80Ko35yKtZljW" target="_blank">
             <Button className="bg-[#006ED3] hover:bg-[#005bb0] text-white text-sm px-6 py-2">
