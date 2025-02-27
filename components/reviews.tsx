@@ -138,6 +138,8 @@ export default function Reviews() {
           </div>
 
         </div>
+
+        <script src="./"></script>
       {/* </section> */}
     </section>
   )
