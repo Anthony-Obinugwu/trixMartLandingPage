@@ -40,7 +40,7 @@ interface BenefitsProps{
 function BenefitsCard({isDirectionLeft=false, benefactor, benefitsList}: BenefitsProps){
   return (
     <div className="relative px-10 sm:static sm:px-0">
-          <div className={`${isDirectionLeft ? "bg-[#FF8B2A1F]" : "bg-[#006ED30D]"} h-[400px] mx-auto px-6 rounded-xl sm:relative sm:flex sm:items-center  ${isDirectionLeft ? "sm:justify-start" : "sm:justify-end"} sm:px-6 sm:h-44 md:px-10`}>
+          <div className={`${isDirectionLeft ? "bg-[#FF8B2A1F]" : "bg-[#006ED30D]"} h-[400px] mx-auto px-6 rounded-xl sm:relative sm:flex sm:items-center  ${isDirectionLeft ? "sm:justify-start" : "sm:justify-end"} sm:px-6 sm:h-44 md:px-10 lg:h-52`}>
             <h3 className="text-center font-bold text-xl py-6 sm:text-left lg:text-2xl">
                 <span className="font-normal text-sm lg:text-base">Benefits </span>
                 <br className=""/>
@@ -49,7 +49,7 @@ function BenefitsCard({isDirectionLeft=false, benefactor, benefitsList}: Benefit
 
             <div className={`absolute left-0 right-0 top-28 flex flex-col gap-y-6 sm:max-w-96 sm:top-auto  ${ isDirectionLeft ? "sm:left-auto sm:right-10" : "sm:right-auto sm:left-10" } md:max-w-none lg:min-w-[550px]`}>
               {benefitsList.map((benefit, index)=>(
-                <div key={index} className={` ${isDirectionLeft ? "bg-[#FFAD68]" : "bg-[#0A42B6]"} flex items-center py-4 px-4 rounded-xl`}>
+                <div key={index} className={` ${isDirectionLeft ? "bg-[#FFAD68]" : "bg-[#0A42B6]"} flex items-center py-6 px-4 rounded-xl`}>
                   <Image src={`${isDirectionLeft ? "icons/dark-check-mark.svg" : "icons/light-check-mark.svg"}`} className="mr-4" width={25} height={25} alt="checkmark" />
                   <p className={`text-sm ${isDirectionLeft ? "text-[#051650]" : "text-[#F1F1F1]"}`}>{benefit}</p>
               </div>
