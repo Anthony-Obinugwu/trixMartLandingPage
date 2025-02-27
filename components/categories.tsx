@@ -107,7 +107,7 @@ function CategoryCard({ title, image, items = [], defaultExpanded = false }: Cat
           isExpanded ? "max-h-96" : "max-h-0 mt-0", // Original max height and added overflow-y-auto
         )}
       >
-        <ul className="space-y-6 text-white/90 text-lg pt-12 pb-8 px-8 bg-[#F1F1F138] ">
+        <ul className="space-y-6 text-white text-sm pt-12 pb-8 px-8 bg-[#F1F1F138] sm:text-base">
           {items.map((item, index) => (
             <li key={index} className="flex items-center gap-3">
               {/* <div className="w-2 h-2 bg-white rounded-full flex-shrink-0" /> */}
