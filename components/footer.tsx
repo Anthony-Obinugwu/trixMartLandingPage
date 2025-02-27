@@ -1,61 +1,127 @@
+"use client"
+
+import type React from "react"
 import Image from "next/image"
 import Link from "next/link"
+import { Input } from "@/components/ui/input"
+import { Button } from "@/components/ui/button"
 
 export default function Footer() {
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault()
+    // Add newsletter subscription logic here
+  }
+
   return (
-    <footer className="bg-white border-t">
-      <div className="container mx-auto px-4 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-          <div>
+    <footer className="font-montserrat bg-[#051650] text-white">
+      <div className="container mx-auto px-4 py-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[2fr_1fr_1fr_1fr_3fr] gap-6 mb-16">
+          {/* Logo and Description */}
+          <div className="lg:col-span-1">
             <Image
-              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-emCkCQ4bjWWLZMSnDxqvmzbzxbIu3C.png"
+              src="/white-trixmart-logo.png"
               alt="Trix Mart Logo"
               width={120}
               height={60}
+              className="mb-4"
             />
-            <p className="mt-4 text-sm text-gray-600">
-              The student marketplace where buyers shop, and sellers grow their businesses within the university.
-            </p>
+            <p className="text-[#CFD3D7] text-xs text-nowrap">Connecting Buyers, Growing <br className="hidden lg:inline-block" /> Student Businesses.</p>
           </div>
-          <div>
-            <h3 className="font-semibold mb-4">Quick Links</h3>
-            <nav className="flex flex-col gap-2">
-              <Link href="/about" className="text-sm text-gray-600 hover:text-gray-900">
+
+          {/* Quick Links */}
+          <div className="lg:col-span-1">
+            <h3 className="text-base font-semibold text-[#F1F1F1CF] mb-4">Quick Links</h3>
+            <nav className="flex flex-col gap-3">
+              <Link href="#about" className="text-[#CFD3D7] text-xs text-nowrap hover:text-white transition-colors">
                 About Us
               </Link>
-              <Link href="/how-it-works" className="text-sm text-gray-600 hover:text-gray-900">
-                How it Works
+              <Link href="#how-it-works" className="text-[#CFD3D7] text-xs text-nowrap hover:text-white transition-colors">
+                How Trix Mart works
               </Link>
-              <Link href="/categories" className="text-sm text-gray-600 hover:text-gray-900">
-                Categories
+              <Link href="#categories" className="text-[#CFD3D7] text-xs text-nowrap hover:text-white transition-colors">
+                Product Categories
               </Link>
-            </nav>
-          </div>
-          <div>
-            <h3 className="font-semibold mb-4">Community</h3>
-            <nav className="flex flex-col gap-2">
-              <Link href="/why-join" className="text-sm text-gray-600 hover:text-gray-900">
+              <Link href="#why-join" className="text-[#CFD3D7] text-xs text-nowrap hover:text-white transition-colors">
                 Why Join Us
               </Link>
-              <Link href="/reviews" className="text-sm text-gray-600 hover:text-gray-900">
-                Reviews
+              <Link href="https://chat.whatsapp.com/E9fDd3thS80Ko35yKtZljW" target="_blank" className="text-[#CFD3D7] text-xs text-nowrap hover:text-white transition-colors">
+                Join the Community
               </Link>
             </nav>
           </div>
-          <div>
-            <h3 className="font-semibold mb-4">Legal</h3>
-            <nav className="flex flex-col gap-2">
-              <Link href="/privacy" className="text-sm text-gray-600 hover:text-gray-900">
+
+          {/* Contact Info */}
+          <div className="lg:col-span-1">
+            <h3 className="text-base font-semibold text-[#F1F1F1CF] mb-4">Contact Info</h3>
+            <div className="flex flex-col gap-3">
+              <a href="mailto:trixmartng@gmail.com" className="text-[#CFD3D7] text-xs text-nowrap hover:text-white transition-colors">
+                trixmartng@gmail.com
+              </a>
+              <a href="tel:+23409030965445" className="text-[#CFD3D7] text-xs text-nowrap hover:text-white transition-colors">
+                +234 - 0903 - 096 - 5445
+              </a>
+            </div>
+          </div>
+
+          {/* Legal Info */}
+          <div className="lg:col-span-1">
+            <h3 className="text-base font-semibold text-[#F1F1F1CF] mb-4">Legal Info</h3>
+            <nav className="flex flex-col gap-3">
+              <Link href="/privacy" className="text-[#CFD3D7] text-xs text-nowrap hover:text-white transition-colors">
                 Privacy Policy
               </Link>
-              <Link href="/terms" className="text-sm text-gray-600 hover:text-gray-900">
+              <Link href="/terms" className="text-[#CFD3D7] text-xs text-nowrap hover:text-white transition-colors">
                 Terms of Service
               </Link>
             </nav>
           </div>
+
+          {/* Newsletter */}
+          <div className="lg:col-span-1">
+            <h3 className="text-base font-semibold text-[#F1F1F1CF] mb-4">Join a Newsletter</h3>
+            <form onSubmit={handleSubmit}>
+              <div className="space-y-2" >
+                <label htmlFor="email" className="text-xs text-nowrap text-[#CFD3D7]">
+                  Your Email
+                </label>
+                <div className="flex space-x-4 max-w-[450px]">
+                  <Input
+                    type="email"
+                    id="email"
+                    placeholder="Enter Your Email"
+                    className="bg-[#F1F1F14A] text-xs text-nowrap text-white border-none placeholder:text-[#CFD3D7]"
+                  /><Button type="submit" className="bg-[#FF8B2A] flex-1 hover:bg-[#e67a1f] text-white">Subscribe</Button>
+                </div>
+   
+              </div>
+              
+              <div className="flex gap-4 mt-6">
+                <Link
+                  href="#"
+                  className="w-10 h-10 rounded-full bg-[#F1F1F1CF] font-bold flex items-center justify-center hover:bg-white/20 transition-colors"
+                >
+                  Dr
+                </Link>
+                <Link
+                  href="#"
+                  className="w-10 h-10 rounded-full bg-[#F1F1F1CF] font-bold flex items-center justify-center hover:bg-white/20 transition-colors"
+                >
+                  Be
+                </Link>
+                <Link
+                  href="#"
+                  className="w-10 h-10 rounded-full bg-[#F1F1F1CF] font-bold flex items-center justify-center hover:bg-white/20 transition-colors"
+                >
+                  Ig
+                </Link>
+              </div>
+            </form>
+          </div>
         </div>
-        <div className="mt-12 pt-8 border-t text-center text-sm text-gray-600">
-          © {new Date().getFullYear()} Trix Mart. All rights reserved.
+
+        {/* Copyright */}
+        <div className="pt-8 border-t border-[#F1F1F1CF] text-center text-[#CFD3D7] text-xs text-nowrap">
+          <p>Copyright © Trix Solutions 2025. All Rights Reserved</p>
         </div>
       </div>
     </footer>
