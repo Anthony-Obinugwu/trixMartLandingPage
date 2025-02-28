@@ -11,7 +11,7 @@ export default function HowItWorks() {
           </h2>
           <p className="font-light text-base text-center leading-8 mb-6 sm:text-lg">Step-by-Step Guide to be a part of our community</p>
 
-          <p className="text-gray-600 inline-block mx-auto w-full text-nowrap text-ellipsis overflow-hidden">
+          <p className="text-gray-600 inline-block mx-auto">
           On the Trix Mart Community, all student buyers are welcome, but for now, only Nile University Students can sell.
           </p>
         </div>

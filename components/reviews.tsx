@@ -64,7 +64,7 @@ export default function Reviews() {
                 {reviewsArr.map((review, index) => (
 
                   <CarouselItem key={index} className="pl-1 sm:basis-1/2 lg:basis-1/3">
-                      <div className="p-1 w-full h-full hover:bg-gradient-to-br from-[#006ED3] to-[#FF8B2A] rounded-2xl ">
+                      <div className="p-1 w-full h-full hover:bg-[linear-gradient(155deg,#006ED3_30%,#FF8B2A)] rounded-2xl ">
                         <div className="bg-white mb-10 py-10 px-8 rounded-xl mx-auto border-2 border-gray-300 h-full hover:border-0">
                           <div className="flex items-center space-x-4 mb-6">
                             <div className="relative">
