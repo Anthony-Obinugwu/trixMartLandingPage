@@ -2,7 +2,7 @@ import Image from "next/image"
 
 export default function WhyJoin() {
   return (
-    <section className="font-montserrat pt-8 pb-24" id="why-join-us">
+    <section className="font-montserrat pt-8 pb-16" id="why-join-us">
       <div className="container mx-auto px-4">
         
         <h2 className="text-2xl md:text-4xl font-bold flex justify-center mb-4 sm:text-3xl">

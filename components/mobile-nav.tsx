@@ -16,17 +16,17 @@ export default function MobileNav() {
         </Button>
       </SheetTrigger>
       <SheetContent side="right">
-        <nav className="flex flex-col gap-4">
-          <Link href="#about" className="text-lg">
+        <nav className="flex flex-col gap-4 font-montserrat">
+          <Link href="#about" className="text-base">
             About Us
           </Link>
-          <Link href="#how-it-works" className="text-lg">
+          <Link href="#how-it-works" className="text-base">
             How it Works
           </Link>
-          <Link href="#categories" className="text-lg">
+          <Link href="#categories" className="text-base">
             Categories
           </Link>
-          <Link href="#why-join" className="text-lg">
+          <Link href="#why-join" className="text-base">
             Why Join Us
           </Link>
           <Link href="https://chat.whatsapp.com/E9fDd3thS80Ko35yKtZljW" target="_blank">
