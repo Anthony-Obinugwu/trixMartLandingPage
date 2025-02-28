@@ -1,9 +1,6 @@
 import Image from "next/image"
-import { Montserrat } from 'next/font/google'
 import { Card, CardContent } from "@/components/ui/card"
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel"
-
-const montserrat = Montserrat({ subsets: ['latin'], weight: ['400', '700']})
 
 const reviewsArr = [
     {
