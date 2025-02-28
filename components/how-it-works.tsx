@@ -12,7 +12,7 @@ export default function HowItWorks() {
           <p className="font-light text-base text-center leading-8 mb-12 sm:text-lg sm:mb-20">Step-by-Step Guide to be a part of our community</p>
 
           <p className="text-gray-600 max-w-3xl mx-auto">
-            On the Trix Mart Community there are buyers and sellers. You can choose to be either one or both
+          On the Trix Mart Community, all student buyers are welcome, but for now, only Nile University Students can sell.
           </p>
         </div>
 

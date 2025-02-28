@@ -11,18 +11,11 @@ export default function About() {
         </h2>
         <p className="font-light text-base text-center leading-8 mb-12 sm:text-lg sm:mb-20">Who are we and what do we stand for?</p>
         {/* You can start editing from here */}
-        <div className="sm:flex sm:flex-row-reverse sm:justify-between sm:items-start sm:gap-x-10 md:px-12 md:gap-x-20 lg:gap-48">
-          <div className="font-bold text-[#006ED3] text-2xl text-center my-8 lg:text-nowrap">
-          Hmm...What else?
-          </div>
+        <div className="sm:flex sm:flex-row sm:justify-between sm:items-start sm:gap-x-10 md:px-12 md:gap-x-20 lg:gap-48">
+          
           <div id="paragraph-and-button" className="flex flex-col items-center mb-16 sm:items-start">
               <p className="text-base text-center leading-8 sm:text-left lg:leading-10">
-                <span className="font-bold text-[#006ED3]">Trix Mart</span> (Nile Market) is a student marketplace
-                that connects buyers with student businesses on campus.
-                It’s the best place to find affordable products and
-                services while supporting student entrepreneurs. Whether
-                you're buying or selling, Trix Mart makes it easy and convenient
-                for everyone.
+                <span className="font-bold text-[#006ED3]">Trix Mart</span> (Nile Market)  is a student marketplace that connects buyers with student businesses on campus. It’s the best place to find affordable products and services while supporting student entrepreneurs. Whether you're buying or selling, Trix Mart makes it easy and convenient for everyone. For Now, only Nile University Students can sell on the platform but all student buyers are welcome
               </p>
               <Link href="https://chat.whatsapp.com/E9fDd3thS80Ko35yKtZljW" target="_blank">
                 <Button variant="outline" className="bg-[#006ED3] text-base text-white border-[#006ED3] px-8 py-6 mt-4 rounded-2xl hover:bg-white hover:text-[#006ED3]">
@@ -30,10 +23,13 @@ export default function About() {
                 </Button>
               </Link>
           </div>
+          <div className="font-bold text-[#006ED3] text-2xl text-center my-8 lg:text-nowrap">
+          Hmm...What else?
+          </div>
         </div>
         <div id="" className="space-y-20">
           <AboutCardRow title="Our Mission" subHeader="What is our purpose?" isDirectionLeft={true}  cardText="To help student businesses grow while making it easy for buyers to find what they need at affordable prices."/>
-          <AboutCardRow title="Our Vision" subHeader="What is our goal?" isDirectionLeft={false}  cardText="To help student businesses grow while making it easy for buyers to find what they need at affordable prices."/>
+          <AboutCardRow title="Our Vision" subHeader="What is our goal?" isDirectionLeft={false}  cardText="To be the top marketplace for universities, encouraging collaboration, entrepreneurship, and redefining campus commerce."/>
         </div>
       </div>
     </section>
