@@ -26,7 +26,7 @@ export default function Home() {
         <Image src="/page-vectors/hero-image.png" className="hidden sm:inline-block sm:absolute sm:bottom-0 sm:right-0 sm:-z-10 md:w-60 lg:w-72" width={200} height={400} alt="student-emphasis" />
         <Image src="/page-vectors/ellipse2.svg" className="absolute -bottom-4 right-0 -z-20 md:w-80 md:h-auto" width={200} height={200} alt="" />
         <Image src="/page-vectors/shopping-cart.svg" className="absolute top-2 right-2 -z-10 sm:top-10 sm:right-4 md:right-16" width={40} height={40} alt="" />
-        <Image src="/page-vectors/color-shop.svg" className="absolute bottom-16 left-10 -z-10 sm:left-30 md:left-56" width={40} height={40} alt="" />
+        <Image src="/page-vectors/color-shop.svg" className="absolute bottom-12 left-10 -z-10 sm:left-30 md:left-56" width={40} height={40} alt="" />
         <Image src="/page-vectors/credit-card.svg" className="absolute bottom-16 right-10 -z-10 sm:right-56 md:right-72" width={40} height={40} alt="" />
         <Hero />
       </section>

@@ -9,9 +9,9 @@ export default function HowItWorks() {
           <h2 className="text-2xl md:text-4xl font-bold flex justify-center mb-4 sm:text-3xl">
             <div className="relative bg-white px-9 py-1 before:content-[''] before:absolute before:-top-1 before:-left-1 before:w-9 before:h-6 before:bg-[#006ED3] before:-z-10 after:content-[''] after:absolute after:-bottom-1 after:-right-1 after:w-9 after:h-6 after:bg-[#006ED3] after:-z-10">How the Community Works</div>
           </h2>
-          <p className="font-light text-base text-center leading-8 mb-12 sm:text-lg sm:mb-20">Step-by-Step Guide to be a part of our community</p>
+          <p className="font-light text-base text-center leading-8 mb-6 sm:text-lg">Step-by-Step Guide to be a part of our community</p>
 
-          <p className="text-gray-600 max-w-3xl mx-auto">
+          <p className="text-gray-600 inline-block mx-auto">
           On the Trix Mart Community, all student buyers are welcome, but for now, only Nile University Students can sell.
           </p>
         </div>
@@ -21,12 +21,13 @@ export default function HowItWorks() {
           <div className="group bg-white rounded-3xl p-12 border-2 border-[#CBCBCB] hover:border-[#0A42B6]">
             <div className="flex justify-start mb-8">
               <div className="w-24 h-24 rounded-full border-2 border-[#CBCBCB] flex items-center justify-center group-hover:border-[#0A42B6]">
-                <Image src="/page-vectors/blue-bag.svg" width={50} height={50} alt="" />
+                <Image src="/icons/black-bag.svg" className="group-hover:hidden" width={50} height={50} alt="" />
+                <Image src="/icons/blue-bag.svg" className="hidden group-hover:inline-block" width={50} height={50} alt="" />
               </div>
             </div>
             <div className="text-left mb-6">
               <p className="text-[#1E1E1E] mb-2">How to join as a</p>
-              <h3 className="text-3xl font-bold text-primary">Student Buyer</h3>
+              <h3 className="text-3xl font-bold text-black group-hover:text-[#0A42B6] ">Student Buyer</h3>
             </div>
             <ul className="space-y-6">
               {[
@@ -36,7 +37,8 @@ export default function HowItWorks() {
                 "Receive your item",
               ].map((step, index) => (
                 <li key={index} className="flex items-start gap-4">
-                  <Image src="/page-vectors/blue-radio-elem.svg" className="" width={18} height={18} alt="" />
+                  <Image src="/icons/black-radio-elem.svg" className="group-hover:hidden" width={18} height={18} alt="" />
+                  <Image src="/icons/blue-radio-elem.svg" className="hidden group-hover:inline-block" width={18} height={18} alt="" />
                   <span className="text-gray-700">{step}</span>
                 </li>
               ))}
@@ -44,15 +46,16 @@ export default function HowItWorks() {
           </div>
 
           {/* Student Seller Card */}
-          <div className="group bg-white rounded-3xl p-12 border-2 border-[#CBCBCB] hover:border-black">
+          <div className="group bg-white rounded-3xl p-12 border-2 border-[#CBCBCB] hover:border-[#0A42B6]">
             <div className="flex justify-left mb-6">
-              <div className="w-24 h-24 rounded-full border-2 border-[#CBCBCB] flex items-center justify-center group-hover:border-black">
-              <Image src="/page-vectors/black-bag.svg" width={50} height={50} alt="" />
+              <div className="w-24 h-24 rounded-full border-2 border-[#CBCBCB] flex items-center justify-center group-hover:border-[#0A42B6]">
+                <Image src="/icons/black-seller-tag.svg" className="group-hover:hidden" width={50} height={50} alt="" />
+                <Image src="/icons/blue-seller-tag.svg" className="hidden group-hover:inline-block" width={50} height={50} alt="" />
               </div>
             </div>
             <div className="text-left mb-8">
               <p className="text-[#1E1E1E] mb-2">How to join as a</p>
-              <h3 className="text-3xl font-bold">Student Seller</h3>
+              <h3 className="text-3xl font-bold group-hover:text-[#0A42B6]">Student Seller</h3>
             </div>
             <ul className="space-y-6">
               {[
@@ -62,7 +65,8 @@ export default function HowItWorks() {
                 "Sell and grow your business",
               ].map((step, index) => (
                 <li key={index} className="flex items-start gap-4">
-                  <Image src="/page-vectors/black-radio-elem.svg" className="" width={18} height={18} alt="" />
+                  <Image src="/icons/black-radio-elem.svg" className="group-hover:hidden" width={18} height={18} alt="" />
+                  <Image src="/icons/blue-radio-elem.svg" className="hidden group-hover:inline-block" width={18} height={18} alt="" />
                   <span className="text-gray-700">{step}</span>
                 </li>
               ))}
