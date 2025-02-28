@@ -3,7 +3,7 @@ import { ShoppingBag } from "lucide-react"
 
 export default function HowItWorks() {
   return (
-    <section className="font-montserrat py-24">
+    <section className="font-montserrat pt-8 pb-16">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-2xl md:text-4xl font-bold flex justify-center mb-4 sm:text-3xl">
@@ -25,7 +25,7 @@ export default function HowItWorks() {
               </div>
             </div>
             <div className="text-left mb-6">
-              <p className="text-xl text-[#1E1E1E] mb-2">How to join as a</p>
+              <p className="text-[#1E1E1E] mb-2">How to join as a</p>
               <h3 className="text-3xl font-bold text-primary">Student Buyer</h3>
             </div>
             <ul className="space-y-6">
@@ -51,7 +51,7 @@ export default function HowItWorks() {
               </div>
             </div>
             <div className="text-left mb-8">
-              <p className="text-gray-600 mb-2">How to join as a</p>
+              <p className="text-[#1E1E1E] mb-2">How to join as a</p>
               <h3 className="text-3xl font-bold">Student Seller</h3>
             </div>
             <ul className="space-y-6">

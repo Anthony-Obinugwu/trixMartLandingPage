@@ -73,6 +73,9 @@ export default function Footer() {
               <Link href="/terms" className="text-[#CFD3D7] text-xs text-nowrap hover:text-white transition-colors">
                 Terms of Service
               </Link>
+              <Link href="/terms" className="text-[#CFD3D7] text-xs text-nowrap hover:text-white transition-colors">
+                Community Guidelines
+              </Link>
             </nav>
           </div>
 
