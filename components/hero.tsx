@@ -4,7 +4,7 @@ import Image from "next/image"
 
 export default function Hero() {
   return (
-    <main className="font-montserrat relative px-4 py-12 md:pt-8 pb-24 max-w-[1440px] mx-auto">
+    <main className="font-montserrat relative px-4 pt-12 pb-16 md:pt-8 max-w-[1440px] mx-auto">
       <div className="max-w-[1280px] mx-auto mb-8">
         <h1 className="relative w-fit font-extralight text-[28px] text-center text-gray-900 mb-10 leading-[60px] mx-auto sm:text-3xl sm:leading-[80px] md:text-4xl md:leading-[80px] lg:text-5xl lg:leading-[96px]" >
           <Image src="/page-vectors/trixmart-banner.svg" className="absolute -top-10 -z-10 sm:-top-6 sm:left-8 md:-top-8 md:w-36" width={120} height={200} alt="" />
@@ -26,7 +26,8 @@ export default function Hero() {
           Connecting Buyers, Growing Student Businesses
         </p>
 
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
+        <div className="relative flex flex-col sm:flex-row items-center justify-center gap-6">
+          <Image src="/page-vectors/vector-3.svg" className="absolute -top-16 left-0 -z-10 md:left-8 lg:left-36" width={100} height={100} alt="" />
           <Link href="https://chat.whatsapp.com/E9fDd3thS80Ko35yKtZljW" target="_blank">
             <Button variant="outline" className="bg-[#006ED3] border-[#006ED3] text-white text-base rounded-2xl hover:bg-white hover:text-[#006ED3] px-8 py-6">
               Join Our Community

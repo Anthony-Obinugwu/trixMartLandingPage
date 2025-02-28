@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button"
  
 export default function About() {
   return (
-    <section id="about" className="font-montserrat pt-8 pb-24">
+    <section id="about" className="font-montserrat pt-8 pb-16">
       <div className="container mx-auto px-4">
         <h2 className="text-2xl md:text-4xl font-bold flex justify-center mb-4 sm:text-3xl">
           <div className="relative bg-white px-9 py-1 before:content-[''] before:absolute before:-top-1 before:-left-1 before:w-9 before:h-6 before:bg-[#006ED3] before:-z-10 after:content-[''] after:absolute after:-bottom-1 after:-right-1 after:w-9 after:h-6 after:bg-[#006ED3] after:-z-10">About Us</div>

@@ -7,7 +7,7 @@ import { cn } from "@/lib/utils"
 
 export default function Categories() {
   return (
-    <section className="pt-8 pb-24 bg-[#051650] -z-20" id="categories">
+    <section className="pt-8 pb-16 bg-[#051650] -z-20" id="categories">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="font-bold text-2xl text-white flex justify-center mb-4 sm:text-3xl md:text-4xl">
