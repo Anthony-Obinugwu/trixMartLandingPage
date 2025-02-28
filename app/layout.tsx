@@ -9,6 +9,8 @@ interface LayoutProps {
 export default function Layout({ children, backgroundImage }: LayoutProps) {
   return (
     <html lang="en">
+      <title>TrixMart</title>
+      <link rel="shortcut icon" href="/trixmart-square-blue.png" type="image/x-icon" />
       <body>
         <div
           className="min-h-screen w-full relative"
