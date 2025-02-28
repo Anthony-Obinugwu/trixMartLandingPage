@@ -65,7 +65,7 @@ export default function Reviews() {
 
                   <CarouselItem key={index} className="pl-1 sm:basis-1/2 lg:basis-1/3">
                       <div className="p-1 w-full h-full hover:bg-[linear-gradient(155deg,#006ED3_30%,#FF8B2A)] rounded-2xl ">
-                        <div className="bg-white mb-10 py-10 px-8 rounded-xl mx-auto border-2 border-gray-300 h-full hover:border-0">
+                        <div className="bg-white mb-10 py-10 px-8 rounded-xl mx-auto border-2 border-gray-300 h-full hover:border-white">
                           <div className="flex items-center space-x-4 mb-6">
                             <div className="relative">
                                 <div className="bg-gray-200 h-20 w-20 rounded-full flex items-center justify-center overflow-hidden"><Image src={review.image !== "" ? review.image : '/icons/no-profile.svg'} width={review.image !== "" ? 80 : 32} height={review.image !== "" ? 80 : 32} alt="" /></div>
