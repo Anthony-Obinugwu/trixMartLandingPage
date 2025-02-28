@@ -79,43 +79,55 @@ export default function Footer() {
             </nav>
           </div>
 
-          {/* Newsletter */}
+          {/* Have a question */}
           <div className="lg:col-span-1">
-            <h3 className="text-base font-semibold text-[#F1F1F1CF] mb-4">Join a Newsletter</h3>
+            <h3 className="text-base font-semibold text-[#F1F1F1CF] mb-4">Have a question?</h3>
             <form onSubmit={handleSubmit}>
-              <div className="space-y-2" >
-                <label htmlFor="email" className="text-xs text-nowrap text-[#CFD3D7]">
-                  Your Email
-                </label>
-                <div className="flex space-x-4 max-w-[450px]">
-                  <Input
-                    type="email"
-                    id="email"
-                    placeholder="Enter Your Email"
-                    className="bg-[#F1F1F14A] text-xs text-nowrap text-white border-none placeholder:text-[#CFD3D7]"
-                  /><Button type="submit" className="bg-[#FF8B2A] flex-1 hover:bg-[#e67a1f] text-white">Subscribe</Button>
+              <div className="" >
+                <div className="flex mb-6 max-w-[450px]">
+                  <textarea name="message" rows={5} id="message" className="flex-1 bg-[#F1F1F14A] rounded-xl px-3 py-3 text-xs placeholder:text-[#CFD3D7]" placeholder="Type Message here...." />
+                  <span id="the-pillar" className="w-[80px]"></span>
                 </div>
-   
+                <div>
+                  <label htmlFor="email" className="text-xs text-nowrap text-[#CFD3D7]">
+                    Your Email
+                  </label>
+                  <div className="flex space-x-4 max-w-[450px] mt-2">
+                    <Input
+                      type="email"
+                      id="email"
+                      placeholder="Enter Your Email"
+                      className="bg-[#F1F1F14A] text-xs text-nowrap text-white border-none placeholder:text-[#CFD3D7]"
+                    /><Button type="submit" className="bg-[#FF8B2A] hover:bg-[#e67a1f] text-white">Send</Button>
+                  </div>
+                </div>
               </div>
               
               <div className="flex gap-4 mt-6">
-                <Link
+              <Link
                   href="#"
-                  className="w-10 h-10 rounded-full bg-[#F1F1F1CF] font-bold flex items-center justify-center hover:bg-white/20 transition-colors"
+                  className=""
                 >
-                  Dr
+                  <Image src="/icons/facebook.svg" width={40} height={40} alt="" />
+                </Link>
+                <Link
+                  href="https://www.instagram.com/trixmart_"
+                  className=""
+                  target="_blank"
+                >
+                  <Image src="/icons/instagram.svg" width={40} height={40} alt="" />
                 </Link>
                 <Link
                   href="#"
-                  className="w-10 h-10 rounded-full bg-[#F1F1F1CF] font-bold flex items-center justify-center hover:bg-white/20 transition-colors"
+                  className=""
                 >
-                  Be
+                  <Image src="/icons/linkedin.svg" width={40} height={40} alt="" />
                 </Link>
                 <Link
                   href="#"
-                  className="w-10 h-10 rounded-full bg-[#F1F1F1CF] font-bold flex items-center justify-center hover:bg-white/20 transition-colors"
+                  className=""
                 >
-                  Ig
+                  <Image src="/icons/twitter.svg" width={40} height={40} alt="" />
                 </Link>
               </div>
             </form>

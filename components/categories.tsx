@@ -15,7 +15,7 @@ export default function Categories() {
               <div className="bg-[#051650] px-9 py-1">Product Categories</div>
             </div>
           </h2>
-          <p className="font-light text-base text-center text-white/90 leading-8  mb-12 sm:text-lg sm:mb-20">Products & Services sold by <span className="font-bold">student sellers</span></p>
+          <p className="font-light text-base text-center text-white/90 leading-8  mb-12 sm:text-lg">Products & Services sold by <span className="font-bold">student sellers</span></p>
         </div>
 
         <div className="grid grid-cols-1 gap-8 lg:grid-cols-2 ">
