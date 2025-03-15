@@ -1,5 +1,6 @@
 import type { ReactNode } from "react"
 import './globals.css'
+import { Analytics } from "@vercel/analytics/react"
 
 interface LayoutProps {
   children: ReactNode
@@ -24,6 +25,7 @@ export default function Layout({ children, backgroundImage }: LayoutProps) {
           <div className="relative z-10">{children}</div>
         </div>
       </body>
+      <Analytics />
     </html>
   )
 }
