@@ -1,4 +1,5 @@
 "use client"
+import { motion } from 'framer-motion'
 import About from "@/components/about"
 import Categories from "@/components/categories"
 import Footer from "@/components/footer"
@@ -32,7 +33,7 @@ export default function Home() {
       </section>
       <section id="about" className="relative">
         <Image src="/page-vectors/ellipse3.svg" className="absolute -top-16 left-0 -z-10" width={100} height={100} alt="" />
-        <Image src="/page-vectors/orange-meteocons-star.svg" className="absolute top-80 right-10 -z-10" width={60} height={60} alt="" />
+        <Image src="/page-vectors/orange-meteocons-star.svg" className="absolute top-80 right-10 -z-10 animate-[spin_3s_linear_infinite]" width={60} height={60} alt="" />
         <Image src="/page-vectors/orange-meteocons-star.svg" className="absolute top-[440px] right-64 -z-10" width={60} height={60} alt="" />
         <Image src="/page-vectors/polygon1.svg" className="absolute top-96 right-0 -z-10" width={250} height={200} alt="" />
         <Image src="/page-vectors/polygon2.svg" className="absolute bottom-20 -z-10" width={200} height={200} alt="" />
@@ -48,8 +49,8 @@ export default function Home() {
       </section>
       <section id="why-join" className="relative">
         <Image src="/page-vectors/shopping-cart.svg" className="absolute top-24 right-3 sm:right-10 -z-10" width={50} height={50} alt="" />
-        <Image src="/page-vectors/blue-meteocons-star.svg" className="absolute top-32 left-8 sm:top-40 md:left-20 -z-10" width={40} height={40} alt="" />
-        <Image src="/page-vectors/orange-meteocons-star.svg" className="absolute bottom-10 right-16 sm:bottom-10 -z-10" width={40} height={40} alt="" />
+        <Image src="/page-vectors/blue-meteocons-star.svg" className="absolute top-32 left-8 sm:top-40 md:left-20 -z-10 animate-[spin_3s_linear_infinite]" width={40} height={40} alt="" />
+        <Image src="/page-vectors/orange-meteocons-star.svg" className="absolute bottom-10 right-16 sm:bottom-10 -z-10 animate-[spin_3s_linear_infinite]" width={40} height={40} alt="" />
         <Image src="/page-vectors/color-shop.svg" className="absolute bottom-10 left-1 sm:bottom-4 -z-10" width={60} height={60} alt="" />
         <WhyJoin />
       </section>
