@@ -46,7 +46,7 @@ export default function Hero() {
           <Image src="/page-vectors/vector-3.svg" className="absolute -top-10 -left-2 -z-10 sm:w-24 sm:-top-16 sm:left-0 md:left-8 lg:left-36" width={60} height={80} alt="" />
           <Link href="https://chat.whatsapp.com/E9fDd3thS80Ko35yKtZljW" target="_blank">
             <motion.button
-            initial={{opacity: 0, x: -200}}
+            initial={{opacity: 0, x: -100}}
             whileInView={{opacity: 1, x: 0}}
             viewport={{once: true}}
             transition={{duration: 0.6, delay: 0.8, type: "spring", damping: 10}}
@@ -56,7 +56,7 @@ export default function Hero() {
           </Link>
           <Link href="#categories">
             <motion.button
-            initial={{opacity: 0, x: 200}}
+            initial={{opacity: 0, x: 100}}
             whileInView={{opacity: 1, x: 0}}
             viewport={{once: true}}
             transition={{duration: 0.6, delay: 0.8, type: "spring", damping: 10}}

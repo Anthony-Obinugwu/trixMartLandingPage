@@ -1,34 +1,64 @@
 "use client"
 
+import { motion } from 'framer-motion'
 import { Plus, Minus } from "lucide-react"
 import { useState } from "react"
 import Image from "next/image"
 import { cn } from "@/lib/utils"
 
 export default function Categories() {
+  const variants = {
+    hidden: {opacity: 0, y: 100},
+    visible: {opacity: 1, y: 0}
+  }
+
   return (
     <section className="pt-8 pb-16 bg-[#051650] -z-20" id="categories">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="font-bold text-2xl text-white flex justify-center mb-4 sm:text-3xl md:text-4xl">
+          <motion.h2
+          initial={{opacity: 0, y: 100}}
+          whileInView={{opacity: 1, y: 0}}
+          viewport={{once: true}}
+          transition={{duration: 0.5}}
+           className="font-bold text-2xl text-white flex justify-center mb-4 sm:text-3xl md:text-4xl">
             <div className="relative z-10 before:content-[''] before:absolute before:-top-1 before:-left-1 before:w-9 before:h-6 before:bg-white before:-z-10 after:content-[''] after:absolute after:-bottom-1 after:-right-1 after:w-9 after:h-6 after:bg-white after:-z-10">
               <div className="bg-[#051650] px-9 py-1">Product Categories</div>
             </div>
-          </h2>
-          <p className="font-light text-base text-center text-white/90 leading-8  mb-12 sm:text-lg">Products & Services sold by <span className="font-bold">student sellers</span></p>
+          </motion.h2>
+          <motion.p
+          initial={{opacity: 0, y: 100}}
+          whileInView={{opacity: 1, y: 0}}
+          viewport={{once: true}}
+          transition={{duration: 0.4, delay: 0.3}}
+           className="font-light text-base text-center text-white/90 leading-8  mb-12 sm:text-lg">Products & Services sold by {' '}
+            <span className="font-bold">student sellers</span>
+           </motion.p>
         </div>
 
         <div className="grid grid-cols-1 gap-8 lg:grid-cols-2 ">
-          <CategoryCard
-            title="Food, Snacks, and Drinks"
-            image="/food.png"
-            items={[
-              "Main courses like Jollof rice, Grilled Chicken",
-              "Smoothies, Milk Shakes, Fruit Juice and Energy Drinks",
-              "Snacks such as Puff Puff, Spring rolls, Meat pie, etc.",
-            ]}
-          />
-          <CategoryCard
+          
+          <motion.div 
+          initial={{opacity: 0, y: 100}}
+          whileInView={{opacity: 1, y: 0}}
+          viewport={{once: true}}
+          transition={{duration: 0.5}}>
+            <CategoryCard
+              title="Food, Snacks, and Drinks"
+              image="/food.png"
+              items={[
+                "Main courses like Jollof rice, Grilled Chicken",
+                "Smoothies, Milk Shakes, Fruit Juice and Energy Drinks",
+                "Snacks such as Puff Puff, Spring rolls, Meat pie, etc.",
+              ]}
+            />
+          </motion.div>
+          <motion.div 
+          initial={{opacity: 0, y: 100}}
+          whileInView={{opacity: 1, y: 0}}
+          viewport={{once: true}}
+          transition={{duration: 0.5, delay: 0.3}}>
+            <CategoryCard
             title="Clothing and Fashion"
             image="/clothing.png"
             items={[
@@ -36,8 +66,14 @@ export default function Categories() {
               "Custom designed t-shirts and hoodies",
               "Fashion accessories and seasonal collections",
             ]}
-          />
-          <CategoryCard
+            />
+          </motion.div>
+          <motion.div 
+          initial={{opacity: 0, y: 100}}
+          whileInView={{opacity: 1, y: 0}}
+          viewport={{once: true}}
+          transition={{duration: 0.5, delay: 0.3}}>
+            <CategoryCard
             title="Gadgets and Electronics"
             image="/gadgets.png"
             items={[
@@ -45,8 +81,14 @@ export default function Categories() {
               "Laptops and computer peripherals",
               "Smart watches and electronic gadgets",
             ]}
-          />
-          <CategoryCard
+            />
+          </motion.div>
+          <motion.div 
+          initial={{opacity: 0, y: 100}}
+          whileInView={{opacity: 1, y: 0}}
+          viewport={{once: true}}
+          transition={{duration: 0.5, delay: 0.6}}>
+            <CategoryCard
             title="Jewelry and Accessories"
             image="/jewelry.png"
             items={[
@@ -55,7 +97,13 @@ export default function Categories() {
               "Custom-made designs and collections",
             ]}
           />
-          <CategoryCard
+          </motion.div>
+          <motion.div 
+          initial={{opacity: 0, y: 100}}
+          whileInView={{opacity: 1, y: 0}}
+          viewport={{once: true}}
+          transition={{duration: 0.5, delay: 0.3}}>
+            <CategoryCard
             title="Shoes and Bags"
             image="/shoes.png"
             items={[
@@ -63,12 +111,19 @@ export default function Categories() {
               "Backpacks and laptop bags",
               "Designer handbags and accessories",
             ]}
-          />
-          <CategoryCard
+            />
+          </motion.div>
+          <motion.div 
+          initial={{opacity: 0, y: 100}}
+          whileInView={{opacity: 1, y: 0}}
+          viewport={{once: true}}
+          transition={{duration: 0.5, delay: 0.6}}>
+            <CategoryCard
             title="Cosmetics and Skincare"
             image="/cosmetics.png"
             items={["Natural skincare products", "Makeup and beauty essentials", "Personal care and wellness items"]}
-          />
+            />
+          </motion.div>
         </div>
       </div>
     </section>

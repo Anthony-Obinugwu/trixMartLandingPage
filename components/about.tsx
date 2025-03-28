@@ -26,8 +26,8 @@ export default function About() {
           
           <div id="paragraph-and-button" className="flex flex-col items-center mb-16 sm:items-start">
               <motion.p
-              initial={{opacity: 0, x: -200}}
-              whileInView={{opacity: 1, x: 0}}
+              initial={{opacity: 0, y: 200}}
+              whileInView={{opacity: 1, y: 0}}
               viewport={{once: true}}
               transition={{duration: 0.4, delay: 0.5}}
               className="text-base text-center leading-8 sm:text-left lg:leading-10">
@@ -35,7 +35,7 @@ export default function About() {
               </motion.p>
               <Link href="https://chat.whatsapp.com/E9fDd3thS80Ko35yKtZljW" target="_blank">
               <motion.button
-              initial={{opacity: 0, y: 200}}
+              initial={{opacity: 0, y: 100}}
               whileInView={{opacity: 1, y: 0}}
               viewport={{once: true}}
               transition={{duration: 0.4, delay: 0.4, type: "spring", damping: 10}}
@@ -45,8 +45,8 @@ export default function About() {
               </Link>
           </div>
           <motion.div
-              initial={{opacity: 0, x: 200}}
-              whileInView={{opacity: 1, x: 0}}
+              initial={{opacity: 0, y: 100}}
+              whileInView={{opacity: 1, y: 0}}
               viewport={{once: true}}
               transition={{duration: 0.4, delay: 0.5}}
            className="font-bold text-[#006ED3] text-2xl text-center my-8 lg:text-nowrap">
@@ -71,7 +71,12 @@ interface AboutCardRowProps{
 
 function AboutCardRow ({title, subHeader, cardText, isDirectionLeft}: AboutCardRowProps){
   return (
-    <div className={`mb-20 sm:flex ${!isDirectionLeft && "flex-row-reverse"} sm:justify-between sm:items-center sm:gap-10 md:gap-28 md:px-8`}>
+    <motion.div
+    initial={{opacity: 0, y: 100}}
+    whileInView={{opacity: 1, y: 0}}
+    viewport={{once: true}}
+    transition={{duration: 0.5, delay: 0.4}}
+     className={`mb-20 sm:flex ${!isDirectionLeft && "flex-row-reverse"} sm:justify-between sm:items-center sm:gap-10 md:gap-28 md:px-8`}>
       <div className="mb-10">
         <h3 className="font-bold text-2xl text-center mb-2 text-nowrap sm:text-3xl lg:text-4xl">{title}</h3>
         <p className="text-center text-lg text-nowrap sm:text-xl">{subHeader}</p>
@@ -88,6 +93,6 @@ function AboutCardRow ({title, subHeader, cardText, isDirectionLeft}: AboutCardR
             {cardText}
         </p>
       </div>
-    </div>
+    </motion.div>
   )
 }
