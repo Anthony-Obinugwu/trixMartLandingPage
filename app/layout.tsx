@@ -12,7 +12,7 @@ export default function Layout({ children, backgroundImage }: LayoutProps) {
     <html lang="en">
       <title>TrixMart</title>
       <link rel="shortcut icon" href="/trixmart-square-blue.png" type="image/x-icon" />
-      <body>
+      <body className="">
         <div
           className="min-h-screen w-full relative"
           style={{
