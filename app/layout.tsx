@@ -1,17 +1,21 @@
-import type { ReactNode } from "react"
-import './globals.css'
-import { Analytics } from "@vercel/analytics/react"
+import type { ReactNode } from "react";
+import "./globals.css";
+import { Analytics } from "@vercel/analytics/react";
 
 interface LayoutProps {
-  children: ReactNode
-  backgroundImage?: string
+  children: ReactNode;
+  backgroundImage?: string;
 }
 
 export default function Layout({ children, backgroundImage }: LayoutProps) {
   return (
     <html lang="en">
       <title>TrixMart</title>
-      <link rel="shortcut icon" href="/trixmart-square-blue.png" type="image/x-icon" />
+      <link
+        rel="shortcut icon"
+        href="/trixmart-square-blue.png"
+        type="image/x-icon"
+      />
       <body className="">
         <div
           className="min-h-screen w-full relative"
@@ -27,5 +31,5 @@ export default function Layout({ children, backgroundImage }: LayoutProps) {
       </body>
       <Analytics />
     </html>
-  )
+  );
 }
