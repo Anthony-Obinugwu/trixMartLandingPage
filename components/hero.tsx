@@ -114,6 +114,7 @@ export default function Hero() {
                   <a
                     href="https://forms.gle/cnUxEYHcj87pDBUBA"
                     className="bg-black mx-auto border-black border-[1px] text-white text-base rounded-2xl hover:bg-white hover:text-black px-8 py-[12px]"
+                    target="_blank"
                   >
                     Go to the form
                   </a>
