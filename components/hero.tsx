@@ -97,19 +97,11 @@ export default function Hero() {
                 showPopup ? "flex" : "hidden"
               } flex justify-center items-center w-full bg-black bg-opacity-60 z-50`}
           >
-            <div className="bg-white p-4 mx-4 rounded-xl">
+            <div className="relative bg-white p-4 mx-4 rounded-xl">
               <div className="flex justify-between p-3 border-b-2 border-solid border-black">
                 <span>NACOS DINNER RAFFLE DRAW</span>
-                <span
-                  onClick={() => {
-                    setShowPopup((prev) => !prev);
-                  }}
-                  className="px-2 bg-black text-xl text-white rounded-full cursor-pointer"
-                >
-                  &times;
-                </span>
               </div>
-              <div className="p-3">
+              <div className="py-4 px-6">
                 <h3>Instructions</h3>
                 <ul className="list-disc">
                   <li>
@@ -119,11 +111,22 @@ export default function Hero() {
                   <li>Sit back and wait for the results</li>
                 </ul>
                 <div className="flex justify-center mt-8">
-                  <button className="bg-black mx-auto border-black border-[1px] text-white text-base rounded-2xl hover:bg-white hover:text-black px-8 py-[12px]">
+                  <a
+                    href="https://forms.gle/cnUxEYHcj87pDBUBA"
+                    className="bg-black mx-auto border-black border-[1px] text-white text-base rounded-2xl hover:bg-white hover:text-black px-8 py-[12px]"
+                  >
                     Go to the form
-                  </button>
+                  </a>
                 </div>
               </div>
+              <span
+                onClick={() => {
+                  setShowPopup((prev) => !prev);
+                }}
+                className="absolute -bottom-14 left-1/2 -translate-x-1/2 flex justify-center items-center bg-black/60 w-8 h-8 border-2 border-solid border-white text-3xl text-white rounded-full cursor-pointer"
+              >
+                &times;
+              </span>
             </div>
           </div>
           <motion.button
