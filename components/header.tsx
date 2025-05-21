@@ -47,6 +47,12 @@ export default function Header() {
               Join the Community
             </Button>
           </Link>
+          <Link href="https://forms.gle/cnUxEYHcj87pDBUBA" target="_blank">
+              <Button className="bg-[#006ED3] hover:bg-[#005bb0] text-white text-sm px-6 py-2">
+                        🎟️ RAFFLE DRAW
+
+               </Button>
+          </Link>
         </nav>
         <MobileNav />
       </div>
