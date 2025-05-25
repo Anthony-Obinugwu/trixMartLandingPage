@@ -1,13 +1,9 @@
-"use client";
-import { useState } from "react";
 import { motion, spring } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import Image from "next/image";
 
 export default function Hero() {
-  const [showPopup, setShowPopup] = useState(false);
-
   return (
     <main className="font-montserrat relative px-4 pt-12 pb-16 md:pt-8 max-w-[1440px] mx-auto">
       <div className="max-w-[1280px] mx-auto mb-8">
@@ -90,63 +86,6 @@ export default function Hero() {
             height={80}
             alt=""
           />
-          {/* Popup */}
-          <div
-            className={`fixed top-0 bottom-0 left-0 right-0 
-              ${
-                showPopup ? "flex" : "hidden"
-              } flex justify-center items-center w-full bg-black bg-opacity-60 z-50`}
-          >
-            <div className="relative bg-white p-4 mx-4 rounded-xl">
-              <div className="flex justify-between p-3 border-b-2 border-solid border-black">
-                <span>NACOS DINNER RAFFLE DRAW</span>
-              </div>
-              <div className="py-4 px-6">
-                <h3>Instructions</h3>
-                <ul className="list-disc">
-                  <li>
-                    Tap on the button below to get redirected to the google form
-                  </li>
-                  <li>Fill the form with the necessary details</li>
-                  <li>Sit back and wait for the results</li>
-                </ul>
-                <div className="flex justify-center mt-8">
-                  <a
-                    href="https://forms.gle/cnUxEYHcj87pDBUBA"
-                    className="bg-black mx-auto border-black border-[1px] text-white text-base rounded-2xl hover:bg-white hover:text-black px-8 py-[12px]"
-                    target="_blank"
-                  >
-                    Go to the form
-                  </a>
-                </div>
-              </div>
-              <span
-                onClick={() => {
-                  setShowPopup((prev) => !prev);
-                }}
-                className="absolute -bottom-14 left-1/2 -translate-x-1/2 flex justify-center items-center bg-black/60 w-8 h-8 border-2 border-solid border-white text-3xl text-white rounded-full cursor-pointer"
-              >
-                &times;
-              </span>
-            </div>
-          </div>
-          <motion.button
-            initial={{ opacity: 0, y: -100 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{
-              duration: 0.6,
-              delay: 0.8,
-              type: "spring",
-              damping: 10,
-            }}
-            className="bg-black border-black border-[1px] text-white text-base rounded-2xl hover:bg-white hover:text-black px-8 py-[12px]"
-            onClick={() => {
-              setShowPopup((prev) => !prev);
-            }}
-          >
-            NACOS Raffle Draw
-          </motion.button>
           <Link
             href="https://chat.whatsapp.com/E9fDd3thS80Ko35yKtZljW"
             target="_blank"
