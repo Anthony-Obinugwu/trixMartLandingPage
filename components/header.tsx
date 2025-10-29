@@ -42,9 +42,9 @@ export default function Header() {
             Why Join Us
             <div className="opacity-0 absolute w-full h-1 bg-[#FF8B2A] rounded-full -bottom-2 transition-opacity duration-100 sm:group-hover:opacity-100"></div>
           </a>
-          <Link href="https://chat.whatsapp.com/E9fDd3thS80Ko35yKtZljW" target="_blank">
+          <Link href="/shop">
             <Button className="bg-[#006ED3] hover:bg-[#005bb0] text-white text-sm px-6 py-2">
-              Join the Community
+              Shop With TrixMart
             </Button>
           </Link>
         </nav>
