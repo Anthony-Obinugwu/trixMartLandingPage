@@ -17,29 +17,29 @@ export default function ProductSections({ handleCartUpdate }: propz) {
       id: 1,
       businessName: "Rose Cakes",
       description: "Bento boxes, cakes, treats and more",
-      rating: 4.8,
+      rating: 4.9,
       image: '/shop-images/rose-cakes.png'
     },
     {
       id: 2,
-      businessName: "Rose Cakes",
-      description: "Bento boxes, cakes, treats and more",
-      rating: 4.8,
-      image: '/shop-images/rose-cakes.png'
+      businessName: "Peak Fits",
+      description: "The best fits from around the globe",
+      rating: 4.3,
+      image: '/shop-images/clothes.jpeg'
     },
     {
       id: 3,
-      businessName: "Rose Cakes",
-      description: "Bento boxes, cakes, treats and more",
-      rating: 4.8,
-      image: '/shop-images/rose-cakes.png'
+      businessName: "Zeenat's Kitchen",
+      description: "Tasteful meals at your doorstep",
+      rating: 4.4,
+      image: '/shop-images/chef-logo.jpeg'
     },
     {
       id: 4,
-      businessName: "Rose Cakes",
-      description: "Bento boxes, cakes, treats and more",
+      businessName: "AliExpress Finds - Shine",
+      description: "Skip the stress, Pay less",
       rating: 4.8,
-      image: '/shop-images/rose-cakes.png'
+      image: '/shop-images/aliexpress-finds.png'
     },
   ]
 
