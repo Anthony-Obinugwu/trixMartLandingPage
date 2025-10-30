@@ -16,7 +16,7 @@ interface cartStuffs {
 
 const CartPage = () => {
   const storedItems = localStorage.getItem('cart');
-  const [cartItems, setCartItems] = useState<Array<cartStuffs>>(JSON.parse(storedItems ?? '[]'))
+  const [cartItems, setCartItems] = useState<cartStuffs[]>(JSON.parse(storedItems ?? '[]'))
 
   function refreshPage() {
     const storedItems = localStorage.getItem('cart');
@@ -59,9 +59,9 @@ const CartItem = (props: cartStuffs,) => {
         <div className='flex justify-center items-center w-24 h-32 border-l border-l-gray-200 hover:bg-red-300 active:bg-red-500'
           onClick={() => {
             const storedJsonItems: string = localStorage.getItem('cart') ?? '[]';
-            const storedCart: Array<cartStuffs> = JSON.parse(storedJsonItems);
+            const storedCart: any = JSON.parse(storedJsonItems);
 
-            const newArray = storedCart.filter((item) => {
+            const newArray = storedCart.filter((item: cartStuffs) => {
               if (item.id !== props.id) {
                 return item;
               }
