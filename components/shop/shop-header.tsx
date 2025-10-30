@@ -6,7 +6,14 @@ import Image from "next/image"
 import Link from "next/link"
 import { Search, ShoppingCart, Bell, Heart, User, ChevronDown } from "lucide-react"
 
-export default function ShopHeader() {
+interface properties {
+  numberOfCartItems: number;
+}
+
+export default function ShopHeader({ numberOfCartItems }: properties) {
+
+
+
   return (
     <header className="font-montserrat bg-white border-b border-gray-200 sticky top-0 z-50">
       <div className="max-w-[1440px] mx-auto px-4 py-4">
@@ -37,28 +44,34 @@ export default function ShopHeader() {
           {/* Right Side Icons */}
           <div className="flex items-center gap-4">
             {/* User Profile Icon */}
-            <button className="hidden lg:flex items-center justify-center w-10 h-10 rounded-full hover:bg-gray-100">
-              <User className="h-5 w-5 text-gray-600" />
-            </button>
+            <Link href='/profile'>
+              <button className="bg-gray-50 flex items-center justify-center w-10 h-10 rounded-full hover:bg-gray-100">
+                <User className="h-5 w-5 text-gray-600" />
+              </button>
+            </Link>
 
             {/* Notifications Icon */}
-            <button className="hidden lg:flex items-center justify-center w-10 h-10 rounded-full hover:bg-gray-100 relative">
+            <button className="bg-gray-50 flex items-center justify-center w-10 h-10 rounded-full hover:bg-gray-100 relative">
               <Bell className="h-5 w-5 text-gray-600" />
               <span className="absolute top-1 right-1 w-2 h-2 bg-red-500 rounded-full"></span>
             </button>
 
             {/* Wishlist Icon */}
-            <button className="hidden lg:flex items-center justify-center w-10 h-10 rounded-full hover:bg-gray-100">
+            <button className="bg-gray-50 flex items-center justify-center w-10 h-10 rounded-full hover:bg-gray-100">
               <Heart className="h-5 w-5 text-gray-600" />
             </button>
 
             {/* Cart Icon */}
-            <button className="flex items-center justify-center w-10 h-10 rounded-full hover:bg-gray-100 relative">
-              <ShoppingCart className="h-5 w-5 text-gray-600" />
-              <span className="absolute -top-1 -right-1 w-5 h-5 bg-[#FF7A00] text-white text-xs rounded-full flex items-center justify-center">
-                0
-              </span>
-            </button>
+            <Link href='/cart'>
+              <button className="bg-gray-50 flex items-center justify-center w-10 h-10 rounded-full hover:bg-gray-100 relative">
+                <ShoppingCart className="h-5 w-5 text-gray-600" />
+                <span className="absolute -top-1 -right-1 w-5 h-5 bg-[#FF7A00] text-white text-xs rounded-full flex items-center justify-center">
+                  {
+                    numberOfCartItems
+                  }
+                </span>
+              </button>
+            </Link>
           </div>
         </div>
 
@@ -79,6 +92,7 @@ export default function ShopHeader() {
               <ChevronDown className="h-4 w-4" />
             </button>
           </div>
+          <div className="flex-1"></div>
           <Link href="#" className="text-sm font-medium text-gray-700 hover:text-gray-900">
             My Orders
           </Link>

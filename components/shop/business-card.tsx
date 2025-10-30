@@ -33,7 +33,7 @@ export default function BusinessCard({
             <span className="text-6xl text-gray-400">🏪</span>
           </div>
         )}
-        
+
         {/* Favorite Button */}
         <button className="absolute top-3 right-3 w-10 h-10 bg-white rounded-full flex items-center justify-center hover:bg-gray-50 transition-colors shadow-md">
           <Heart
@@ -50,7 +50,7 @@ export default function BusinessCard({
         <p className="text-sm text-gray-600 mb-3 line-clamp-2">
           {description}
         </p>
-        
+
         {/* Rating */}
         <div className="flex items-center gap-1">
           <Star className="h-4 w-4 fill-[#FF7A00] text-[#FF7A00]" />

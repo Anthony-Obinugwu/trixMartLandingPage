@@ -1,76 +1,95 @@
 "use client"
 
-import { Card } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Star, Heart } from "lucide-react"
+import Image from "next/image"
 
 interface ProductCardProps {
+  id: number,
   businessName: string
   productName: string
   price: number
   rating: number
-  image?: string
+  image: string
   isFavorite?: boolean
+  handleCartUpdate: Function
 }
 
 export default function ProductCard({
+  id,
   businessName,
   productName,
   price,
   rating,
   image,
-  isFavorite = false,
+  isFavorite = true,
+  handleCartUpdate
 }: ProductCardProps) {
   return (
-    <Card className="font-montserrat group relative overflow-hidden rounded-2xl border border-gray-200 hover:shadow-lg transition-all duration-300 cursor-pointer min-w-[280px] flex-shrink-0">
+    <div className="font-montserrat group relative overflow-hidden transition-all duration-300 cursor-pointer min-w-[280px] flex-shrink-0">
       {/* Image Section */}
-      <div className="relative h-48 bg-gray-200 overflow-hidden">
-        {image ? (
-          <img
-            src={image}
-            alt={productName}
-            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-          />
-        ) : (
-          <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-gray-200 to-gray-300">
-            <span className="text-6xl text-gray-400">👕</span>
-          </div>
-        )}
-        
-        {/* Favorite Button */}
-        <button className="absolute top-3 right-3 w-10 h-10 bg-white rounded-full flex items-center justify-center hover:bg-gray-50 transition-colors shadow-md">
-          <Heart
-            className={`h-5 w-5 ${isFavorite ? "fill-red-500 text-red-500" : "text-gray-600"}`}
-          />
-        </button>
+      <div className="relative h-80 w-72 mb-4 bg-gray-200 rounded-xl overflow-hidden">
+        <Image src='/shop-images/sneakers.png' className="w-full h-full object-cover" width={1952} height={1536} alt="Sneakers banner" />
       </div>
 
       {/* Content Section */}
-      <div className="p-4">
+      <div className="">
         <p className="text-xs text-gray-500 mb-1">{businessName}</p>
-        <h3 className="text-lg font-bold text-gray-900 mb-2 line-clamp-1">
+        <h3 className="text-lg font-bold text-gray-900 line-clamp-1">
           {productName}
         </h3>
-        
+
         {/* Price and Rating Row */}
-        <div className="flex items-center justify-between mb-3">
+        <div className="flex items-center justify-between mb-1">
           <span className="text-xl font-bold text-gray-900">
             ₦ {price.toLocaleString()}
           </span>
+        </div>
+
+        <div className="flex justify-between items-end">
           <div className="flex items-center gap-1">
             <Star className="h-4 w-4 fill-[#FF7A00] text-[#FF7A00]" />
             <span className="text-sm font-semibold text-gray-900">{rating.toFixed(1)}</span>
           </div>
+
+          {/* Add to Cart Button */}
+          <Button
+            className="bg-transparent text-[#006ED3] hover:bg-[#006ED3] active:bg-[#005bb0] border border-[#006ED3] hover:text-white rounded-lg "
+            onClick={() => {
+              const storedJsonItems: string = localStorage.getItem('cart') ?? '[]';
+              const storedCart: Array<ProductCardProps> = JSON.parse(storedJsonItems);
+
+              const productToAdd = {
+                id,
+                businessName,
+                productName,
+                price,
+                rating,
+                image,
+              }
+
+              const productIds: Array<number> = [];
+              storedCart.forEach((item) => {
+                if (!productIds.includes(item.id)) {
+                  productIds.push(item.id);
+                }
+              });
+
+              if (!productIds.includes(productToAdd.id)) {
+                const cart = [...storedCart, productToAdd];
+                localStorage.setItem('cart', JSON.stringify(cart));
+              }
+              handleCartUpdate();
+            }}
+
+
+          >
+            Add to Cart
+          </Button>
         </div>
-        
-        {/* Add to Cart Button */}
-        <Button 
-          className="w-full bg-[#006ED3] hover:bg-[#005bb0] text-white rounded-lg py-2"
-        >
-          Add to Cart
-        </Button>
+
       </div>
-    </Card>
+    </div>
   )
 }
 

@@ -80,9 +80,9 @@ export default function Hero() {
 
         <div className="relative flex flex-col sm:flex-row items-center justify-center gap-6">
           <Image src="/page-vectors/vector-3.svg" className="absolute -top-10 -left-2 -z-10 sm:w-24 sm:-top-16 sm:left-0 md:left-8 lg:left-36" width={60} height={80} alt="" />
-          <Link href="https://chat.whatsapp.com/E9fDd3thS80Ko35yKtZljW" target="_blank">
+          <Link href="/shop" target="_blank">
             <Button variant="outline" className="bg-[#006ED3] border-[#006ED3] text-white text-base rounded-2xl hover:bg-white hover:text-[#006ED3] px-8 py-6">
-              Join Our Community
+              Shop with Trix Mart
             </Button>
           </Link>
           <Link href="#categories">
