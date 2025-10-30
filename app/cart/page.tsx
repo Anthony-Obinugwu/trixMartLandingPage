@@ -2,7 +2,7 @@
 import { Item } from '@radix-ui/react-accordion'
 import Image from 'next/image'
 import Link from 'next/link'
-import React from 'react'
+import React, { useState } from 'react'
 
 interface cartStuffs {
   id: number
@@ -11,11 +11,17 @@ interface cartStuffs {
   price: number
   rating: number
   image: string
+  handleDelete: Function
 }
 
 const CartPage = () => {
   const storedItems = localStorage.getItem('cart');
-  const cartItems: Array<cartStuffs> = JSON.parse(storedItems ?? '[]');
+  const [cartItems, setCartItems] = useState<Array<cartStuffs>>(JSON.parse(storedItems ?? '[]'))
+
+  function refreshPage() {
+    const storedItems = localStorage.getItem('cart');
+    setCartItems(JSON.parse(storedItems ?? '[]'));
+  }
 
   return (
     <div className='font-montserrat'>
@@ -31,7 +37,7 @@ const CartPage = () => {
       <main>
         {
           cartItems.map((item) => {
-            return <CartItem id={item.id} businessName='' productName={item.productName} price={item.price} rating={item.rating} image={item.image} />
+            return <CartItem id={item.id} businessName='' productName={item.productName} price={item.price} rating={item.rating} image={item.image} handleDelete={() => refreshPage()} />
           })
         }
       </main>
@@ -41,7 +47,7 @@ const CartPage = () => {
 
 export default CartPage
 
-const CartItem = (props: cartStuffs) => {
+const CartItem = (props: cartStuffs,) => {
   return (
     <div className='mx-4 mb-4'>
       <div className='flex items-stretch gap-x-4 rounded-2xl border border-gray-200 hover:shadow-lg overflow-hidden'>
@@ -51,7 +57,19 @@ const CartItem = (props: cartStuffs) => {
           <span className='text-lg'>N {props.price}</span>
         </div>
         <div className='flex justify-center items-center w-24 h-32 border-l border-l-gray-200 hover:bg-red-300 active:bg-red-500'
-          onClick={() => { }}>Delete</div>
+          onClick={() => {
+            const storedJsonItems: string = localStorage.getItem('cart') ?? '[]';
+            const storedCart: Array<cartStuffs> = JSON.parse(storedJsonItems);
+
+            const newArray = storedCart.filter((item) => {
+              if (item.id !== props.id) {
+                return item;
+              }
+            })
+
+            localStorage.setItem('cart', JSON.stringify(newArray));
+            props.handleDelete();
+          }}>Delete</div>
       </div>
     </div>
   )

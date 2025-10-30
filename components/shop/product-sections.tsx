@@ -18,28 +18,28 @@ export default function ProductSections({ handleCartUpdate }: propz) {
       businessName: "Rose Cakes",
       description: "Bento boxes, cakes, treats and more",
       rating: 4.8,
-      image: '/shop-images/sneakers.png'
+      image: '/shop-images/rose-cakes.png'
     },
     {
       id: 2,
       businessName: "Rose Cakes",
       description: "Bento boxes, cakes, treats and more",
       rating: 4.8,
-      image: '/shop-images/sneakers.png'
+      image: '/shop-images/rose-cakes.png'
     },
     {
       id: 3,
       businessName: "Rose Cakes",
       description: "Bento boxes, cakes, treats and more",
       rating: 4.8,
-      image: '/shop-images/sneakers.png'
+      image: '/shop-images/rose-cakes.png'
     },
     {
       id: 4,
       businessName: "Rose Cakes",
       description: "Bento boxes, cakes, treats and more",
       rating: 4.8,
-      image: '/shop-images/sneakers.png'
+      image: '/shop-images/rose-cakes.png'
     },
   ]
 
@@ -47,67 +47,67 @@ export default function ProductSections({ handleCartUpdate }: propz) {
   const personalizedProducts = [
     {
       id: 5,
-      businessName: "Beauty Palace",
-      productName: "Boyfriend Jeans",
+      businessName: "Rose Cakes",
+      productName: "Tres Leches Cakes",
       price: 8000,
       rating: 4.8,
-      image: '/shop-images/sneakers.png'
+      image: '/shop-images/tres-leches-cake.jpeg'
     },
     {
       id: 6,
-      businessName: "Beauty Palace",
-      productName: "Boyfriend Jeans",
-      price: 8000,
-      rating: 4.8,
-      image: '/shop-images/sneakers.png'
+      businessName: "Zeenat's kitchen",
+      productName: "Yam with fried sauce",
+      price: 3500,
+      rating: 4.2,
+      image: '/shop-images/yam-and-sauce.jpeg'
     },
     {
       id: 7,
-      businessName: "Beauty Palace",
-      productName: "Boyfriend Jeans",
-      price: 8000,
-      rating: 4.8,
-      image: '/shop-images/sneakers.png'
+      businessName: "Muhammad Kabir's Jerseys",
+      productName: "Carlsberg Jersey",
+      price: 13000,
+      rating: 3.9,
+      image: '/shop-images/carlsberg-jersey.jpeg'
     },
     {
       id: 8,
-      businessName: "Beauty Palace",
-      productName: "Boyfriend Jeans",
-      price: 8000,
-      rating: 4.8,
-      image: '/shop-images/sneakers.png'
+      businessName: "Mufy's Treats",
+      productName: "Oreos Milk Cake",
+      price: 3500,
+      rating: 4.5,
+      image: '/shop-images/oreo-cake.jpeg'
     },
     {
       id: 9,
-      businessName: "Beauty Palace",
-      productName: "Boyfriend Jeans",
-      price: 8000,
-      rating: 4.8,
-      image: '/shop-images/sneakers.png'
+      businessName: "Suru's Meals",
+      productName: "Gurasa Packs",
+      price: 3500,
+      rating: 4.7,
+      image: '/shop-images/gurasa.png'
     },
     {
       id: 10,
-      businessName: "Beauty Palace",
-      productName: "Boyfriend Jeans",
-      price: 8000,
-      rating: 4.8,
-      image: '/shop-images/sneakers.png'
+      businessName: "Zamam's Collection",
+      productName: "Beaded Bracelet",
+      price: 3500,
+      rating: 3.7,
+      image: '/shop-images/beaded-bracelet.png'
     },
     {
       id: 11,
-      businessName: "Beauty Palace",
-      productName: "Boyfriend Jeans",
-      price: 8000,
-      rating: 4.8,
-      image: '/shop-images/sneakers.png'
+      businessName: "Hajara's Collection",
+      productName: "Ushas Lip Mask",
+      price: 2500,
+      rating: 5.0,
+      image: '/shop-images/ushas-lip-mask.png'
     },
     {
       id: 12,
-      businessName: "Beauty Palace",
-      productName: "Boyfriend Jeans",
-      price: 8000,
-      rating: 4.8,
-      image: '/shop-images/sneakers.png'
+      businessName: "Reedascent",
+      productName: "Oudal Lavl Oud",
+      price: 17500,
+      rating: 4.7,
+      image: '/shop-images/oud.png'
     },
   ]
 
@@ -115,35 +115,35 @@ export default function ProductSections({ handleCartUpdate }: propz) {
   const fashionWeekProducts = [
     {
       id: 13,
-      businessName: "Beauty Palace",
-      productName: "Boyfriend Jeans",
-      price: 8000,
-      rating: 4.8,
-      image: '/shop-images/sneakers.png'
+      businessName: "Muhammad Kabir's Jerseys",
+      productName: "Manchester City Kit",
+      price: 13000,
+      rating: 4.7,
+      image: '/shop-images/man-city-jersey.jpeg'
     },
     {
       id: 14,
-      businessName: "Beauty Palace",
-      productName: "Boyfriend Jeans",
-      price: 8000,
-      rating: 4.8,
-      image: '/shop-images/sneakers.png'
+      businessName: "Knightz Fashion",
+      productName: "Knightz Black Jeans",
+      price: 35000,
+      rating: 4.2,
+      image: '/shop-images/black-jeans.jpeg'
     },
     {
       id: 15,
-      businessName: "Beauty Palace",
-      productName: "Boyfriend Jeans",
-      price: 8000,
-      rating: 4.8,
-      image: '/shop-images/sneakers.png'
+      businessName: "Jeho's Luxury",
+      productName: "Alte Jeans",
+      price: 32000,
+      rating: 4.83,
+      image: '/shop-images/alte.jpeg'
     },
     {
       id: 16,
-      businessName: "Beauty Palace",
-      productName: "Boyfriend Jeans",
-      price: 8000,
-      rating: 4.8,
-      image: '/shop-images/sneakers.png'
+      businessName: "Purp's Crochets",
+      productName: "Nike Socks",
+      price: 2500,
+      rating: 5.0,
+      image: '/shop-images/nike-socks.jpeg'
     },
   ]
 
@@ -174,6 +174,7 @@ export default function ProductSections({ handleCartUpdate }: propz) {
                 businessName={business.businessName}
                 description={business.description}
                 rating={business.rating}
+                image={business.image}
               />
             ))}
           </div>

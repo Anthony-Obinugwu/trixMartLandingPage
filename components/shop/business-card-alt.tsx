@@ -7,7 +7,7 @@ interface BusinessCardProps {
   businessName: string
   description: string
   rating: number
-  image?: string
+  image: string
   isFavorite?: boolean
 }
 
@@ -22,7 +22,7 @@ export default function BusinessCardAlt({
     <div className="font-montserrat group relative overflow-hidden border-none transition-all duration-300 cursor-pointer min-w-[280px] flex-shrink-0">
       {/* Image Section */}
       <div className="h-80 w-72 mb-4">
-        <Image src='/shop-images/sneakers.png' className="w-full h-full object-cover rounded-xl" width={1952} height={1536} alt="Sneakers banner" />
+        <Image src={`${image}`} className="w-full h-full object-cover rounded-xl" width={1952} height={1536} alt="Sneakers banner" />
       </div>
 
       {/* Content Section */}

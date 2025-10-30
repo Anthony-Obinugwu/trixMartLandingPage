@@ -11,7 +11,7 @@ const ProfilePage = () => {
             <Image src='/page-vectors/back-arrow.svg' width={20} height={20} alt='' />
           </div>
         </Link>
-        <h1 className='font-bold text-3xl'>Profile</h1>
+        <h1 className='font-bold text-3xl'>User</h1>
       </header>
 
       <div className='w-52'>
