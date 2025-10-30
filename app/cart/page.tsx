@@ -2,7 +2,7 @@
 import { Item } from '@radix-ui/react-accordion'
 import Image from 'next/image'
 import Link from 'next/link'
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 
 interface cartStuffs {
   id: number
@@ -15,8 +15,12 @@ interface cartStuffs {
 }
 
 const CartPage = () => {
-  const storedItems = localStorage.getItem('cart');
-  const [cartItems, setCartItems] = useState<cartStuffs[]>(JSON.parse(storedItems ?? '[]'))
+  const [cartItems, setCartItems] = useState<cartStuffs[]>([])
+
+  useEffect(() => {
+    const storedItems = localStorage.getItem('cart');
+    setCartItems(JSON.parse(storedItems ?? '[]'));
+  }, [])
 
   function refreshPage() {
     const storedItems = localStorage.getItem('cart');
