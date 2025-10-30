@@ -167,17 +167,19 @@ export default function ProductSections({ handleCartUpdate }: propz) {
 
         {/* Horizontal Scrollable Container */}
         <div className="overflow-x-auto pb-4 scrollbar-hide">
-          <div className="flex gap-4 mx-4">
-            {studentBusinesses.map((business, index) => (
-              <BusinessCardAlt
-                key={index}
-                businessName={business.businessName}
-                description={business.description}
-                rating={business.rating}
-                image={business.image}
-              />
-            ))}
-          </div>
+          <Link href="/select-university">
+            <div className="flex gap-4 mx-4">
+              {studentBusinesses.map((business, index) => (
+                <BusinessCardAlt
+                  key={index}
+                  businessName={business.businessName}
+                  description={business.description}
+                  rating={business.rating}
+                  image={business.image}
+                />
+              ))}
+            </div>
+          </Link>
         </div>
       </section>
 
