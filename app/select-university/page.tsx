@@ -4,7 +4,7 @@ import React from 'react'
 
 const SelectUniversityPage = () => {
   return (
-    <div>
+    <div className='px-4'>
       <header className='relative flex items-center justify-between px-12 pt-4 mb-7'>
         <Link href="/shop">
           <div className='flex justify-center items-center w-9 border border-gray-300 rounded-full aspect-square'>
@@ -24,20 +24,22 @@ const SelectUniversityPage = () => {
       </section>
 
       <section className='flex justify-center gap-x-4 gap-y-7 flex-wrap'>
-        <div className='bg-gray-200 w-32 h-32 rounded-xl overflow-hidden'>
-          <Image src='/nile-logo.png' className='w-full h-full object-cover hover:scale-110 transition-transform' width={700} height={700} alt='' />
+        <Link href='/shop'>
+          <div className='bg-gray-200 w-32 h-32 md:w-52 md:h-52 rounded-xl overflow-hidden'>
+            <Image src='/nile-logo.png' className='w-full h-full object-cover hover:scale-110 transition-transform brightness-95' width={700} height={700} alt='' />
+          </div>
+        </Link>
+        <div className='bg-gray-200 w-32 h-32 md:w-52 md:h-52 rounded-xl overflow-hidden'>
+          <Image src='/baze.png' className='w-full h-full object-cover hover:scale-110 transition-transform' width={700} height={700} alt='' />
         </div>
-        <div className='bg-gray-200 w-32 h-32 rounded-xl'>
-          <Image src='/Trix-Mart-Logo-Blue.png' className='' width={700} height={700} alt='' />
-        </div>
-        <div className='bg-gray-200 w-32 h-32 rounded-xl'>
+        <div className='bg-gray-200 w-32 h-32 md:w-52 md:h-52 rounded-xl overflow-hidden'>
           <Image src='/veritas.png' className='w-full h-full object-cover hover:scale-110 transition-transform' width={700} height={700} alt='' />
         </div>
-        <div className='bg-gray-200 w-32 h-32 rounded-xl'>
-          <Image src='/Trix-Mart-Logo-Blue.png' className='' width={700} height={700} alt='' />
+        <div className='bg-gray-200 w-32 h-32 md:w-52 md:h-52 rounded-xl overflow-hidden'>
+          <Image src='/babcock.png' className='w-full h-full object-cover hover:scale-110 transition-transform' width={700} height={700} alt='' />
         </div>
-        <div className='bg-gray-200 w-32 h-32 rounded-xl'>
-          <Image src='/Trix-Mart-Logo-Blue.png' className='' width={700} height={700} alt='' />
+        <div className='bg-gray-200 w-32 h-32 md:w-52 md:h-52 rounded-xl overflow-hidden'>
+          <Image src='/uni-abuja.png' className='w-full h-full object-cover hover:scale-110 transition-transform' width={700} height={700} alt='' />
         </div>
       </section>
     </div>

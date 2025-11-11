@@ -2,7 +2,7 @@
 import { Item } from '@radix-ui/react-accordion'
 import Image from 'next/image'
 import Link from 'next/link'
-import React, { useState, useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 
 interface cartStuffs {
   id: number
@@ -15,12 +15,19 @@ interface cartStuffs {
 }
 
 const CartPage = () => {
-  const [cartItems, setCartItems] = useState<cartStuffs[]>([])
+  const storedItems = localStorage.getItem('cart');
+  const [cartItems, setCartItems] = useState<cartStuffs[]>([]);
+  const [cartTotal, setCartTotal] = useState<number>(0);
 
   useEffect(() => {
-    const storedItems = localStorage.getItem('cart');
-    setCartItems(JSON.parse(storedItems ?? '[]'));
-  }, [])
+    let tempCartTotal = 0;
+    cartItems.forEach((item) => {
+      tempCartTotal += item.price;
+      setCartTotal(tempCartTotal);
+    });
+  }, [cartItems]);
+
+
 
   function refreshPage() {
     const storedItems = localStorage.getItem('cart');
@@ -38,13 +45,21 @@ const CartPage = () => {
         <h1 className='font-bold text-3xl'>Cart</h1>
       </header>
 
-      <main>
+      <main className='pb-32'>
         {
-          cartItems.map((item) => {
-            return <CartItem id={item.id} businessName='' productName={item.productName} price={item.price} rating={item.rating} image={item.image} handleDelete={() => refreshPage()} />
-          })
+          cartItems.length > 0 ?
+            cartItems.map((item) => {
+              return <CartItem id={item.id} businessName='' productName={item.productName} price={item.price} rating={item.rating} image={item.image} handleDelete={() => refreshPage()} />
+            }) : <div className='flex justify-center items-center h-dvh'>Cart is Empty</div>
         }
       </main>
+      <footer className='fixed left-0 right-0 bottom-0 flex bg-[#006ED3] border border-[#006ED3]'>
+        <div className='flex-1 flex items-center pl-4'>
+          <div className='text-white text-2xl'>Total:</div>
+          <div className='px-2 text-white text-2xl'>{cartTotal}</div>
+        </div>
+        <button className='px-8 py-5 bg-white hover:bg-neutral-100 active:bg-[#006ED3] active:text-white transition-colors'>Buy Now</button>
+      </footer>
     </div>
   )
 }
@@ -63,9 +78,9 @@ const CartItem = (props: cartStuffs,) => {
         <div className='flex justify-center items-center w-24 h-32 border-l border-l-gray-200 hover:bg-red-300 active:bg-red-500'
           onClick={() => {
             const storedJsonItems: string = localStorage.getItem('cart') ?? '[]';
-            const storedCart: any = JSON.parse(storedJsonItems);
+            const storedCart: Array<cartStuffs> = JSON.parse(storedJsonItems);
 
-            const newArray = storedCart.filter((item: cartStuffs) => {
+            const newArray = storedCart.filter((item) => {
               if (item.id !== props.id) {
                 return item;
               }

@@ -200,7 +200,7 @@ export default function ProductSections({ handleCartUpdate }: propz) {
         </div>
 
         {/* Grid Container for Desktop, Scrollable for Mobile */}
-        <div className="hidden lg:grid lg:grid-cols-4 gap-4 mx-4">
+        <div className="hidden lg:grid lg:grid-cols-4 gap-x-4 gap-y-24 mx-4">
           {personalizedProducts.map((product, index) => (
             <ProductCard
               key={index}
