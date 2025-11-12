@@ -16,8 +16,13 @@ interface cartStuffs {
 
 const CartPage = () => {
   const storedItems = localStorage.getItem('cart');
-  const [cartItems, setCartItems] = useState<cartStuffs[]>([]);
+  const [cartItems, setCartItems] = useState<cartStuffs[]>(JSON.parse(storedItems ?? '[]'));
   const [cartTotal, setCartTotal] = useState<number>(0);
+
+  function refreshPage() {
+    const storedStuff = localStorage.getItem('cart');
+    setCartItems(JSON.parse(storedStuff ?? '[]'));
+  }
 
   useEffect(() => {
     let tempCartTotal = 0;
@@ -27,12 +32,6 @@ const CartPage = () => {
     });
   }, [cartItems]);
 
-
-
-  function refreshPage() {
-    const storedItems = localStorage.getItem('cart');
-    setCartItems(JSON.parse(storedItems ?? '[]'));
-  }
 
   return (
     <div className='font-montserrat'>
@@ -58,7 +57,9 @@ const CartPage = () => {
           <div className='text-white text-2xl'>Total:</div>
           <div className='px-2 text-white text-2xl'>{cartTotal}</div>
         </div>
-        <button className='px-8 py-5 bg-white hover:bg-neutral-100 active:bg-[#006ED3] active:text-white transition-colors'>Buy Now</button>
+        <Link href='/checkout'>
+          <button className='px-8 py-5 bg-white hover:bg-neutral-100 active:bg-[#006ED3] active:text-white transition-colors'>Buy Now</button>
+        </Link>
       </footer>
     </div>
   )
