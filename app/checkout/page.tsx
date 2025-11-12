@@ -57,12 +57,11 @@ const page = () => {
 }
 body {
   font-family: Arial;
-  padding-top: 68px;
 }
 header {
   display: grid;
   grid-template-columns: 155px 1fr max-content;
-  border: 1px solid var(--accent-color-2);
+  border: 1px solid #006ED3;
   padding: 14px 10px;
 
   background-color: white;
@@ -480,7 +479,7 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: var(--accent-color-4);
+  background-color: #006ED3;
   color: var(--accent-color-1);
   width: 100%;
   padding-top: 12px;
@@ -495,6 +494,7 @@ main {
 .place-order-button:hover {
   background-color: var(--accent-color-1);
   color: var(--accent-color-4);
+  outline: 1px solid black;
 }
 .place-order-button:active {
   background-color: rgb(218, 218, 218);
