@@ -2,7 +2,7 @@
 import { Item } from '@radix-ui/react-accordion'
 import Image from 'next/image'
 import Link from 'next/link'
-import React, { useEffect, useState } from 'react'
+import React, { useState, useEffect } from 'react'
 
 interface cartStuffs {
   id: number
@@ -78,9 +78,9 @@ const CartItem = (props: cartStuffs,) => {
         <div className='flex justify-center items-center w-24 h-32 border-l border-l-gray-200 hover:bg-red-300 active:bg-red-500'
           onClick={() => {
             const storedJsonItems: string = localStorage.getItem('cart') ?? '[]';
-            const storedCart: Array<cartStuffs> = JSON.parse(storedJsonItems);
+            const storedCart: any = JSON.parse(storedJsonItems);
 
-            const newArray = storedCart.filter((item) => {
+            const newArray = storedCart.filter((item: cartStuffs) => {
               if (item.id !== props.id) {
                 return item;
               }
