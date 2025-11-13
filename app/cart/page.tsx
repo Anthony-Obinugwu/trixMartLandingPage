@@ -1,5 +1,5 @@
 'use client'
-import { Item } from '@radix-ui/react-accordion'
+
 import Image from 'next/image'
 import Link from 'next/link'
 import React, { useState, useEffect } from 'react'
