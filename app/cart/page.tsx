@@ -15,9 +15,13 @@ interface cartStuffs {
 }
 
 const CartPage = () => {
-  const storedItems = localStorage.getItem('cart');
-  const [cartItems, setCartItems] = useState<cartStuffs[]>(JSON.parse(storedItems ?? '[]'));
+  const [cartItems, setCartItems] = useState<cartStuffs[]>([]);
   const [cartTotal, setCartTotal] = useState<number>(0);
+
+  useEffect(() => {
+    const storedItems = localStorage.getItem('cart');
+    setCartItems(JSON.parse(storedItems ?? '[]'));
+  }, []);
 
   function refreshPage() {
     const storedStuff = localStorage.getItem('cart');

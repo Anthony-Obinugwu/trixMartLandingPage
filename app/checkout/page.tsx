@@ -13,15 +13,14 @@ interface cartStuffs {
   handleDelete: Function
 }
 
-const page = () => {
-  const storedItems = localStorage.getItem('cart');
-  const [cartItems, setCartItems] = useState<cartStuffs[]>(JSON.parse(storedItems ?? '[]'));
+const CheckoutPage = () => {
+  const [cartItems, setCartItems] = useState<cartStuffs[]>([]);
   const [cartTotal, setCartTotal] = useState<number>(0);
 
-  function refreshPage() {
-    const storedStuff = localStorage.getItem('cart');
-    setCartItems(JSON.parse(storedStuff ?? '[]'));
-  }
+  useEffect(() => {
+    const storedItems = localStorage.getItem('cart');
+    setCartItems(JSON.parse(storedItems ?? '[]'));
+  }, []);
 
   useEffect(() => {
     let tempCartTotal = 0;
@@ -680,4 +679,4 @@ footer {
   )
 }
 
-export default page
+export default CheckoutPage
