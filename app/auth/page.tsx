@@ -42,7 +42,7 @@ const AuthPage = () => {
           transition={{ duration: 0.5 }}
           className='text-center mb-12'
         >
-          <h1 className='font-bold text-3xl md:text-4xl mb-4'>Welcome to TrixMart</h1>
+          <h1 className='font-bold text-3xl md:text-4xl mb-4'>Welcome to Trix Mart</h1>
           <p className='text-lg md:text-xl text-gray-600'>Choose how you want to join our community</p>
         </motion.section>
 

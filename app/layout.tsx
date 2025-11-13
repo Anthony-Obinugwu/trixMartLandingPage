@@ -10,7 +10,7 @@ interface LayoutProps {
 export default function Layout({ children, backgroundImage }: LayoutProps) {
   return (
     <html lang="en">
-      <title>TrixMart</title>
+      <title>Trix Mart</title>
       <link
         rel="shortcut icon"
         href="/trixmart-square-blue.png"

@@ -44,7 +44,7 @@ export default function Header() {
           </a>
           <Link href="/shop">
             <Button className="bg-[#006ED3] hover:bg-[#005bb0] text-white text-sm px-6 py-2">
-              Shop With TrixMart
+              Shop With Trix Mart
             </Button>
           </Link>
         </nav>
