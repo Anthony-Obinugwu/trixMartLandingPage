@@ -665,7 +665,7 @@ footer {
 
           <div className="payment-summary-row total-row">
             <div>Order total:</div>
-            <div className="payment-summary-money js-order-total">N{cartTotal + 1030}</div>
+            <div className="payment-summary-money js-order-total">N{cartTotal === 0 ? 0 : cartTotal + 1030}</div>
           </div>
 
           <Link href='/shop'>
