@@ -493,7 +493,7 @@ main {
 .place-order-button:hover {
   background-color: var(--accent-color-1);
   color: var(--accent-color-4);
-  outline: 1px solid black;
+  outline: 1px solid #006ED3;
 }
 .place-order-button:active {
   background-color: rgb(218, 218, 218);

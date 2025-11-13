@@ -29,18 +29,26 @@ const SelectUniversityPage = () => {
             <Image src='/nile-logo.png' className='w-full h-full object-cover hover:scale-110 transition-transform brightness-95' width={700} height={700} alt='' />
           </div>
         </Link>
-        <div className='bg-gray-200 w-32 h-32 md:w-52 md:h-52 rounded-xl overflow-hidden'>
-          <Image src='/baze.png' className='w-full h-full object-cover hover:scale-110 transition-transform' width={700} height={700} alt='' />
-        </div>
-        <div className='bg-gray-200 w-32 h-32 md:w-52 md:h-52 rounded-xl overflow-hidden'>
-          <Image src='/veritas.png' className='w-full h-full object-cover hover:scale-110 transition-transform' width={700} height={700} alt='' />
-        </div>
-        <div className='bg-gray-200 w-32 h-32 md:w-52 md:h-52 rounded-xl overflow-hidden'>
-          <Image src='/babcock.png' className='w-full h-full object-cover hover:scale-110 transition-transform' width={700} height={700} alt='' />
-        </div>
-        <div className='bg-gray-200 w-32 h-32 md:w-52 md:h-52 rounded-xl overflow-hidden'>
-          <Image src='/uni-abuja.png' className='w-full h-full object-cover hover:scale-110 transition-transform' width={700} height={700} alt='' />
-        </div>
+        <Link href='/shop'>
+          <div className='bg-gray-200 w-32 h-32 md:w-52 md:h-52 rounded-xl overflow-hidden'>
+            <Image src='/baze.png' className='w-full h-full object-cover hover:scale-110 transition-transform' width={700} height={700} alt='' />
+          </div>
+        </Link>
+        <Link href='/shop'>
+          <div className='bg-gray-200 w-32 h-32 md:w-52 md:h-52 rounded-xl overflow-hidden'>
+            <Image src='/veritas.png' className='w-full h-full object-cover hover:scale-110 transition-transform' width={700} height={700} alt='' />
+          </div>
+        </Link>
+        <Link href='/shop'>
+          <div className='bg-gray-200 w-32 h-32 md:w-52 md:h-52 rounded-xl overflow-hidden'>
+            <Image src='/babcock.png' className='w-full h-full object-cover hover:scale-110 transition-transform' width={700} height={700} alt='' />
+          </div>
+        </Link>
+        <Link href='/shop'>
+          <div className='bg-gray-200 w-32 h-32 md:w-52 md:h-52 rounded-xl overflow-hidden'>
+            <Image src='/uni-abuja.png' className='w-full h-full object-cover hover:scale-110 transition-transform' width={700} height={700} alt='' />
+          </div>
+        </Link>
       </section>
     </div>
   )
