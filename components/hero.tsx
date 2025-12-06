@@ -81,11 +81,6 @@ export default function Hero() {
         <div className="relative flex flex-col sm:flex-row items-center justify-center gap-6">
           <Image src="/page-vectors/vector-3.svg" className="absolute -top-10 -left-2 -z-10 sm:w-24 sm:-top-16 sm:left-0 md:left-8 lg:left-36" width={60} height={80} alt="" />
           <Link href="/shop" target="_blank">
-            <Button variant="outline" className="bg-[#215485] border-[#006ED3] text-white text-base rounded-2xl hover:bg-white hover:text-[#006ED3] px-8 py-6">
-              Shop with Trix Mart
-            </Button>
-          </Link>
-          <Link href="https://docs.google.com/forms/d/e/1FAIpQLSdPn3SFOBH3haWOi0tuRzgG1Fwcapcc8r8rJSDgBiyR1kpBbg/viewform?usp=header">
             <motion.button
               initial={{ opacity: 0, x: 100 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -98,6 +93,11 @@ export default function Hero() {
               }}
               className="border-[#FF8B2A] border-[1px] text-[#FF8B2A] text-base rounded-2xl hover:bg-[#FF8B2A] hover:text-white px-8 py-[12px]"
             >
+              Shop with Trix Mart
+            </motion.button>
+          </Link>
+          <Link href="https://docs.google.com/forms/d/e/1FAIpQLSdJUn4bsC346OYssLG1oJDXAHs9MGtz9UGZ242MG-Tcus_UKw/viewform?usp=publish-editor" target="_blank">
+            <motion.button className="bg-[#006ED3] border-[#006ED3] border text-white text-base rounded-2xl hover:bg-white hover:text-[#006ED3] px-8 py-[12px]">
               Join Trix Mart Community
             </motion.button>
           </Link>
