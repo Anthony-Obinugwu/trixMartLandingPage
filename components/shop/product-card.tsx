@@ -26,9 +26,9 @@ export default function ProductCard({
   handleCartUpdate
 }: ProductCardProps) {
   return (
-    <div className="font-montserrat group relative overflow-hidden transition-all duration-300 cursor-pointer min-w-[280px] flex-shrink-0">
+    <div className="font-montserrat group relative overflow-hidden transition-all duration-300 cursor-pointer min-w-[240px] md:min-w-[280px] flex-shrink-0">
       {/* Image Section */}
-      <div className="relative h-80 w-72 mb-4 bg-gray-200 rounded-xl overflow-hidden">
+      <div className="relative h-64 md:h-80 w-full mb-4 bg-gray-200 rounded-xl overflow-hidden">
         <Image src={`${image}`} className="w-full h-full object-cover" width={1952} height={1536} alt="Sneakers banner" />
       </div>
 

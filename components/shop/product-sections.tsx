@@ -153,8 +153,8 @@ export default function ProductSections({ handleCartUpdate }: propz) {
       <section>
         <div className="flex items-center justify-between mb-6 mx-4">
           <div className="flex items-center h-full">
-            <div className="w-2 h-12 mr-4 bg-[#006ED3] rounded-full"></div>
-            <h2 className="text-2xl lg:text-3xl font-bold text-gray-900">Student Businesses</h2>
+            <div className="w-2 h-8 md:h-12 mr-4 bg-[#006ED3] rounded-full"></div>
+            <h2 className="text-xl md:text-2xl lg:text-3xl font-bold text-gray-900">Student Businesses</h2>
           </div>
           <Link
             href="#"
@@ -187,8 +187,8 @@ export default function ProductSections({ handleCartUpdate }: propz) {
       <section>
         <div className="flex items-center justify-between mb-6 mx-4">
           <div className="flex items-center">
-            <div className="w-2 h-12 mr-4 bg-[#006ED3] rounded-full"></div>
-            <h2 className="text-2xl lg:text-3xl font-bold text-gray-900">Products made for You</h2>
+            <div className="w-2 h-8 md:h-12 mr-4 bg-[#006ED3] rounded-full"></div>
+            <h2 className="text-xl md:text-2xl lg:text-3xl font-bold text-gray-900">Products made for You</h2>
           </div>
           <Link
             href="/shop"
@@ -238,8 +238,8 @@ export default function ProductSections({ handleCartUpdate }: propz) {
       <section>
         <div className="flex items-center justify-between mb-6 mx-4">
           <div className="flex items-center">
-            <div className="w-2 h-12 mr-4 bg-[#006ED3] rounded-full"></div>
-            <h2 className="text-2xl lg:text-3xl font-bold text-gray-900">Shop for Fashion Week</h2>
+            <div className="w-2 h-8 md:h-12 mr-4 bg-[#006ED3] rounded-full"></div>
+            <h2 className="text-xl md:text-2xl lg:text-3xl font-bold text-gray-900">Shop for Fashion Week</h2>
           </div>
           <Link
             href="/shop"

@@ -25,29 +25,29 @@ export default function Footer() {
               height={60}
               className="mb-4"
             />
-            <p className="text-[#CFD3D7] text-xs text-nowrap">Connecting Buyers, Growing <br className="hidden lg:inline-block" /> Student Businesses.</p>
+            <p className="text-[#CFD3D7] text-xs">Connecting Buyers, Growing <br className="hidden lg:inline-block" /> Student Businesses.</p>
           </div>
 
           {/* Quick Links */}
           <div className="lg:col-span-1">
             <h3 className="text-base font-semibold text-[#F1F1F1CF] mb-4">Quick Links</h3>
             <nav className="flex flex-col gap-3">
-              <Link href="/#about" className="text-[#CFD3D7] text-xs text-nowrap hover:text-white transition-colors">
+              <Link href="/#about" className="text-[#CFD3D7] text-xs hover:text-white transition-colors">
                 About Us
               </Link>
-              <Link href="/#how-it-works" className="text-[#CFD3D7] text-xs text-nowrap hover:text-white transition-colors">
+              <Link href="/#how-it-works" className="text-[#CFD3D7] text-xs hover:text-white transition-colors">
                 How Trix Mart works
               </Link>
-              <Link href="/#categories" className="text-[#CFD3D7] text-xs text-nowrap hover:text-white transition-colors">
+              <Link href="/#categories" className="text-[#CFD3D7] text-xs hover:text-white transition-colors">
                 Product Categories
               </Link>
-              <Link href="/#why-join" className="text-[#CFD3D7] text-xs text-nowrap hover:text-white transition-colors">
+              <Link href="/#why-join" className="text-[#CFD3D7] text-xs hover:text-white transition-colors">
                 Why Join Us
               </Link>
-              <Link href="/#faq" className="text-[#CFD3D7] text-xs text-nowrap hover:text-white transition-colors">
+              <Link href="/#faq" className="text-[#CFD3D7] text-xs hover:text-white transition-colors">
                 FAQ
               </Link>
-              <Link href="https://chat.whatsapp.com/E9fDd3thS80Ko35yKtZljW" target="_blank" className="text-[#CFD3D7] text-xs text-nowrap hover:text-white transition-colors">
+              <Link href="https://chat.whatsapp.com/E9fDd3thS80Ko35yKtZljW" target="_blank" className="text-[#CFD3D7] text-xs hover:text-white transition-colors">
                 Join the Community
               </Link>
             </nav>
@@ -57,10 +57,10 @@ export default function Footer() {
           <div className="lg:col-span-1">
             <h3 className="text-base font-semibold text-[#F1F1F1CF] mb-4">Contact Info</h3>
             <div className="flex flex-col gap-3">
-              <a href="mailto:trixmartng@gmail.com" className="text-[#CFD3D7] text-xs text-nowrap hover:text-white transition-colors">
+              <a href="mailto:trixmartng@gmail.com" className="text-[#CFD3D7] text-xs hover:text-white transition-colors">
                 trixmartng@gmail.com
               </a>
-              <a href="tel:+23409030965445" className="text-[#CFD3D7] text-xs text-nowrap hover:text-white transition-colors">
+              <a href="tel:+23409030965445" className="text-[#CFD3D7] text-xs hover:text-white transition-colors">
                 +234 - 0903 - 096 - 5445
               </a>
             </div>
@@ -70,13 +70,13 @@ export default function Footer() {
           <div className="lg:col-span-1">
             <h3 className="text-base font-semibold text-[#F1F1F1CF] mb-4">Legal Info</h3>
             <nav className="flex flex-col gap-3">
-              <Link href="/privacy-policy" className="text-[#CFD3D7] text-xs text-nowrap hover:text-white transition-colors">
+              <Link href="/privacy-policy" className="text-[#CFD3D7] text-xs hover:text-white transition-colors">
                 Privacy Policy
               </Link>
-              <Link href="/terms-conditions" className="text-[#CFD3D7] text-xs text-nowrap hover:text-white transition-colors">
+              <Link href="/terms-conditions" className="text-[#CFD3D7] text-xs hover:text-white transition-colors">
                 Terms of Service
               </Link>
-              <Link href="/community-guidelines" className="text-[#CFD3D7] text-xs text-nowrap hover:text-white transition-colors">
+              <Link href="/community-guidelines" className="text-[#CFD3D7] text-xs hover:text-white transition-colors">
                 Community Guidelines
               </Link>
             </nav>
@@ -92,7 +92,7 @@ export default function Footer() {
                   <span id="the-pillar" className="w-[80px]"></span>
                 </div>
                 <div>
-                  <label htmlFor="email" className="text-xs text-nowrap text-[#CFD3D7]">
+                  <label htmlFor="email" className="text-xs text-[#CFD3D7]">
                     Your Email
                   </label>
                   <div className="flex space-x-4 max-w-[450px] mt-2">
@@ -100,7 +100,7 @@ export default function Footer() {
                       type="email"
                       id="email"
                       placeholder="Enter Your Email"
-                      className="bg-[#F1F1F14A] text-xs text-nowrap text-white border-none placeholder:text-[#CFD3D7]"
+                      className="bg-[#F1F1F14A] text-xs text-white border-none placeholder:text-[#CFD3D7]"
                     /><Button type="submit" className="bg-[#FF8B2A] hover:bg-[#e67a1f] text-white">Send</Button>
                   </div>
                 </div>
@@ -138,7 +138,7 @@ export default function Footer() {
         </div>
 
         {/* Copyright */}
-        <div className="pt-8 border-t border-[#F1F1F1CF] text-center text-[#CFD3D7] text-xs text-nowrap">
+        <div className="pt-8 border-t border-[#F1F1F1CF] text-center text-[#CFD3D7] text-xs">
           <p>Copyright © Trix Solutions 2025. All Rights Reserved</p>
         </div>
       </div>

@@ -17,13 +17,14 @@ export default function Home() {
 
   return (
     <Layout backgroundImage={backgroundImage}>
-      <section id="header">
+      <section id="header" className="pt-2 md:pt-4">
         <Image
           src="/page-vectors/ellipse1.svg"
           className="absolute -left-10 sm:-left-4 md:left-0 -z-10"
           width={130}
           height={50}
           alt=""
+          priority
         />
         <Header />
       </section>
@@ -34,6 +35,7 @@ export default function Home() {
           width={200}
           height={400}
           alt="student-emphasis"
+          priority
         />
         <Image
           src="/page-vectors/ellipse2.svg"
@@ -41,6 +43,7 @@ export default function Home() {
           width={200}
           height={200}
           alt=""
+          priority
         />
         <Image
           src="/page-vectors/shopping-cart.svg"

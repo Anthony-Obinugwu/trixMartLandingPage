@@ -8,9 +8,9 @@ export default function TermsAndConditions() {
     return (
         <Layout>
             <Header />
-            <main className="container mx-auto px-4 py-16 font-montserrat">
+            <main className="container mx-auto px-4 py-8 md:py-16 font-montserrat">
                 <div className="max-w-4xl mx-auto">
-                    <h1 className="text-4xl font-bold text-[#051650] mb-8">Terms and Conditions and End-User License Agreement (EULA)</h1>
+                    <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold text-[#051650] mb-8">Terms and Conditions and End-User License Agreement (EULA)</h1>
                     <p className="text-gray-600 mb-6 font-medium">Effective Date: April 12, 2026</p>
 
                     <p className="text-gray-700 leading-relaxed mb-6">

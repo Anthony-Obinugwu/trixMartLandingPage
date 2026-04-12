@@ -23,13 +23,15 @@ export default function ShopPage() {
 
   return (
     <div className="min-h-screen bg-white">
-      {/* Demo Disclaimer Banner */}
-      <div className="bg-[#FF8B2A] text-white text-center py-2 px-4 text-sm font-medium">
-        <p>
-          <strong>Notice:</strong> This is a demo version for showcase purposes. Trix Mart services are currently only available via our mobile app, which is still under development.
-        </p>
+      <div className="sticky top-0 z-50">
+        {/* Demo Disclaimer Banner */}
+        <div className="bg-[#FF8B2A] text-white text-center py-2 px-4 text-xs sm:text-sm font-medium">
+          <p>
+            <strong>Notice:</strong> This is a demo version for showcase purposes. Trix Mart services are currently only available via our mobile app, which is still under development.
+          </p>
+        </div>
+        <ShopHeader numberOfCartItems={cartCount} />
       </div>
-      <ShopHeader numberOfCartItems={cartCount} />
       <HeroBanner />
       <ProductSections handleCartUpdate={calculateCart} />
       <Footer />

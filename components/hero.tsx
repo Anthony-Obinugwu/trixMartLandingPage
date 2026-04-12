@@ -8,13 +8,14 @@ export default function Hero() {
     <main className="font-montserrat relative px-4 pt-12 pb-16 md:pt-8 max-w-[1440px] mx-auto">
       <div className="max-w-[1280px] mx-auto mb-8">
         <motion.h1
-          initial={{ opacity: 0, y: 150 }}
+          initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="relative w-fit font-extralight text-[28px] text-center text-gray-900 mb-10 leading-[60px] mx-auto sm:text-3xl sm:leading-[80px] md:text-4xl md:leading-[80px] lg:text-5xl lg:leading-[96px]"
+          className="relative w-fit font-extralight text-[24px] text-center text-gray-900 mb-10 leading-[40px] mx-auto sm:text-3xl sm:leading-[80px] md:text-4xl md:leading-[80px] lg:text-5xl lg:leading-[96px]"
         >
           <motion.div
+            style={{ willChange: "transform" }}
             animate={{
               x: [0, -20, 20, -10, 10, 0],
               rotate: [0, -5, 5, -2, 2, 0],
@@ -42,7 +43,7 @@ export default function Hero() {
             alt=""
           />
           The
-          <span className="relative font-marckscript text-4xl inline-block leading-none mx-2 text-[#006ED3] md:text-5xl md:mx-3">
+          <span className="relative font-marckscript text-3xl inline-block leading-none mx-2 text-[#006ED3] md:text-5xl md:mx-3">
             <Image
               src="/page-vectors/vector-1.svg"
               className="absolute scale-110"
@@ -55,7 +56,7 @@ export default function Hero() {
           marketplace where <br className="hidden sm:block" /> buyers shop,
           <br className="hidden" /> and sellers grow their{" "}
           <br className="hidden sm:block " /> businesses
-          <span className="relative font-marckscript text-4xl inline-block leading-none mx-2 text-[#FF8B2A] md:text-5xl md:mx-3">
+          <span className="relative font-marckscript text-3xl inline-block leading-none mx-2 text-[#FF8B2A] md:text-5xl md:mx-3">
             <Image
               src="/page-vectors/vector-2.svg"
               className="absolute scale-110"
@@ -69,7 +70,7 @@ export default function Hero() {
         </motion.h1>
 
         <motion.p
-          initial={{ opacity: 0, y: 100 }}
+          initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.4 }}

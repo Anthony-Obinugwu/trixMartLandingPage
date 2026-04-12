@@ -9,19 +9,19 @@ export default function HeroBanner() {
     <section className="font-montserrat max-w-[1440px] mx-auto px-4 py-8">
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {/* Main Featured Banner */}
-        <div className="lg:col-span-2 relative rounded-3xl overflow-hidden bg-gradient-to-br from-purple-400 via-purple-500 to-pink-500 h-[400px] lg:h-[500px]">
+        <div className="lg:col-span-2 relative rounded-3xl overflow-hidden bg-gradient-to-br from-purple-400 via-purple-500 to-pink-500 h-[300px] sm:h-[400px] lg:h-[500px]">
           <Image src='/shop-images/headphones.png' className="w-full h-full object-cover" width={1952} height={1536} alt="Headphones banner" />
 
           {/* Content Overlay */}
           <div className="absolute inset-0 flex flex-col justify-center px-8 lg:px-16">
             <div className="">
-              <h2 className="font-semibold text-white text-3xl sm:text-4xl mb-4 ">
+              <h2 className="font-semibold text-white text-xl sm:text-2xl md:text-3xl lg:text-4xl mb-4 ">
                 Premium Sound, Premium Savings
               </h2>
               <p className="text-white/90 text-base mb-6">
                 Limited offer, hurry up and get yours now
               </p>
-              <Button className="bg-white/30 text-white hover:bg-white hover:text-black border-white border-2 border-solid px-8 py-6 text-lg rounded-3xl ">
+              <Button className="bg-white/30 text-white hover:bg-white hover:text-black border-white border-2 border-solid px-6 py-4 sm:px-8 sm:py-6 text-base sm:text-lg rounded-3xl ">
                 Shop Now
               </Button>
             </div>

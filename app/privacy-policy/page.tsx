@@ -8,9 +8,9 @@ export default function PrivacyPolicy() {
     return (
         <Layout>
             <Header />
-            <main className="container mx-auto px-4 py-16 font-montserrat">
+            <main className="container mx-auto px-4 py-8 md:py-16 font-montserrat">
                 <div className="max-w-4xl mx-auto">
-                    <h1 className="text-4xl font-bold text-[#051650] mb-8">Comprehensive Privacy Policy for TrixMart</h1>
+                    <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold text-[#051650] mb-8">Privacy Policy for TrixMart</h1>
                     <p className="text-gray-600 mb-6 font-medium">Effective Date: April 12, 2026</p>
 
                     <section className="mb-10">
