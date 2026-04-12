@@ -93,10 +93,10 @@ export default function ShopHeader({ numberOfCartItems }: properties) {
             </button>
           </div>
           <div className="flex-1"></div>
-          <Link href="#" className="text-sm font-medium text-gray-700 hover:text-gray-900">
+          <Link href="/profile" className="text-sm font-medium text-gray-700 hover:text-gray-900">
             My Orders
           </Link>
-          <Link href="#" className="text-sm font-medium text-gray-700 hover:text-gray-900">
+          <Link href="mailto:trixmartng@gmail.com" className="text-sm font-medium text-gray-700 hover:text-gray-900">
             Contact Us
           </Link>
         </nav>

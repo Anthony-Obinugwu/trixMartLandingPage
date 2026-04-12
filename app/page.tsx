@@ -9,6 +9,7 @@ import HowItWorks from "@/components/how-it-works";
 import Layout from "@/components/layout";
 import Reviews from "@/components/reviews";
 import WhyJoin from "@/components/why-join";
+import FAQ from "@/components/faq";
 import Image from "next/image";
 
 export default function Home() {
@@ -170,6 +171,7 @@ export default function Home() {
         />
         <Reviews />
       </section>
+      <FAQ />
       <Footer />
     </Layout>
   );

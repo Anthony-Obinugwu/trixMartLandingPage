@@ -97,7 +97,18 @@ export default function Hero() {
             </motion.button>
           </Link>
           <Link href="https://docs.google.com/forms/d/e/1FAIpQLSdJUn4bsC346OYssLG1oJDXAHs9MGtz9UGZ242MG-Tcus_UKw/viewform?usp=publish-editor" target="_blank">
-            <motion.button className="bg-[#006ED3] border-[#006ED3] border text-white text-base rounded-2xl hover:bg-white hover:text-[#006ED3] px-8 py-[12px]">
+            <motion.button
+              initial={{ opacity: 0, x: -100 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{
+                duration: 0.6,
+                delay: 0.8,
+                type: "spring",
+                damping: 10,
+              }}
+              className="bg-[#006ED3] border-[#006ED3] border text-white text-base rounded-2xl hover:bg-white hover:text-[#006ED3] px-8 py-[12px]"
+            >
               Join Trix Mart Community
             </motion.button>
           </Link>

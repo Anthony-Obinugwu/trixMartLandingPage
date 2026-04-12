@@ -191,7 +191,7 @@ export default function ProductSections({ handleCartUpdate }: propz) {
             <h2 className="text-2xl lg:text-3xl font-bold text-gray-900">Products made for You</h2>
           </div>
           <Link
-            href="#"
+            href="/shop"
             className="flex items-center gap-1 text-[#006ED3] hover:text-[#005bb0] font-medium text-sm lg:text-base"
           >
             See more
@@ -242,7 +242,7 @@ export default function ProductSections({ handleCartUpdate }: propz) {
             <h2 className="text-2xl lg:text-3xl font-bold text-gray-900">Shop for Fashion Week</h2>
           </div>
           <Link
-            href="#"
+            href="/shop"
             className="flex items-center gap-1 text-[#006ED3] hover:text-[#005bb0] font-medium text-sm lg:text-base"
           >
             See more
