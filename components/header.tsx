@@ -4,12 +4,19 @@ import Image from "next/image"
 import Link from "next/link"
 import MobileNav from "./mobile-nav"
 
+import { usePathname } from "next/navigation"
+
 export default function Header() {
+  const pathname = usePathname()
+  const isHomePage = pathname === "/"
+
   const handleScroll = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>, targetId: string) => {
-    e.preventDefault();
-    const targetElement = document.getElementById(targetId);
-    if (targetElement) {
-      targetElement.scrollIntoView({ behavior: "smooth" });
+    if (isHomePage) {
+      e.preventDefault();
+      const targetElement = document.getElementById(targetId);
+      if (targetElement) {
+        targetElement.scrollIntoView({ behavior: "smooth" });
+      }
     }
   };
 
@@ -26,19 +33,19 @@ export default function Header() {
           />
         </Link>
         <nav className="hidden md:flex items-center gap-4 lg:gap-8">
-          <a href="#about" className="relative group text-sm text-gray-700 hover:text-gray-900" onClick={(e) => handleScroll(e, "about")}>
+          <a href={isHomePage ? "#about" : "/#about"} className="relative group text-sm text-gray-700 hover:text-gray-900" onClick={(e) => handleScroll(e, "about")}>
             About Us
             <div className="opacity-0 absolute w-full h-1 bg-[#FF8B2A] rounded-full -bottom-2 transition-opacity duration-100 sm:group-hover:opacity-100"></div>
           </a>
-          <a href="#how-it-works" className="relative group text-sm text-gray-700 hover:text-gray-900" onClick={(e) => handleScroll(e, "how-it-works")}>
+          <a href={isHomePage ? "#how-it-works" : "/#how-it-works"} className="relative group text-sm text-gray-700 hover:text-gray-900" onClick={(e) => handleScroll(e, "how-it-works")}>
             How it Works
             <div className="opacity-0 absolute w-full h-1 bg-[#FF8B2A] rounded-full -bottom-2 transition-opacity duration-100 sm:group-hover:opacity-100"></div>
           </a>
-          <a href="#categories" className="relative group text-sm text-gray-700 hover:text-gray-900" onClick={(e) => handleScroll(e, "categories")}>
-            Categories
+          <a href={isHomePage ? "#categories" : "/#categories"} className="relative group text-sm text-gray-700 hover:text-gray-900" onClick={(e) => handleScroll(e, "categories")}>
+            Product Categories
             <div className="opacity-0 absolute w-full h-1 bg-[#FF8B2A] rounded-full -bottom-2 transition-opacity duration-100 sm:group-hover:opacity-100"></div>
           </a>
-          <a href="#why-join-us" className="relative group text-sm text-gray-700 hover:text-gray-900" onClick={(e) => handleScroll(e, "why-join")}>
+          <a href={isHomePage ? "#why-join" : "/#why-join"} className="relative group text-sm text-gray-700 hover:text-gray-900" onClick={(e) => handleScroll(e, "why-join")}>
             Why Join Us
             <div className="opacity-0 absolute w-full h-1 bg-[#FF8B2A] rounded-full -bottom-2 transition-opacity duration-100 sm:group-hover:opacity-100"></div>
           </a>

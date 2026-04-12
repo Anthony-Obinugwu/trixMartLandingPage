@@ -67,13 +67,13 @@ export default function Footer() {
           <div className="lg:col-span-1">
             <h3 className="text-base font-semibold text-[#F1F1F1CF] mb-4">Legal Info</h3>
             <nav className="flex flex-col gap-3">
-              <Link href="/privacy" className="text-[#CFD3D7] text-xs text-nowrap hover:text-white transition-colors">
+              <Link href="/privacy-policy" className="text-[#CFD3D7] text-xs text-nowrap hover:text-white transition-colors">
                 Privacy Policy
               </Link>
-              <Link href="/terms" className="text-[#CFD3D7] text-xs text-nowrap hover:text-white transition-colors">
+              <Link href="/terms-conditions" className="text-[#CFD3D7] text-xs text-nowrap hover:text-white transition-colors">
                 Terms of Service
               </Link>
-              <Link href="/terms" className="text-[#CFD3D7] text-xs text-nowrap hover:text-white transition-colors">
+              <Link href="/community-guidelines" className="text-[#CFD3D7] text-xs text-nowrap hover:text-white transition-colors">
                 Community Guidelines
               </Link>
             </nav>
@@ -102,9 +102,9 @@ export default function Footer() {
                   </div>
                 </div>
               </div>
-              
+
               <div className="flex gap-4 mt-6">
-              <Link
+                <Link
                   href="#"
                   className=""
                 >
