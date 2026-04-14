@@ -1,15 +1,40 @@
 "use client"
 
-import type React from "react"
+import { useState, type FormEvent } from "react"
+import { useRouter } from "next/navigation"
 import Image from "next/image"
 import Link from "next/link"
 import { Input } from "@/components/ui/input"
 import { Button } from "@/components/ui/button"
 
 export default function Footer() {
-  const handleSubmit = (e: React.FormEvent) => {
+  const [result, setResult] = useState("")
+  const router = useRouter()
+
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault()
-    // Add newsletter subscription logic here
+    setResult("Sending...")
+
+    const formData = new FormData(e.target as HTMLFormElement)
+    formData.append("access_key", "483df40c-b466-4755-8079-2893a9b71d8b")
+
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData,
+      })
+
+      const data = await response.json()
+      if (data.success) {
+        setResult("Success!")
+          ; (e.target as HTMLFormElement).reset()
+        router.push("/form-submitted")
+      } else {
+        setResult("Error! " + data.message)
+      }
+    } catch (error) {
+      setResult("Error occurred while sending.")
+    }
   }
 
   return (
@@ -82,9 +107,9 @@ export default function Footer() {
             </nav>
           </div>
 
-          {/* Have a question */}
+          {/* Questions and complaints */}
           <div className="lg:col-span-1">
-            <h3 className="text-base font-semibold text-[#F1F1F1CF] mb-4">Have a question?</h3>
+            <h3 className="text-base font-semibold text-[#F1F1F1CF] mb-4">Questions and complaints</h3>
             <form onSubmit={handleSubmit}>
               <div className="" >
                 <div className="flex mb-6 max-w-[450px]">
@@ -99,10 +124,17 @@ export default function Footer() {
                     <Input
                       type="email"
                       id="email"
+                      name="email"
                       placeholder="Enter Your Email"
+                      required
                       className="bg-[#F1F1F14A] text-xs text-white border-none placeholder:text-[#CFD3D7]"
                     /><Button type="submit" className="bg-[#FF8B2A] hover:bg-[#e67a1f] text-white">Send</Button>
                   </div>
+                  {result && (
+                    <p className={`mt-2 text-xs ${result.includes("Error") ? "text-red-400" : "text-green-400"}`}>
+                      {result}
+                    </p>
+                  )}
                 </div>
               </div>
 
