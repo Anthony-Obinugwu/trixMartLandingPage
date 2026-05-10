@@ -10,6 +10,7 @@ import {
   Mail, 
   School as SchoolIcon, 
   Shield, 
+  ShieldAlert,
   LogOut, 
   ArrowLeft,
   Calendar,
@@ -166,16 +167,6 @@ export default function ProfilePage() {
                             <span className="text-sm">Campus location primary</span>
                           </div>
                         </div>
-                        <div className="flex flex-wrap justify-center md:justify-start gap-4 pt-2">
-                          <div className="flex flex-col items-center md:items-start p-3 bg-gray-50 rounded-xl min-w-[120px]">
-                            <span className="text-xs text-gray-400 uppercase font-bold">School Code</span>
-                            <span className="font-semibold text-gray-700">{school.code}</span>
-                          </div>
-                          <div className="flex flex-col items-center md:items-start p-3 bg-gray-50 rounded-xl min-w-[120px]">
-                            <span className="text-xs text-gray-400 uppercase font-bold">Domains</span>
-                            <span className="font-semibold text-gray-700">{school.allowed_email_domains.join(', ')}</span>
-                          </div>
-                        </div>
                       </div>
                     </div>
                   ) : (
@@ -185,11 +176,40 @@ export default function ProfilePage() {
               </Card>
             </motion.div>
 
-            {/* Placeholder for other profile sections */}
+            {/* Danger Zone */}
             <motion.div 
               initial={{ opacity: 0, x: 20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.2 }}
+            >
+              <Card className="shadow-xl border-none rounded-3xl overflow-hidden border-red-100 bg-red-50/30">
+                <CardHeader className="pb-4">
+                  <CardTitle className="text-xl flex items-center gap-2 text-red-600">
+                    <ShieldAlert className="h-5 w-5" />
+                    Danger Zone
+                  </CardTitle>
+                </CardHeader>
+                <CardContent className="pt-2">
+                  <div className="flex flex-col md:flex-row items-center justify-between gap-4 bg-white/60 p-6 rounded-2xl border border-red-100">
+                    <div className="text-center md:text-left">
+                      <h4 className="font-bold text-gray-900">Delete Account</h4>
+                      <p className="text-sm text-gray-500">Permanently remove your account and all associated data.</p>
+                    </div>
+                    <Link href="/profile/delete-account">
+                      <Button variant="destructive" className="bg-red-600 hover:bg-red-700 text-white rounded-xl shadow-md hover:shadow-lg transition-all font-bold">
+                        Delete My Account
+                      </Button>
+                    </Link>
+                  </div>
+                </CardContent>
+              </Card>
+            </motion.div>
+
+            {/* Placeholder for other profile sections */}
+            <motion.div 
+              initial={{ opacity: 0, x: 20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ delay: 0.3 }}
             >
               <Card className="shadow-xl border-none rounded-3xl overflow-hidden border-dashed border-2 bg-gray-50/50">
                 <CardContent className="py-12 text-center">

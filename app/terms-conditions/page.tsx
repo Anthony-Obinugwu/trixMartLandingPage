@@ -41,10 +41,14 @@ export default function TermsAndConditions() {
                             The underlying architecture of The Platform is proprietary. You are strictly prohibited from:
                         </p>
                         <ul className="list-disc ml-6 text-gray-700 space-y-2 mb-4">
-                            <li>Reverse-engineering, decompiling, or disassembling the compiled application binaries or the underlying Dart source code.</li>
+                            <li>Reverse-engineering, decompiling, or disassembling the compiled application binaries or the underlying source code.</li>
                             <li>Utilizing automated data scraping, extraction tools, or participating in Distributed Denial of Service (DDoS) attacks against our servers.</li>
                             <li>Creating derivative works, distributing unauthorized modified versions of the application, or utilizing the platform to infringe upon the copyright or intellectual property rights of others.</li>
                         </ul>
+                        <h3 className="text-xl font-semibold text-[#051650] mt-6 mb-3">Prohibited Academic and Illicit Listings</h3>
+                        <p className="text-gray-700 leading-relaxed mb-4">
+                            Given the academic nature of our community, Sellers are strictly prohibited from listing items that facilitate academic dishonesty. This includes, but is not limited to, the sale of pre-written essays, thesis projects, stolen examination materials, or proxy-examination services. Furthermore, the sale of illicit substances, weapons, and counterfeit institutional merchandise is strictly forbidden and will result in an immediate, permanent ban.
+                        </p>
                         <p className="text-gray-700 leading-relaxed">
                             <strong>Notice and Takedown:</strong> We operate a strict takedown policy. If we receive a valid notification of copyright infringement, we will expeditiously remove the infringing content and permanently suspend the accounts of repeat infringers.
                         </p>
@@ -59,6 +63,10 @@ export default function TermsAndConditions() {
                             <li><strong>No Seller Liability:</strong> TrixMart is not a party to the actual sales transaction. The contract formed at the completion of a purchase exists solely between the Buyer and the Seller. TrixMart is not vicariously or strictly liable for unlawful user-generated content, defamatory reviews, or defective products listed by third-party Sellers.</li>
                             <li><strong>Indemnification:</strong> Sellers agree to fully indemnify and hold TrixMart harmless against any third-party claims, regulatory fines, or legal expenses arising from their product listings, digital storefronts, or failure to fulfill orders.</li>
                         </ul>
+                        <h3 className="text-xl font-semibold text-[#051650] mt-6 mb-3">Escrow and Payout Clearing Period</h3>
+                        <p className="text-gray-700 leading-relaxed">
+                            To ensure marketplace integrity and buyer satisfaction, TrixMart utilizes a temporary fund-holding mechanism. All funds generated from a completed transaction are held in a pending escrow state for a mandatory clearing period of three (3) calendar days (72 hours) following the order completion. During this three-day window, the Buyer retains the right to inspect the goods and report any defects, non-delivery, or misrepresentation to initiate a dispute. If no dispute is formally lodged within this 72-hour period, the funds will be automatically cleared and released to the Seller's withdrawable wallet balance.
+                        </p>
                     </section>
 
                     <section className="mb-10">
@@ -78,10 +86,14 @@ export default function TermsAndConditions() {
                         <p className="text-gray-700 leading-relaxed mb-4">
                             To protect our ecosystem from digital fraud and comply with the Cybercrimes (Prohibition, Prevention, etc.) Amendment Act of 2024, Sellers are subject to strict regulatory oversight:
                         </p>
-                        <ul className="list-disc ml-6 text-gray-700 space-y-2">
+                        <ul className="list-disc ml-6 text-gray-700 space-y-2 mb-4">
                             <li><strong>Identity Verification (KYC):</strong> Sellers must provide accurate legal identities. TrixMart reserves the right to mandate the biometric matching and real-time database verification of government-issued identification (such as the NIN or BVN) before granting storefront visibility.</li>
                             <li><strong>Fraud Prevention:</strong> Any manipulation or fraudulent exploitation of our payment technology gateways will result in immediate account termination, and the preservation of digital evidence (including IP addresses and traffic logs) for handover to national law enforcement and cybersecurity agencies.</li>
                         </ul>
+                        <h3 className="text-xl font-semibold text-[#051650] mt-6 mb-3">Account Suspension and Financial Freezes</h3>
+                        <p className="text-gray-700 leading-relaxed">
+                            In the event that our automated risk algorithms or administrative personnel flag a Seller's account for suspected fraudulent activity, severe policy violations, or anomalous transaction patterns, TrixMart reserves the right to immediately suspend the account. Furthermore, to protect consumers and facilitate internal review, any pending wallet payouts and escrowed funds will be frozen for a period of up to ninety (90) days. This administrative hold allows us to conduct a comprehensive investigation, process necessary buyer chargebacks, and, if required, liaise with regulatory and law enforcement authorities. Upon the successful resolution of the investigation and exoneration of the Seller, all frozen, legitimate funds will be released.
+                        </p>
                     </section>
 
                     <section className="mb-10">
@@ -102,6 +114,17 @@ export default function TermsAndConditions() {
                         <p className="text-gray-700 leading-relaxed mb-4">
                             Your use of The Platform is also governed by our Privacy Policy, which is aligned with the Nigeria Data Protection Act (NDPA) 2023. You retain the right to request the deletion of your account at any time via the application settings. Please note that while public profile data will be removed, specific financial transaction ledgers and KYC artifacts may be retained securely offline for up to ten (10) years to comply with national Anti-Money Laundering (AML) statutory retention mandates.
                         </p>
+                        <h3 className="text-xl font-semibold text-[#051650] mt-6 mb-3">Prerequisites for Account Deletion</h3>
+                        <p className="text-gray-700 leading-relaxed mb-4">
+                            While you retain the right to request account deletion, this action is strictly contingent upon the resolution of all active contractual obligations. Users may only initiate a permanent account deletion if:
+                        </p>
+                        <ul className="list-disc ml-6 text-gray-700 space-y-2 mb-4">
+                            <li><strong>Buyers:</strong> Have no pending, unfulfilled, or actively disputed orders.</li>
+                            <li><strong>Sellers:</strong> Have successfully fulfilled all active orders, resolved any open buyer disputes, and successfully withdrawn all cleared funds from their platform wallet.</li>
+                        </ul>
+                        <p className="text-gray-700 leading-relaxed">
+                            The Platform's system will automatically block and reject any account deletion request until all active orders and financial obligations are fully resolved.
+                        </p>
                     </section>
 
                     <section className="mb-10">
@@ -109,6 +132,41 @@ export default function TermsAndConditions() {
                         <p className="text-gray-700 leading-relaxed mb-4">
                             This Agreement shall be governed by and construed in accordance with the laws of the Federal Republic of Nigeria. Any dispute arising out of or in connection with this Agreement, including any question regarding its existence, validity, or termination, shall be subject to the exclusive jurisdiction of the Nigerian courts.
                         </p>
+                        <h3 className="text-xl font-semibold text-[#051650] mt-6 mb-3">Mandatory Internal Mediation</h3>
+                        <p className="text-gray-700 leading-relaxed">
+                            Before initiating any formal legal proceedings, Users agree to first attempt to resolve any disputes arising from Platform transactions through TrixMart's internal support channels. Upon filing a formal dispute, TrixMart will act as a neutral mediator for a period of up to fourteen (14) days to facilitate an amicable resolution between the Buyer and Seller. Only after this internal mediation period has been exhausted may a User pursue external legal remedies.
+                        </p>
+                    </section>
+
+                    <section className="mb-10">
+                        <h2 className="text-2xl font-semibold text-[#051650] mb-4">9. Prohibited Goods and Services</h2>
+                        <p className="text-gray-700 leading-relaxed mb-4">
+                            Sellers are strictly prohibited from listing, selling, or facilitating the exchange of the following age-restricted or regulated items on TrixMart:
+                        </p>
+                        <ul className="list-disc ml-6 text-gray-700 space-y-3 mb-4">
+                            <li><strong>Alcohol & Tobacco:</strong> Any alcoholic beverages, tobacco products, cigarettes, e-cigarettes, vapes, or related paraphernalia.</li>
+                            <li><strong>Weapons & Explosives:</strong> Firearms, ammunition, tactical knives (excluding kitchen cutlery), explosives, or any item designed to cause bodily harm.</li>
+                            <li><strong>Pharmaceuticals:</strong> Prescription-only medications, illegal drugs, or controlled substances.</li>
+                            <li><strong>Adult Content:</strong> Pornographic material, sexually explicit services, or adult-oriented "novelty" items.</li>
+                            <li><strong>Gambling:</strong> Lottery tickets, betting credits, or any form of organized gambling.</li>
+                            <li><strong>Regulated Financial Products:</strong> Cryptocurrency, stocks, or credit services.</li>
+                        </ul>
+                        <p className="text-gray-700 leading-relaxed">
+                            <strong>Enforcement:</strong> TrixMart reserves the right to immediately suspend any seller account and remove listings found in violation of these restrictions without prior notice.
+                        </p>
+                    </section>
+
+                    <section className="mb-10">
+                        <h2 className="text-2xl font-semibold text-[#051650] mb-4">10. User Eligibility and Age Requirements</h2>
+                        <p className="text-gray-700 leading-relaxed mb-4">
+                            By creating an account or using the TrixMart platform, you represent and warrant that:
+                        </p>
+                        <ul className="list-disc ml-6 text-gray-700 space-y-3 mb-4">
+                            <li><strong>Minimum Age:</strong> You are at least <strong>18 years of age</strong>.</li>
+                            <li><strong>Contractual Capacity:</strong> You have the full legal capacity to enter into a binding contract and are not barred from using the services under applicable laws.</li>
+                            <li><strong>Parental Supervision:</strong> If you are under the age of 18, you may only use TrixMart under the direct supervision of a parent or legal guardian who agrees to be bound by these Terms. However, <strong>all financial transactions</strong> must be conducted by the parent or guardian.</li>
+                            <li><strong>Verification:</strong> TrixMart reserves the right to request proof of age at any time to ensure compliance with this section.</li>
+                        </ul>
                     </section>
 
                     <section className="mb-10">

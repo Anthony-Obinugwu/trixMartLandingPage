@@ -104,6 +104,9 @@ export default function Footer() {
               <Link href="/community-guidelines" className="text-[#CFD3D7] text-xs hover:text-white transition-colors">
                 Community Guidelines
               </Link>
+              <Link href="/profile/delete-account" className="text-[#CFD3D7] text-xs hover:text-white transition-colors">
+                Delete Account
+              </Link>
             </nav>
           </div>
 
@@ -171,7 +174,7 @@ export default function Footer() {
 
         {/* Copyright */}
         <div className="pt-8 border-t border-[#F1F1F1CF] text-center text-[#CFD3D7] text-xs">
-          <p>Copyright © Trix Solutions 2025. All Rights Reserved</p>
+          <p>Copyright © Trix Solutions 2025 - 2026. All Rights Reserved</p>
         </div>
       </div>
     </footer>

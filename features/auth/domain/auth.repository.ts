@@ -6,4 +6,5 @@ export interface IAuthRepository {
   signup(payload: SignupPayload): Promise<Result<Profile, Error>>;
   logout(): Promise<Result<void, Error>>;
   getCurrentUser(): Promise<Result<Profile | null, Error>>;
+  deleteAccount(password: string): Promise<Result<void, Error>>;
 }

@@ -48,3 +48,21 @@ export async function getCurrentUserAction() {
     return { success: false, error: result.error.message };
   }
 }
+
+export async function deleteAccountAction(password: string, confirmationWord: string) {
+  // Validate confirmation word (current day name in ALL CAPS)
+  const today = new Intl.DateTimeFormat('en-US', { weekday: 'long' }).format(new Date()).toUpperCase();
+  
+  if (confirmationWord !== today) {
+    return { success: false, error: `Invalid confirmation word. Please type "${today}" in all caps.` };
+  }
+
+  const result = await authRepo.deleteAccount(password);
+  
+  if (result.success) {
+    revalidatePath('/', 'layout');
+    return { success: true };
+  } else {
+    return { success: false, error: result.error.message };
+  }
+}

@@ -21,7 +21,11 @@ export default function PrivacyPolicy() {
                         <p className="text-gray-700 leading-relaxed mb-4">
                             TrixMart utilizes a multi-tenant architecture designed to serve distinct educational institutions globally. As we expand across various academic campuses and international jurisdictions, we remain committed to localized data isolation and global privacy standards. Within Nigeria, The Organization operates formally as a Data Controller of Major Importance as defined by the Nigeria Data Protection Act (NDPA) 2023 and the General Application and Implementation Directive (GAID) 2025.
                         </p>
+                        <h3 className="text-xl font-medium text-[#051650] mt-6 mb-3">Cross-Border Data Transfers and Hosting</h3>
                         <p className="text-gray-700 leading-relaxed mb-4">
+                            The primary database infrastructure and servers supporting the TrixMart platform are hosted in the West EU region (specifically Ireland). By registering an account and utilizing The Platform, you explicitly consent to the cross-border transfer, processing, and storage of your personal data in this jurisdiction. These transfers are executed in compliance with standard data protection frameworks ensuring a level of security commensurate with the NDPA 2023.
+                        </p>
+                        <p className="text-gray-700 leading-relaxed">
                             This Policy applies to all registered users, encompassing academic consumers ("Buyers"), marketplace merchants ("Sellers"), and authorized administrative personnel ("Admins").
                         </p>
                     </section>
@@ -37,10 +41,23 @@ export default function PrivacyPolicy() {
                             <li><strong>Profile Identity Data:</strong> Full legal name, username, and associated academic affiliations (School ID) utilized to verify presence within specific educational communities.</li>
                             <li><strong>Contact Information:</strong> Valid email addresses and localized phone numbers utilized for account verification, security alerts, and transactional communications.</li>
                             <li><strong>Authentication Data:</strong> Cryptographic hashes of passwords and security credentials. We do not store plain-text passwords.</li>
-                            <li><strong>User-Generated Content:</strong> Profile avatars, product reviews, supplementary JSON metadata, and peer-to-peer communications.</li>
+                            <li><strong>User-Generated Content:</strong> Profile avatars, product reviews, supplementary JSON metadata, and peer-to-peer communications. This also includes **Social Metrics** such as follower counts, which are publicly visible to other users within your institution's partition.</li>
+                            <li><strong>Dispute & Reporting Data:</strong> Information collected via the 'Report Product' or 'Process Dispute' features, including narrative reports, evidence of non-conformity, and communications during a mediation process.</li>
                         </ul>
 
-                        <h3 className="text-xl font-medium text-[#051650] mt-6 mb-3">2.2 Specialized Information Collected from Marketplace Sellers</h3>
+                        <h3 className="text-xl font-medium text-[#051650] mt-6 mb-3">2.2 Payment Integration & Tokenization (Paystack)</h3>
+                        <p className="text-gray-700 leading-relaxed mb-4">
+                            TrixMart integrates with Paystack for secure transaction processing. While we do not store full credit or debit card numbers, we do manage:
+                        </p>
+                        <ul className="list-disc ml-6 text-gray-700 space-y-2">
+                            <li><strong>Authorization Tokens:</strong> Secure recurring payment tokens provided by Paystack to facilitate "saved account" functionality.</li>
+                            <li><strong>Transaction Metadata:</strong> Authorization codes and reference IDs necessary for payment reconciliation and refunds.</li>
+                        </ul>
+                        <p className="text-gray-700 leading-relaxed mt-4">
+                            All payment tokens and authorization metadata are permanently disabled and purged upon the successful deletion of a user account.
+                        </p>
+
+                        <h3 className="text-xl font-medium text-[#051650] mt-6 mb-3">2.3 Specialized Information Collected from Marketplace Sellers</h3>
                         <p className="text-gray-700 leading-relaxed mb-4">
                             To ensure marketplace integrity and comply with national financial regulations, Sellers are subject to enhanced data collection:
                         </p>
@@ -50,12 +67,17 @@ export default function PrivacyPolicy() {
                             <li><strong>Operational Metrics:</strong> System-generated data including cumulative completed orders, calculated average ratings, and applied shipping fee structures.</li>
                         </ul>
 
-                        <h3 className="text-xl font-medium text-[#051650] mt-6 mb-3">2.3 Automated Data Generation and Telemetry</h3>
+                        <h3 className="text-xl font-medium text-[#051650] mt-6 mb-3">2.4 Automated Data Generation and Telemetry</h3>
                         <ul className="list-disc ml-6 text-gray-700 space-y-2">
                             <li><strong>System Telemetry:</strong> IP addresses, device fingerprints, session durations, and interaction logs.</li>
+                            <li><strong>Logistics & Delivery Tracking:</strong> Data related to order fulfillment, including delivery status, timestamps, and physical receipt confirmations utilized to trigger the release of escrowed funds.</li>
                             <li><strong>Algorithmic Risk Scoring:</strong> TrixMart dynamically calculates risk assessment scores for Sellers based on account modifications, verification status, and transactional histories.</li>
                             <li><strong>Operational Logs:</strong> Timestamp data detailing account creation, profile modifications, suspension events, and product visibility states.</li>
                         </ul>
+                        <h3 className="text-xl font-medium text-[#051650] mt-6 mb-3">Cookies, Local Storage, and Device Tracking</h3>
+                        <p className="text-gray-700 leading-relaxed">
+                            The Platform utilizes local device storage and secure mobile caching mechanisms (rather than traditional web cookies) to maintain active user sessions, store authentication tokens, and optimize app performance. We may also utilize authorized third-party software development kits (SDKs) to collect anonymized crash reports and screen-view analytics to continuously improve the user experience.
+                        </p>
                     </section>
 
                     <section className="mb-10">
@@ -122,6 +144,7 @@ export default function PrivacyPolicy() {
                         </p>
                         <ul className="list-disc ml-6 text-gray-700 space-y-2">
                             <li><strong>Academic Institutions:</strong> TrixMart partitions data via specific School IDs. We cooperate with university authorities only in cases of severe disciplinary infractions or fraud.</li>
+                            <li><strong>Transactional Disclosure:</strong> To facilitate post-purchase communication and fulfillment, contact information is shared between Buyers and Sellers via transactional documents, such as receipts and invoices generated by The Platform.</li>
                             <li><strong>Financial Processors:</strong> We integrate with licensed payment service providers for transaction execution and KYC compliance.</li>
                             <li><strong>Law Enforcement:</strong> We will disclose personal data to regulatory and legal authorities when served with a valid court order.</li>
                         </ul>
@@ -130,7 +153,7 @@ export default function PrivacyPolicy() {
                     <section className="mb-10">
                         <h2 className="text-2xl font-semibold text-[#051650] mb-4">6. Data Retention Protocols and Financial Archiving</h2>
                         <p className="text-gray-700 leading-relaxed mb-4">
-                            <strong>6.1 Standard Retention:</strong> Profile data and standard histories are retained for the duration of the relationship. Upon account deletion, data is erased or anonymized within ninety (90) days.
+                            <strong>6.1 Right to Erasure (Data Deletion) and Operational Limits:</strong> Users can exercise their right to data deletion directly within the TrixMart application by navigating to the 'Account Settings' and selecting 'Delete Account'. <strong>Please note:</strong> This right to erasure cannot be exercised if a User has active, unfulfilled orders, unresolved disputes, or pending wallet balances. All active marketplace contracts must be concluded before the system will process a deletion request. Upon successfully triggering this action, non-financial profile data is permanently erased or irreversibly anonymized within ninety (90) days.
                         </p>
                         <p className="text-gray-700 leading-relaxed mb-4">
                             <strong>6.2 Extended Retention:</strong> Pursuant to AML legislation, financial records and KYC artifacts are legally mandated to be maintained for ten (10) years.

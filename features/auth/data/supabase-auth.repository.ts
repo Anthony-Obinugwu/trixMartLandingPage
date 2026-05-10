@@ -36,7 +36,7 @@ export class SupabaseAuthRepository implements IAuthRepository {
   async signup(payload: SignupPayload): Promise<Result<Profile, Error>> {
     try {
       const supabase = await this.getClient();
-      
+
       // 1. Sign up the user in Supabase Auth
       const { data: authData, error: authError } = await supabase.auth.signUp({
         email: payload.email,
@@ -111,6 +111,63 @@ export class SupabaseAuthRepository implements IAuthRepository {
 
       if (profileError) return failure(profileError);
       return success(profile as Profile);
+    } catch (error) {
+      return failure(error instanceof Error ? error : new Error(String(error)));
+    }
+  }
+
+  async deleteAccount(password: string): Promise<Result<void, Error>> {
+    try {
+      const supabase = await this.getClient();
+
+      // 1. Get current user's email for re-verification
+      const { data: { user }, error: userError } = await supabase.auth.getUser();
+      if (userError) return failure(userError);
+      if (!user || !user.email) return failure(new Error('User not authenticated'));
+
+      // 2. Re-verify password by signing in
+      const { error: verifyError } = await supabase.auth.signInWithPassword({
+        email: user.email,
+        password: password,
+      });
+
+      if (verifyError) {
+        return failure(new Error('Incorrect password. Please verify your credentials.'));
+      }
+
+      // 3. Call the delete_user RPC
+      const { data, error: rpcError } = await supabase.rpc('delete_user');
+
+      if (rpcError) {
+        console.error('RPC Error:', rpcError);
+        return failure(new Error(rpcError.message || 'Failed to delete account through RPC'));
+      }
+
+      // Check data for any indication of failure
+      const isFailure = 
+        data === false || 
+        (typeof data === 'string' && data.toLowerCase() !== 'success' && data.toLowerCase() !== 'ok') ||
+        (data && typeof data === 'object' && (
+          ('success' in data && data.success === false) ||
+          ('error' in data && data.error) ||
+          ('status' in data && data.status === 'error') ||
+          ('code' in data && data.code !== 200 && typeof data.code === 'number' && data.code >= 400)
+        ));
+
+      if (isFailure) {
+        const errorMessage = 
+          typeof data === 'string' 
+            ? data 
+            : (data && typeof data === 'object') 
+              ? (data.message || data.error || 'Deletion denied: You may have active orders or other restrictions.')
+              : 'Deletion denied: You may have active orders or other restrictions.';
+        return failure(new Error(errorMessage));
+      }
+
+      // 4. Logout locally to clear cookies
+      await supabase.auth.signOut();
+
+      return success(undefined);
     } catch (error) {
       return failure(error instanceof Error ? error : new Error(String(error)));
     }
