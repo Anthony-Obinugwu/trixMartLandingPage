@@ -12,10 +12,8 @@ const AuthPage = () => {
 
   const handleContinue = () => {
     if (selectedType) {
-      // Store user type in localStorage for demo purposes
-      localStorage.setItem('userType', selectedType)
-      // Navigate to university selection
-      router.push('/select-university')
+      // Navigate to signup with role pre-selected
+      router.push(`/sign-up?role=${selectedType}`)
     }
   }
 
@@ -42,7 +40,7 @@ const AuthPage = () => {
           transition={{ duration: 0.5 }}
           className='text-center mb-12'
         >
-          <h1 className='font-bold text-3xl md:text-4xl mb-4'>Welcome to Trix Mart</h1>
+          <h1 className='font-bold text-3xl md:text-4xl mb-4 text-gray-900'>Welcome to Trix Mart</h1>
           <p className='text-lg md:text-xl text-gray-600'>Choose how you want to join our community</p>
         </motion.section>
 
@@ -167,17 +165,17 @@ const AuthPage = () => {
           </motion.div>
         </section>
 
-        {/* Continue Button */}
+        {/* Action Buttons */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.4 }}
-          className='flex justify-center'
+          className='flex flex-col items-center space-y-4'
         >
           <button
             onClick={handleContinue}
             disabled={!selectedType}
-            className={`px-12 py-4 rounded-xl font-semibold text-lg transition-all duration-300 ${
+            className={`px-12 py-4 rounded-xl font-semibold text-lg transition-all duration-300 w-full max-w-md ${
               selectedType
                 ? selectedType === 'buyer'
                   ? 'bg-[#0D6EFD] hover:bg-[#0b5ed7] text-white shadow-lg hover:shadow-xl'
@@ -185,11 +183,16 @@ const AuthPage = () => {
                 : 'bg-gray-300 text-gray-500 cursor-not-allowed'
             }`}
           >
-            Continue as {selectedType ? (selectedType === 'buyer' ? 'Buyer' : 'Seller') : 'User'}
+            Join as {selectedType ? (selectedType === 'buyer' ? 'Buyer' : 'Seller') : 'User'}
           </button>
-        </motion.div>
 
-        
+          <p className='text-gray-600 mt-4'>
+            Already have an account?{' '}
+            <Link href="/login" className='font-semibold text-[#0D6EFD] hover:underline'>
+              Sign In
+            </Link>
+          </p>
+        </motion.div>
       </main>
     </div>
   )
