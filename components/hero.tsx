@@ -114,6 +114,24 @@ export default function Hero() {
             </motion.button>
           </Link>
         </div>
+        <div className="flex justify-center">
+          <Link href="/waitlist">
+              <motion.button
+                initial={{ opacity: 0, y: 100 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{
+                  duration: 0.6,
+                  delay: 1.2,
+                  type: "spring",
+                  damping: 10,
+                }}
+                className="text-[#009b00] border-[#009b00] border text-base rounded-2xl hover:bg-[#009b00] hover:text-white px-8 py-[12px] mt-6"
+              >
+                View the Waitlist
+              </motion.button>
+          </Link>
+        </div>
       </div>
     </main>
   );
