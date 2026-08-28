@@ -80,7 +80,13 @@ export default function Hero() {
         </motion.p>
 
         <div className="relative flex flex-col sm:flex-row items-center justify-center gap-6">
-          <Image src="/page-vectors/vector-3.svg" className="absolute -top-10 -left-2 -z-10 sm:w-24 sm:-top-16 sm:left-0 md:left-8 lg:left-36" width={60} height={80} alt="" />
+          <Image
+            src="/page-vectors/vector-3.svg"
+            className="absolute -top-10 -left-2 -z-10 sm:w-24 sm:-top-16 sm:left-0 md:left-8 lg:left-36"
+            width={60}
+            height={80}
+            alt=""
+          />
           <Link href="/shop" target="_blank">
             <motion.button
               initial={{ opacity: 0, x: 100 }}
@@ -97,7 +103,7 @@ export default function Hero() {
               Shop with Trix Mart
             </motion.button>
           </Link>
-          <Link href="https://docs.google.com/forms/d/e/1FAIpQLSdJUn4bsC346OYssLG1oJDXAHs9MGtz9UGZ242MG-Tcus_UKw/viewform?usp=publish-editor" target="_blank">
+          <Link href="/waitlist" target="_blank">
             <motion.button
               initial={{ opacity: 0, x: -100 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -110,26 +116,8 @@ export default function Hero() {
               }}
               className="bg-[#006ED3] border-[#006ED3] border text-white text-base rounded-2xl hover:bg-white hover:text-[#006ED3] px-8 py-[12px]"
             >
-              Join Trix Mart Community
+              View the Waitlist
             </motion.button>
-          </Link>
-        </div>
-        <div className="flex justify-center">
-          <Link href="/waitlist">
-              <motion.button
-                initial={{ opacity: 0, y: 100 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{
-                  duration: 0.6,
-                  delay: 1.2,
-                  type: "spring",
-                  damping: 10,
-                }}
-                className="text-[#009b00] border-[#009b00] border text-base rounded-2xl hover:bg-[#009b00] hover:text-white px-8 py-[12px] mt-6"
-              >
-                View the Waitlist
-              </motion.button>
           </Link>
         </div>
       </div>
