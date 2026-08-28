@@ -59,7 +59,7 @@ export async function updateSession(request: NextRequest) {
   );
 
   // refreshing the auth token
-  await supabase.auth.getSession();
+  await supabase.auth.getUser();
 
   return supabaseResponse;
 }

@@ -29,7 +29,7 @@ export async function middleware(request: NextRequest) {
     }
   );
 
-  const { data: { user } } = await supabase.auth.getUser();
+  const { data: { session } } = await supabase.auth.getSession();
 
   // Route protection logic
   const isAuthRoute = request.nextUrl.pathname.startsWith('/auth') || 
@@ -40,12 +40,12 @@ export async function middleware(request: NextRequest) {
                            request.nextUrl.pathname.startsWith('/shop') ||
                            request.nextUrl.pathname.startsWith('/checkout');
 
-  if (user && isAuthRoute) {
+  if (session && isAuthRoute) {
     // Redirect authenticated users away from auth pages
     return NextResponse.redirect(new URL('/', request.url));
   }
 
-  if (!user && isProtectedRoute) {
+  if (!session && isProtectedRoute) {
     // Redirect unauthenticated users to login page
     return NextResponse.redirect(new URL('/auth', request.url));
   }
