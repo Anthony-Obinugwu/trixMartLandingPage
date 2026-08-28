@@ -79,8 +79,7 @@ const page = () => {
       fullName: "Daisy Ofili",
       businessAddress: "15B Borno Street",
       phoneNumber: "09075576170",
-      socialLink:
-        "https://www.instagram.com/_zamamcollection_?igsi=MWg3cW54OGZreTN0aA==",
+      socialLink: "https://www.instagram.com/trixmart_",
       socialPlatform: SocialPlatform.INSTAGRAM,
       featuredProducts: [
         "/waitlist-images/products/daisy-1.jpeg",
