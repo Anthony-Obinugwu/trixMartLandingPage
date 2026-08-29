@@ -87,7 +87,7 @@ export default function Hero() {
             height={80}
             alt=""
           />
-          <Link href="/shop" target="_blank">
+          <Link href="https://docs.google.com/forms/d/e/1FAIpQLSfvRKx-DHFFqcdDP7titlEi703kjbdvYIyfRbe78eR5znwa9w/viewform?usp=header" target="_blank">
             <motion.button
               initial={{ opacity: 0, x: 100 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -116,7 +116,7 @@ export default function Hero() {
               }}
               className="bg-[#006ED3] border-[#006ED3] border text-white text-base rounded-2xl hover:bg-white hover:text-[#006ED3] px-8 py-[12px]"
             >
-              View the Waitlist
+              Join the Waitlist
             </motion.button>
           </Link>
         </div>
