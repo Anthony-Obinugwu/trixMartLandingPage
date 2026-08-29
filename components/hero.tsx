@@ -87,7 +87,7 @@ export default function Hero() {
             height={80}
             alt=""
           />
-          <Link href="https://docs.google.com/forms/d/e/1FAIpQLSfvRKx-DHFFqcdDP7titlEi703kjbdvYIyfRbe78eR5znwa9w/viewform?usp=header" target="_blank">
+          <Link href="/shop" target="_blank">
             <motion.button
               initial={{ opacity: 0, x: 100 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -103,7 +103,7 @@ export default function Hero() {
               Shop with Trix Mart
             </motion.button>
           </Link>
-          <Link href="/waitlist" target="_blank">
+          <Link href="https://docs.google.com/forms/d/e/1FAIpQLSfvRKx-DHFFqcdDP7titlEi703kjbdvYIyfRbe78eR5znwa9w/viewform?usp=header" target="_blank">
             <motion.button
               initial={{ opacity: 0, x: -100 }}
               whileInView={{ opacity: 1, x: 0 }}
