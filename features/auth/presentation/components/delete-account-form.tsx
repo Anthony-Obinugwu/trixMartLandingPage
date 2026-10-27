@@ -99,9 +99,9 @@ export function DeleteAccountForm() {
             Before you proceed:
           </h3>
           <ul className="text-sm text-gray-600 space-y-2 list-disc pl-5">
-            <li>Review our <Link href="/privacy-policy" className="text-[#0D6EFD] underline hover:text-[#0b5ed7]">Privacy Policy</Link> to understand how we handle data deletion.</li>
+            <li>Review our <Link href="/privacy" className="text-[#0D6EFD] underline hover:text-[#0b5ed7]">Privacy Policy</Link> to understand how we handle data deletion.</li>
             <li>Any pending orders must be completed or cancelled before deletion.</li>
-            <li>Consult our <Link href="/terms-conditions" className="text-[#0D6EFD] underline hover:text-[#0b5ed7]">Terms and Conditions</Link> for more details.</li>
+            <li>Consult our <Link href="/terms" className="text-[#0D6EFD] underline hover:text-[#0b5ed7]">Terms of Service</Link> for more details.</li>
           </ul>
         </div>
       </div>

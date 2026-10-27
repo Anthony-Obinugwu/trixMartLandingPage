@@ -91,18 +91,24 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Legal Info */}
+          {/* LEGAL & POLICIES */}
           <div className="lg:col-span-1">
-            <h3 className="text-base font-semibold text-[#F1F1F1CF] mb-4">Legal Info</h3>
+            <h3 className="text-base font-semibold text-[#F1F1F1CF] mb-4">LEGAL & POLICIES</h3>
             <nav className="flex flex-col gap-3">
-              <Link href="/privacy-policy" className="text-[#CFD3D7] text-xs hover:text-white transition-colors">
-                Privacy Policy
-              </Link>
-              <Link href="/terms-conditions" className="text-[#CFD3D7] text-xs hover:text-white transition-colors">
+              <Link href="/terms" className="text-[#CFD3D7] text-xs hover:text-white transition-colors">
                 Terms of Service
               </Link>
-              <Link href="/community-guidelines" className="text-[#CFD3D7] text-xs hover:text-white transition-colors">
-                Community Guidelines
+              <Link href="/privacy" className="text-[#CFD3D7] text-xs hover:text-white transition-colors">
+                Privacy Policy
+              </Link>
+              <Link href="/refund-policy" className="text-[#CFD3D7] text-xs hover:text-white transition-colors">
+                Returns & Refunds Policy
+              </Link>
+              <Link href="/shipping-policy" className="text-[#CFD3D7] text-xs hover:text-white transition-colors">
+                Shipping & Delivery Policy
+              </Link>
+              <Link href="/acceptable-use" className="text-[#CFD3D7] text-xs hover:text-white transition-colors">
+                Acceptable Use Policy
               </Link>
               <Link href="/profile/delete-account" className="text-[#CFD3D7] text-xs hover:text-white transition-colors">
                 Delete Account
