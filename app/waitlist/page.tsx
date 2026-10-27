@@ -1,138 +1,237 @@
+"use client";
 import Header from "@/components/header";
-import WaitlistUserCard from "@/components/waitlist/waitlist-user-card";
-import { SocialPlatform } from "@/features/waitlist/domain/socialplatform";
-import React from "react";
+import { submitFormData } from "@/features/waitlist/domain/actions/submit_form";
+import React, { useState } from "react";
 
-const page = () => {
-  const waitlistUsers = [
-    {
-      pfpImage: "/waitlist-images/profile-pictures/chow-central.png",
-      businessName: "Chow Central",
-      fullName: "Nafisa Aliyu",
-      businessAddress:
-        "Shop 2 Gunea street, phase 1 off Nile University Road, Cadastral zone, Abuja.",
-      phoneNumber: "07032920569 ",
-      socialLink: "https://wa.me/2347032920569",
-      socialPlatform: SocialPlatform.WHATSAPP,
-      featuredProducts: [
-        "/waitlist-images/products/chow-1.png",
-        "/waitlist-images/products/chow-2.png",
-        "/waitlist-images/products/chow-3.png",
-        "/waitlist-images/products/chow-4.png",
-        "/waitlist-images/products/chow-5.png",
-        "/waitlist-images/products/chow-6.png",
-        "/waitlist-images/products/chow-7.png",
-      ],
-    },
-    {
-      pfpImage: "/waitlist-images/profile-pictures/mk-wears.png",
-      businessName: "MK WEARS & GADGETS NG",
-      fullName: "Muhammad Kabir",
-      businessAddress: "Abuja, Nigeria.",
-      phoneNumber: "09061445332",
-      socialLink: " www.tiktok.com/@mkay_phone_store",
-      socialPlatform: SocialPlatform.TIKTOK,
-      featuredProducts: [
-        "/waitlist-images/products/mk-1.png",
-        "/waitlist-images/products/mk-2.png",
-        "/waitlist-images/products/mk-3.png",
-        "/waitlist-images/products/mk-4.png",
-        "/waitlist-images/products/mk-5.png",
-        "/waitlist-images/products/mk-6.png",
-        "/waitlist-images/products/mk-7.png",
-      ],
-    },
-    {
-      pfpImage: "/waitlist-images/profile-pictures/zaraya.png",
-      businessName: "Zaraya collections",
-      fullName: "Halima Sadiq",
-      businessAddress: "Thuja ville, Abuja.",
-      phoneNumber: "08088466005",
-      socialLink:
-        "https://www.instagram.com/ashbah_232_?igsi=MTNpaXh5MDBzaW1pdw==",
-      socialPlatform: SocialPlatform.INSTAGRAM,
-      featuredProducts: [
-        "/waitlist-images/products/zar-1.png",
-        "/waitlist-images/products/zar-2.png",
-        "/waitlist-images/products/zar-3.png",
-        "/waitlist-images/products/zar-4.png",
-      ],
-    },
-    {
-      pfpImage: "/waitlist-images/profile-pictures/zamam.png",
-      businessName: "Zamam Collection",
-      fullName: "Rahma Adamu Aliyu ",
-      businessAddress: "Abuja.",
-      phoneNumber: "09062022600",
-      socialLink:
-        "https://www.instagram.com/_zamamcollection_?igsi=MWg3cW54OGZreTN0aA==",
-      socialPlatform: SocialPlatform.INSTAGRAM,
-      featuredProducts: [
-        "/waitlist-images/products/zam-1.png",
-        "/waitlist-images/products/zam-2.png",
-        "/waitlist-images/products/zam-3.png",
-      ],
-    },
-    {
-      pfpImage: "/waitlist-images/profile-pictures/daisy.jpeg",
-      businessName: "Softbeautybydaisy",
-      fullName: "Daisy Ofili",
-      businessAddress: "15B Borno Street",
-      phoneNumber: "09075576170",
-      socialLink: "https://www.instagram.com/trixmart_",
-      socialPlatform: SocialPlatform.INSTAGRAM,
-      featuredProducts: [
-        "/waitlist-images/products/daisy-1.jpeg",
-        "/waitlist-images/products/daisy-2.jpeg",
-        "/waitlist-images/products/daisy-3.jpeg",
-      ],
-    },
-    {
-      pfpImage: "/waitlist-images/profile-pictures/lola.png",
-      businessName: "Lola Luxe Nails",
-      fullName: "Damilola Abayomi",
-      businessAddress: "online",
-      phoneNumber: "09019332248",
-      socialLink:
-        "https://www.instagram.com/lola_luxe.nail?igsi=MWU5ZGxhYXQydGFr",
-      socialPlatform: SocialPlatform.INSTAGRAM,
-      featuredProducts: [
-        "/waitlist-images/products/lola-1.png",
-        "/waitlist-images/products/lola-2.png",
-        "/waitlist-images/products/lola-3.png",
-        "/waitlist-images/products/lola-4.png",
-        "/waitlist-images/products/lola-5.png",
-        "/waitlist-images/products/lola-6.png",
-      ],
-    },
-  ];
+const WaitlistForm = () => {
+  const [formData, setFormData] = useState({
+    fullName: "",
+    email: "",
+    whatsapp: "",
+    university: "",
+    userType: "",
+  });
+
+  // UI States for feedback
+  const [errorMessage, setErrorMessage] = useState<string | null>(null);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSuccess, setIsSuccess] = useState(false);
+
+  const handleChange = (
+    event: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>,
+  ) => {
+    const { name, value } = event.target;
+    setFormData((prevState) => ({
+      ...prevState,
+      [name]: value,
+    }));
+  };
+
+  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    setIsSubmitting(true);
+    setErrorMessage(null);
+
+    // Capture the form data to send to your server action
+    const form = new FormData(event.currentTarget);
+
+    try {
+      const response = await submitFormData(form);
+
+      if (response.success) {
+        setIsSuccess(true);
+        // Optional: clear the form
+        setFormData({
+          fullName: "",
+          email: "",
+          whatsapp: "",
+          university: "",
+          userType: "",
+        });
+      } else {
+        setErrorMessage(
+          response.error || "Something went wrong. Please try again.",
+        );
+      }
+    } catch (error) {
+      setErrorMessage("A network error occurred. Please try again.");
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
 
   return (
-    <div>
+    <>
       <Header />
+      <div className="max-w-lg mx-auto p-8 mt-10 bg-white rounded-xl shadow-lg font-sans">
+        <div className="text-center mb-8">
+          <h1 className="text-3xl font-extrabold text-gray-900 mb-4">
+            Find It. Discover It. Shop It.
+          </h1>
+          <p className="text-gray-600 mb-4 leading-relaxed">
+            Student and young businesses are building amazing things. TrixMart
+            makes it easier to discover them — on campus and beyond.
+          </p>
+          <p className="text-gray-800 font-bold text-lg">
+            Join the waitlist for the TrixMart app.
+          </p>
+        </div>
 
-      <div className="px-4">
-        {waitlistUsers.map((user, index) => (
-          <>
-            <div className="text-center font-bold text-[#026ccf] text-3xl pb-4">
-              Top Featured #{index + 1}
+        {/* Success Message */}
+        {isSuccess ? (
+          <div className="bg-green-50 border border-green-200 text-green-800 rounded-lg p-6 text-center">
+            <h2 className="text-xl font-bold mb-2">You're on the list!</h2>
+            <p>
+              Thank you for joining. We will notify you as soon as we launch.
+            </p>
+            <button
+              onClick={() => setIsSuccess(false)}
+              className="mt-4 text-sm font-semibold text-green-700 underline"
+            >
+              Submit another response
+            </button>
+          </div>
+        ) : (
+          <form onSubmit={handleSubmit} className="space-y-5">
+            {/* Error Message */}
+            {errorMessage && (
+              <div className="bg-red-50 border border-red-200 text-red-600 px-4 py-3 rounded-lg text-sm">
+                {errorMessage}
+              </div>
+            )}
+
+            {/* Full Name */}
+            <div>
+              <label
+                htmlFor="fullName"
+                className="block text-sm font-semibold text-gray-700 mb-1"
+              >
+                Full Name
+              </label>
+              <input
+                type="text"
+                id="fullName"
+                name="fullName"
+                value={formData.fullName}
+                onChange={handleChange}
+                required
+                placeholder="John Doe"
+                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all"
+              />
             </div>
-            <WaitlistUserCard
-              key={index}
-              pfpImage={user.pfpImage}
-              businessName={user.businessName}
-              fullName={user.fullName}
-              businessAddress={user.businessAddress}
-              phoneNumber={user.phoneNumber}
-              socialLink={user.socialLink}
-              socialPlatform={user.socialPlatform}
-              featuredProducts={user.featuredProducts}
-            />
-          </>
-        ))}
+
+            {/* Email */}
+            <div>
+              <label
+                htmlFor="email"
+                className="block text-sm font-semibold text-gray-700 mb-1"
+              >
+                Email
+              </label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                value={formData.email}
+                onChange={handleChange}
+                required
+                placeholder="john@example.com"
+                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all"
+              />
+            </div>
+
+            {/* WhatsApp Number */}
+            <div>
+              <label
+                htmlFor="whatsapp"
+                className="block text-sm font-semibold text-gray-700 mb-1"
+              >
+                WhatsApp Number
+              </label>
+              <input
+                type="tel"
+                id="whatsapp"
+                name="whatsapp"
+                value={formData.whatsapp}
+                onChange={handleChange}
+                required
+                placeholder="+234..."
+                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all"
+              />
+            </div>
+
+            {/* University Dropdown */}
+            <div>
+              <label
+                htmlFor="university"
+                className="block text-sm font-semibold text-gray-700 mb-1"
+              >
+                University
+              </label>
+              <select
+                id="university"
+                name="university"
+                value={formData.university}
+                onChange={handleChange}
+                required
+                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all bg-white"
+              >
+                <option value="" disabled>
+                  Select your university
+                </option>
+                <option value="Nile University">Nile University</option>
+                <option value="Baze University">Baze University</option>
+                <option value="University of Abuja">University of Abuja</option>
+                <option value="Veritas University">Veritas University</option>
+                <option value="Other University">Other University</option>
+              </select>
+            </div>
+
+            {/* User Type Dropdown */}
+            <div>
+              <label
+                htmlFor="userType"
+                className="block text-sm font-semibold text-gray-700 mb-1"
+              >
+                I am a:
+              </label>
+              <select
+                id="userType"
+                name="userType"
+                value={formData.userType}
+                onChange={handleChange}
+                required
+                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all bg-white"
+              >
+                <option value="" disabled>
+                  Select an option
+                </option>
+                <option value="Student Buyer">Student Buyer</option>
+                <option value="Student Business Owner">
+                  Student Business Owner
+                </option>
+                <option value="All of the above">All of the above</option>
+                <option value="Outside Buyer">Outside Buyer</option>
+              </select>
+            </div>
+
+            {/* Submit Button */}
+            <button
+              type="submit"
+              disabled={isSubmitting}
+              className={`w-full mt-6 text-white font-bold py-3 px-4 rounded-lg transition-colors duration-200 ${
+                isSubmitting
+                  ? "bg-blue-400 cursor-not-allowed"
+                  : "bg-blue-600 hover:bg-blue-700"
+              }`}
+            >
+              {isSubmitting ? "Submitting..." : "Join the Waitlist"}
+            </button>
+          </form>
+        )}
       </div>
-    </div>
+    </>
   );
 };
 
-export default page;
+export default WaitlistForm;

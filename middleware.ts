@@ -37,7 +37,6 @@ export async function middleware(request: NextRequest) {
                       request.nextUrl.pathname.startsWith('/sign-up');
   
   const isProtectedRoute = request.nextUrl.pathname.startsWith('/profile') || 
-                           request.nextUrl.pathname.startsWith('/shop') ||
                            request.nextUrl.pathname.startsWith('/checkout');
 
   if (session && isAuthRoute) {
